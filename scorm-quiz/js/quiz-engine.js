@@ -5,6 +5,9 @@
   var timer = null;
   var timeLeft = TIME_PER_QUESTION;
   var answers = []; // track per-question result
+  var currentLang = "en";
+  var randomOrder = false;
+  var questionOrder = []; // array of indices into QUIZ_QUESTIONS
 
   var questionMeta = document.getElementById("questionMeta");
   var questionText = document.getElementById("questionText");
@@ -25,11 +28,33 @@
   var resultSummary = document.getElementById("resultSummary");
   var restartBtn = document.getElementById("restartBtn");
   var settingsBtn = document.getElementById("settingsBtn");
+  var langButtons = document.querySelectorAll(".lang-btn");
+  var randomToggle = document.getElementById("randomToggle");
 
   var PASS_PERCENT = 70;
 
+  function buildOrder() {
+    questionOrder = QUIZ_QUESTIONS.map(function (_, i) { return i; });
+    if (randomOrder) {
+      for (var i = questionOrder.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = questionOrder[i];
+        questionOrder[i] = questionOrder[j];
+        questionOrder[j] = tmp;
+      }
+    }
+  }
+
+  function text(field) {
+    // field is either a plain string (legacy) or a {en, ta, hi} object
+    if (typeof field === "string") return field;
+    if (!field) return "";
+    return field[currentLang] || field.en || "";
+  }
+
   function init() {
     ScormAPI.init();
+    buildOrder();
     loadQuestion(0);
 
     nextBtn.addEventListener("click", onNext);
@@ -38,28 +63,57 @@
       alert("Settings: (placeholder) — add mute/exit/review options here.");
     });
 
+    langButtons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        currentLang = btn.dataset.lang;
+        langButtons.forEach(function (b) { b.classList.toggle("active", b === btn); });
+        renderQuestion(); // re-render current question in new language without resetting timer/progress
+      });
+    });
+
+    randomToggle.addEventListener("change", function () {
+      randomOrder = randomToggle.checked;
+      buildOrder();
+      currentIndex = 0;
+      correctCount = 0;
+      answers = [];
+      loadQuestion(0);
+    });
+
     window.addEventListener("beforeunload", function () {
       ScormAPI.commit();
+    });
+  }
+
+  function currentQuestion() {
+    return QUIZ_QUESTIONS[questionOrder[currentIndex]];
+  }
+
+  function renderQuestion() {
+    var q = currentQuestion();
+
+    questionMeta.textContent = "Question " + (currentIndex + 1) + " of " + QUIZ_QUESTIONS.length;
+    questionText.textContent = text(q.question);
+    questionImage.src = q.image;
+
+    var captionText = text(q.imageCaption);
+    imageCaption.textContent = captionText ? "Visual: " + captionText : "";
+    imageCaption.style.display = captionText ? "block" : "none";
+
+    var buttons = optionsGrid.querySelectorAll(".option-btn");
+    ["A", "B", "C", "D"].forEach(function (letter, idx) {
+      var btn = buttons[idx];
+      if (!btn) return;
+      var optText = q.options[letter] ? text(q.options[letter]) : "";
+      var span = btn.querySelector("span:last-child");
+      if (span) span.textContent = optText;
     });
   }
 
   function loadQuestion(index) {
     clearInterval(timer);
     selectedAnswer = null;
-    var q = QUIZ_QUESTIONS[index];
-
-    questionMeta.textContent = "Question " + (index + 1) + " of " + QUIZ_QUESTIONS.length;
-    questionText.textContent = q.question;
-    questionImage.src = q.image;
-
-    // retrigger entrance animations
-    [questionCard, questionText, questionImage.parentElement].forEach(function (el) {
-      el.style.animation = "none";
-      void el.offsetWidth; // force reflow
-      el.style.animation = "";
-    });
-    imageCaption.textContent = q.imageCaption ? "Visual: " + q.imageCaption : "";
-    imageCaption.style.display = q.imageCaption ? "block" : "none";
+    var q = currentQuestion();
 
     optionsGrid.innerHTML = "";
     ["A", "B", "C", "D"].forEach(function (letter) {
@@ -68,11 +122,20 @@
       btn.className = "option-btn";
       btn.dataset.letter = letter;
       btn.innerHTML =
-        '<span class="option-letter">' + letter + "</span><span>" + q.options[letter] + "</span>";
+        '<span class="option-letter">' + letter + "</span><span>" + text(q.options[letter]) + "</span>";
       btn.addEventListener("click", function () {
         selectAnswer(letter, btn);
       });
       optionsGrid.appendChild(btn);
+    });
+
+    renderQuestion();
+
+    // retrigger entrance animations
+    [questionCard, questionText, questionImage.parentElement].forEach(function (el) {
+      el.style.animation = "none";
+      void el.offsetWidth; // force reflow
+      el.style.animation = "";
     });
 
     nextBtn.disabled = true;
@@ -112,7 +175,7 @@
 
   function lockOptions(chosenLetter) {
     clearInterval(timer);
-    var q = QUIZ_QUESTIONS[currentIndex];
+    var q = currentQuestion();
     var buttons = optionsGrid.querySelectorAll(".option-btn");
     var isCorrect = chosenLetter === q.correct;
 
@@ -129,7 +192,7 @@
       }
     });
 
-    answers.push({ question: currentIndex, chosen: chosenLetter, correct: isCorrect });
+    answers.push({ question: questionOrder[currentIndex], chosen: chosenLetter, correct: isCorrect });
     if (isCorrect) correctCount++;
 
     nextBtn.disabled = false;
@@ -165,6 +228,7 @@
   }
 
   function restartQuiz() {
+    buildOrder();
     currentIndex = 0;
     correctCount = 0;
     answers = [];

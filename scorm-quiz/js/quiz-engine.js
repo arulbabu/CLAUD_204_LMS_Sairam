@@ -17,8 +17,8 @@
   var nextBtn = document.getElementById("nextBtn");
   var timerDisplay = document.getElementById("timerDisplay");
   var questionCard = document.getElementById("questionCard");
-  var timeBarFill = document.getElementById("timeBarFill");
   var progressFill = document.getElementById("progressFill");
+  var slideCount = document.getElementById("slideCount");
   var quizBody = document.getElementById("quizBody");
   var quizFooter = document.querySelector(".quiz-footer");
   var resultScreen = document.getElementById("resultScreen");
@@ -142,6 +142,7 @@
     nextBtn.textContent = index === QUIZ_QUESTIONS.length - 1 ? "Finish" : "Next";
 
     progressFill.style.width = (index / QUIZ_QUESTIONS.length) * 100 + "%";
+    slideCount.textContent = (index + 1) + " / " + QUIZ_QUESTIONS.length;
 
     timeLeft = TIME_PER_QUESTION;
     updateTimerUI();
@@ -152,8 +153,6 @@
     var low = timeLeft <= 10;
     timerDisplay.textContent = timeLeft;
     timerDisplay.classList.toggle("low", low);
-    timeBarFill.style.width = (timeLeft / TIME_PER_QUESTION) * 100 + "%";
-    timeBarFill.classList.toggle("low", low);
   }
 
   function tick() {

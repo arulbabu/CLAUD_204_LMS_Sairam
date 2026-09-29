@@ -229,6 +229,15 @@ body {
   min-height: 0;
 }
 
+.question-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 40vh;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
 /* Desktop: two-column layout — image left, options right */
 @media (min-width: 992px) {
   .quiz-body {
@@ -244,8 +253,7 @@ body {
   }
   .question-card       { grid-area: qcard; margin-bottom: 0; }
   .question-image-wrap { grid-area: image; margin-bottom: 0; height: 100%; min-height: 0; display: flex; flex-direction: column; }
-  .options-grid        { grid-area: options; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; margin-bottom: 0; height: 100%; }
-  .option-btn           { height: 100%; }
+  .options-grid        { grid-area: options; margin-bottom: 0; height: 100%; display: flex; flex-direction: column; justify-content: center; }
   .question-text  { font-size: 22px; }
   .option-btn     { font-size: 17px; padding: 16px 18px; min-height: 62px; }
   .option-btn .option-letter { width: 36px; height: 36px; min-width: 36px; font-size: 15px; }
@@ -444,26 +452,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* draining time bar inside the question card */
-.time-bar-track {
-  height: 6px;
-  background: rgba(0,63,114,0.1);
-  border-radius: 999px;
-  overflow: hidden;
-  margin-top: 12px;
-}
-
-.time-bar-fill {
-  height: 100%;
-  width: 100%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #3DDC84, #3CC4DA, #FDB913);
-  transition: width 1s linear, background 0.4s ease;
-}
-
-.time-bar-fill.low {
-  background: linear-gradient(90deg, #FF3D3D, #FF5EA0);
-}
+/* (draining time bar removed) */
 
 .question-meta {
   display: inline-block;
@@ -525,14 +514,7 @@ body {
   pointer-events: none;
 }
 
-.question-image-wrap img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-height: 40vh;
-  object-fit: contain;
-  margin: 0 auto;
-}
+/* (question-image-wrap img base rule defined earlier, before breakpoints) */
 
 .image-caption {
   font-size: 12px;
@@ -545,14 +527,10 @@ body {
 
 /* ---------- Options ---------- */
 .options-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
   margin-bottom: 16px;
-}
-
-@media (max-width: 480px) {
-  .options-grid { grid-template-columns: 1fr; }
 }
 
 .option-btn {
@@ -669,11 +647,22 @@ body {
 /* ---------- Footer / Next ---------- */
 .quiz-footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 12px clamp(14px, 3vw, 20px) clamp(14px, 3vw, 20px);
   gap: 10px;
   flex-shrink: 0;
+}
+
+.slide-count {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--lt-blue);
+  background: rgba(0,79,138,0.08);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
 }
 
 .next-btn {

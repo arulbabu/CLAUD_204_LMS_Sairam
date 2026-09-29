@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="no" ?>
+<manifest identifier="LT_QUIZ_SCORM" version="1"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+
+  <organizations default="LT_QUIZ_ORG">
+    <organization identifier="LT_QUIZ_ORG">
+      <title>L&amp;T - Quiz</title>
+      <item identifier="ITEM_1" identifierref="RES_1">
+        <title>L&amp;T Quiz</title>
+      </item>
+    </organization>
+  </organizations>
+
+  <resources>
+    <resource identifier="RES_1" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html" />
+      <file href="css/style.css" />
+      <file href="js/quiz-data.js" />
+      <file href="js/quiz-engine.js" />
+      <file href="js/scorm-api-wrapper.js" />
+      <file href="assets/logo.svg" />
+      <file href="assets/question-placeholder.svg" />
+      <file href="assets/images/q1.jpg" />
+      <file href="assets/images/q2.jpg" />
+      <file href="assets/images/q3.jpg" />
+      <file href="assets/fonts/lexend-latin.woff2" />
+    </resource>
+  </resources>
+
+</manifest>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>L&amp;T Quiz</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Floating construction icons background -->
+<div class="bg-icons" aria-hidden="true">
+  <span>&#128679;</span><!-- 🚧 -->
+  <span>&#127959;&#65039;</span><!-- 🏗️ -->
+  <span>&#9937;</span><!-- ⛑ -->
+  <span>&#128296;</span><!-- 🔨 -->
+  <span>&#129521;</span><!-- 🧱 brick -->
+  <span>&#9889;</span><!-- ⚡ -->
+  <span>&#128295;</span><!-- 🔧 -->
+  <span>&#128657;</span><!-- 🚑 -->
+  <span>&#129520;</span><!-- 🧰 toolbox -->
+  <span>&#128293;</span><!-- 🔥 -->
+</div>
+
+<div class="quiz-card">
+
+  <!-- Header: Logo | L&T - Quiz | Settings + Timer -->
+  <div class="quiz-header">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="L&amp;T Logo" />
+      <span class="brand-title">L&amp;T - Quiz</span>
+    </div>
+    <div class="header-right">
+      <div class="timer-circle" id="timerDisplay">30</div>
+      <button class="settings-btn" id="settingsBtn" title="Settings">&#9881;</button>
+    </div>
+  </div>
+
+  <div class="progress-track">
+    <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+  </div>
+
+  <!-- Quiz body -->
+  <div class="quiz-body" id="quizBody">
+
+    <!-- Question card: stands out on its own -->
+    <div class="question-card" id="questionCard">
+      <div class="question-card-top">
+        <div class="question-meta" id="questionMeta">Question 1 of 60</div>
+      </div>
+      <p class="question-text" id="questionText">Loading question...</p>
+      <div class="time-bar-track">
+        <div class="time-bar-fill" id="timeBarFill"></div>
+      </div>
+    </div>
+
+    <div class="question-image-wrap">
+      <img id="questionImage" src="" alt="Question image" />
+      <div class="image-caption" id="imageCaption"></div>
+    </div>
+
+    <div class="options-grid" id="optionsGrid">
+      <!-- option buttons injected by JS -->
+    </div>
+  </div>
+
+  <div class="quiz-footer">
+    <button class="next-btn" id="nextBtn" disabled>Next</button>
+  </div>
+
+  <!-- Result screen -->
+  <div class="result-screen hidden" id="resultScreen">
+    <div class="result-emoji" id="resultEmoji">🎉</div>
+    <div class="score-circle" id="scoreCircle">0%</div>
+    <h2 id="resultTitle">Quiz Complete</h2>
+    <p id="resultSummary">You answered 0 of 0 correctly.</p>
+    <button class="next-btn" id="restartBtn">Restart Quiz</button>
+  </div>
+
+</div>
+
+<script src="js/scorm-api-wrapper.js"></script>
+<script src="js/quiz-data.js"></script>
+<script src="js/quiz-engine.js"></script>
+</body>
+</html>

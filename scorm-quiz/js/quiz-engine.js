@@ -105,7 +105,7 @@
       var btn = buttons[idx];
       if (!btn) return;
       var optText = q.options[letter] ? text(q.options[letter]) : "";
-      var span = btn.querySelector("span:last-child");
+      var span = btn.querySelector(".option-label") || btn.querySelector("span:last-child");
       if (span) span.textContent = optText;
     });
   }
@@ -116,13 +116,21 @@
     var q = currentQuestion();
 
     optionsGrid.innerHTML = "";
+    var hasImages = !!q.optionImages;
+    optionsGrid.classList.toggle("options-grid-img", hasImages);
     ["A", "B", "C", "D"].forEach(function (letter) {
       if (!q.options[letter]) return;
       var btn = document.createElement("button");
-      btn.className = "option-btn";
+      btn.className = "option-btn" + (hasImages ? " option-btn-img" : "");
       btn.dataset.letter = letter;
-      btn.innerHTML =
-        '<span class="option-letter">' + letter + "</span><span>" + text(q.options[letter]) + "</span>";
+      if (hasImages && q.optionImages[letter]) {
+        btn.innerHTML =
+          '<span class="option-img-wrap"><img class="option-img" src="' + q.optionImages[letter] + '" alt="Option ' + letter + '" /><span class="option-letter option-letter-img">' + letter + '</span></span>' +
+          '<span class="option-label">' + text(q.options[letter]) + "</span>";
+      } else {
+        btn.innerHTML =
+          '<span class="option-letter">' + letter + '</span><span class="option-label">' + text(q.options[letter]) + "</span>";
+      }
       btn.addEventListener("click", function () {
         selectAnswer(letter, btn);
       });

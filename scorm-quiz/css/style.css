@@ -644,6 +644,90 @@ body {
   80% { transform: translateX(5px); }
 }
 
+/* ---------- Image-option grid (picture-answer questions) ---------- */
+.options-grid-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.option-btn-img {
+  flex-direction: column;
+  align-items: stretch;
+  padding: 8px 8px 12px;
+  gap: 8px;
+  min-height: 0;
+  text-align: center;
+}
+
+.option-img-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #EAF2F8;
+}
+
+.option-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.option-btn-img:hover:not(:disabled) .option-img {
+  transform: scale(1.05);
+}
+
+.option-letter-img {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  font-size: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.option-btn-img .option-label {
+  font-size: clamp(13px, 3.4vw, 15px);
+  line-height: 1.35;
+  padding: 0 2px;
+}
+
+.option-btn-img.correct .option-img-wrap::after,
+.option-btn-img.incorrect .option-img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+}
+
+.option-btn-img.correct .option-img-wrap {
+  box-shadow: 0 0 0 3px #16A34A inset;
+}
+
+.option-btn-img.incorrect .option-img-wrap {
+  box-shadow: 0 0 0 3px #FF3D3D inset;
+}
+
+@media (min-width: 992px) {
+  .options-grid-img {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .options-grid-img { gap: 9px; }
+  .option-btn-img { padding: 6px 6px 10px; }
+}
+
 /* ---------- Footer / Next ---------- */
 .quiz-footer {
   display: flex;

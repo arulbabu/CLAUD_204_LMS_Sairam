@@ -9,6 +9,12 @@ var QUIZ_QUESTIONS = [
     },
     image: "assets/images/q1.png",
     imageCaption: "",
+    optionImages: {
+      A: "assets/images/options/q1-A.jpg",
+      B: "assets/images/options/q1-B.jpg",
+      C: "assets/images/options/q1-C.jpg",
+      D: "assets/images/options/q1-D.jpg"
+    },
     options: {
       A: {
         en: "To protect the head from falling or flying objects",
@@ -75,6 +81,12 @@ var QUIZ_QUESTIONS = [
     },
     image: "assets/images/q13.png",
     imageCaption: "",
+    optionImages: {
+      A: "assets/images/options/q13-A.jpg",
+      B: "assets/images/options/q13-B.jpg",
+      C: "assets/images/options/q13-C.jpg",
+      D: "assets/images/options/q13-D.jpg"
+    },
     options: {
       A: {
         en: "One hand, one foot",

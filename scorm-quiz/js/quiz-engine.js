@@ -94,7 +94,17 @@
 
     questionMeta.textContent = "Question " + (currentIndex + 1) + " of " + QUIZ_QUESTIONS.length;
     questionText.textContent = text(q.question);
-    questionImage.src = q.image;
+
+    var imgWrap = questionImage.parentElement;
+    if (q.image) {
+      questionImage.src = q.image;
+      imgWrap.style.display = "";
+      quizBody.classList.remove("no-scene-image");
+    } else {
+      questionImage.removeAttribute("src");
+      imgWrap.style.display = "none";
+      quizBody.classList.add("no-scene-image");
+    }
 
     var captionText = text(q.imageCaption);
     imageCaption.textContent = captionText ? "Visual: " + captionText : "";

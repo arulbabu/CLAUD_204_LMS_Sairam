@@ -1,0 +1,852 @@
+{
+ "1": {
+  "qno": 1,
+  "category": "PPE",
+  "question": "What is the primary purpose of a hard hat on a construction site?",
+  "options": {
+   "A": "To protect the head from falling or flying objects",
+   "B": "To keep the sun off the worker's face",
+   "C": "To identify the worker's department",
+   "D": "To improve ventilation while working"
+  },
+  "correct": "A"
+ },
+ "2": {
+  "qno": 2,
+  "category": "PPE",
+  "question": "Which type of harness must be used for fall-arrest work at height?",
+  "options": {
+   "A": "A single waist belt",
+   "B": "A full-body harness",
+   "C": "A rope tied around the chest",
+   "D": "A weightlifting belt"
+  },
+  "correct": "B"
+ },
+ "3": {
+  "qno": 3,
+  "category": "PPE",
+  "question": "At what continuous noise level should hearing protection be worn on site?",
+  "options": {
+   "A": "Above 85 decibels (8-hour average)",
+   "B": "Above 30 decibels",
+   "C": "Only when using a jackhammer",
+   "D": "Hearing protection is optional on construction sites"
+  },
+  "correct": "A"
+ },
+ "4": {
+  "qno": 4,
+  "category": "PPE",
+  "question": "Which eye protection is correct when using an angle grinder?",
+  "options": {
+   "A": "Regular prescription glasses only",
+   "B": "Safety goggles or a full face shield",
+   "C": "Sunglasses",
+   "D": "No eye protection is needed for short tasks"
+  },
+  "correct": "B"
+ },
+ "5": {
+  "qno": 5,
+  "category": "PPE",
+  "question": "Why do workers wear high-visibility (hi-vis) vests on site?",
+  "options": {
+   "A": "To look fashionable",
+   "B": "To be easily seen by vehicle and equipment operators",
+   "C": "To keep warm in cold weather",
+   "D": "To show seniority on the project"
+  },
+  "correct": "B"
+ },
+ "6": {
+  "qno": 6,
+  "category": "PPE",
+  "question": "Where does Personal Protective Equipment (PPE) sit in the hierarchy of hazard controls?",
+  "options": {
+   "A": "The first and most effective control",
+   "B": "The last line of defense, used after other controls",
+   "C": "PPE replaces the need for engineering controls",
+   "D": "PPE is only needed if a supervisor is watching"
+  },
+  "correct": "B"
+ },
+ "7": {
+  "qno": 7,
+  "category": "PPE",
+  "question": "What is the main protection offered by steel-toe / safety boots?",
+  "options": {
+   "A": "Protection from falling or rolling heavy objects onto the foot",
+   "B": "Making the worker taller",
+   "C": "Keeping feet cool in summer",
+   "D": "Improving running speed"
+  },
+  "correct": "A"
+ },
+ "8": {
+  "qno": 8,
+  "category": "PPE",
+  "question": "When should a respirator (e.g., N95 mask) be used on site?",
+  "options": {
+   "A": "Only if the worker personally feels like it",
+   "B": "When working in dusty, fume-laden or hazardous atmospheres",
+   "C": "Only during lunch break",
+   "D": "Never — masks are not required in construction"
+  },
+  "correct": "B"
+ },
+ "9": {
+  "qno": 9,
+  "category": "PPE",
+  "question": "On a full-body harness, where is the main D-ring for fall arrest normally located?",
+  "options": {
+   "A": "On the front of the chest only",
+   "B": "On the back, between the shoulder blades (dorsal D-ring)",
+   "C": "On the side of the hip",
+   "D": "On top of the hard hat"
+  },
+  "correct": "B"
+ },
+ "10": {
+  "qno": 10,
+  "category": "Work at Height",
+  "question": "When placing an extension ladder against a wall, what is the safe angle (the 4:1 rule)?",
+  "options": {
+   "A": "About 45 degrees",
+   "B": "About 75 degrees (1 foot out for every 4 feet of height)",
+   "C": "Completely vertical (90 degrees)",
+   "D": "Any angle is fine as long as it touches the wall"
+  },
+  "correct": "B"
+ },
+ "11": {
+  "qno": 11,
+  "category": "Work at Height",
+  "question": "What is the minimum standard height for a scaffold top guardrail?",
+  "options": {
+   "A": "Around 1.0–1.1 m (about 42 inches) above the platform",
+   "B": "15 cm (ankle height)",
+   "C": "Guardrails are optional if the scaffold is low",
+   "D": "2.5 cm (a thin rope only)"
+  },
+  "correct": "A"
+ },
+ "12": {
+  "qno": 12,
+  "category": "Work at Height",
+  "question": "Above what typical height must workers use fall-protection equipment (harness, guardrails, or nets)?",
+  "options": {
+   "A": "About 1.8 m / 6 feet or higher above a lower level",
+   "B": "Only above 30 m",
+   "C": "Fall protection is never required outdoors",
+   "D": "Only when a supervisor happens to be watching"
+  },
+  "correct": "A"
+ },
+ "13": {
+  "qno": 13,
+  "category": "Work at Height",
+  "question": "How many points of contact should a worker maintain while climbing a ladder?",
+  "options": {
+   "A": "One hand, one foot",
+   "B": "Three points of contact at all times (two hands + one foot, or two feet + one hand)",
+   "C": "It doesn't matter as long as you climb fast",
+   "D": "Zero — you can carry tools in both hands while climbing"
+  },
+  "correct": "B"
+ },
+ "14": {
+  "qno": 14,
+  "category": "Work at Height",
+  "question": "What should a worker never do while standing on a ladder?",
+  "options": {
+   "A": "Keep both feet on the same rung, facing the ladder",
+   "B": "Overreach sideways or lean far off the ladder's centerline",
+   "C": "Wear a tool belt",
+   "D": "Keep three points of contact"
+  },
+  "correct": "B"
+ },
+ "15": {
+  "qno": 15,
+  "category": "Work at Height",
+  "question": "When are safety nets typically used on a construction site?",
+  "options": {
+   "A": "As decoration around the site fence",
+   "B": "As a fall-arrest system when guardrails or travel restraint are not practical",
+   "C": "Only to store tools overnight",
+   "D": "To replace the need for any other fall protection everywhere"
+  },
+  "correct": "B"
+ },
+ "16": {
+  "qno": 16,
+  "category": "Work at Height",
+  "question": "What load must a fall-arrest anchor point be rated to support per attached worker?",
+  "options": {
+   "A": "About 5,000 lbs (22 kN), or an engineered system with a safety factor of two",
+   "B": "50 lbs — any small hook will do",
+   "C": "Anchor strength does not matter",
+   "D": "Only as much as the worker's own body weight, no more"
+  },
+  "correct": "A"
+ },
+ "17": {
+  "qno": 17,
+  "category": "Work at Height",
+  "question": "How often should a scaffold be inspected?",
+  "options": {
+   "A": "Once, when it is first built, and never again",
+   "B": "Before each work shift and after any alteration or severe weather",
+   "C": "Only if it visibly collapses",
+   "D": "Once a year regardless of use"
+  },
+  "correct": "B"
+ },
+ "18": {
+  "qno": 18,
+  "category": "Work at Height",
+  "question": "What is the purpose of a toe board on a scaffold platform?",
+  "options": {
+   "A": "To decorate the scaffold edge",
+   "B": "To prevent tools and materials from falling off the platform edge",
+   "C": "To act as a handrail for climbing",
+   "D": "To increase the scaffold's height"
+  },
+  "correct": "B"
+ },
+ "19": {
+  "qno": 19,
+  "category": "Tools Handling",
+  "question": "What should a worker do if a power tool's safety guard is in the way?",
+  "options": {
+   "A": "Remove the guard to work faster",
+   "B": "Never remove the guard — report the issue if it interferes with the task",
+   "C": "Tape the guard down",
+   "D": "Use the tool only at night without the guard"
+  },
+  "correct": "B"
+ },
+ "20": {
+  "qno": 20,
+  "category": "Tools Handling",
+  "question": "What must be checked before using any electrical hand tool?",
+  "options": {
+   "A": "Nothing — just plug it in and go",
+   "B": "The cord, plug and casing for damage or exposed wires",
+   "C": "Only the color of the tool",
+   "D": "Only that the tool is the newest model"
+  },
+  "correct": "B"
+ },
+ "21": {
+  "qno": 21,
+  "category": "Tools Handling",
+  "question": "What is the correct way to bring tools up a ladder?",
+  "options": {
+   "A": "Carry them in one hand while climbing",
+   "B": "Use a tool belt, pouch, or hoist line, keeping both hands free to climb",
+   "C": "Throw them up to a co-worker",
+   "D": "Hold them in your teeth"
+  },
+  "correct": "B"
+ },
+ "22": {
+  "qno": 22,
+  "category": "Tools Handling",
+  "question": "Before using an angle grinder, what must be verified?",
+  "options": {
+   "A": "That the disc matches the tool's rated speed and the guard is fitted",
+   "B": "That the disc is any size that fits by force",
+   "C": "That the operator is wearing sandals",
+   "D": "That the guard has been removed for a clear view"
+  },
+  "correct": "A"
+ },
+ "23": {
+  "qno": 23,
+  "category": "Tools Handling",
+  "question": "What should compressed air never be used for on site?",
+  "options": {
+   "A": "Cleaning debris from machinery, per equipment manual",
+   "B": "Blowing dust or dirt off a worker's clothing or skin",
+   "C": "Inflating tires to the rated pressure",
+   "D": "Powering pneumatic tools"
+  },
+  "correct": "B"
+ },
+ "24": {
+  "qno": 24,
+  "category": "Tools Handling",
+  "question": "How should electrical extension cords be used on a construction site?",
+  "options": {
+   "A": "Daisy-chained (plugged into each other) indefinitely",
+   "B": "Rated for the load, inspected, and not daisy-chained or run through water",
+   "C": "Left submerged in puddles if needed",
+   "D": "Any household cord will do for heavy tools"
+  },
+  "correct": "B"
+ },
+ "25": {
+  "qno": 25,
+  "category": "Tools Handling",
+  "question": "What should be done with a damaged or malfunctioning tool?",
+  "options": {
+   "A": "Keep using it carefully until it fully breaks",
+   "B": "Tag it 'Do Not Use' and remove it from service immediately",
+   "C": "Hide it so no one asks questions",
+   "D": "Pass it to a new worker without mentioning the fault"
+  },
+  "correct": "B"
+ },
+ "26": {
+  "qno": 26,
+  "category": "Electrical",
+  "question": "What is the minimum safe clearance distance for equipment working near overhead power lines (up to 50kV)?",
+  "options": {
+   "A": "About 3 m / 10 feet",
+   "B": "30 cm / 1 foot",
+   "C": "No clearance is required if the operator is careful",
+   "D": "Only 1 m is enough for any voltage"
+  },
+  "correct": "A"
+ },
+ "27": {
+  "qno": 27,
+  "category": "Electrical",
+  "question": "Is it safe to operate electrical tools with wet hands or in standing water?",
+  "options": {
+   "A": "Yes, as long as you work quickly",
+   "B": "No — never operate electrical equipment with wet hands or in water",
+   "C": "Yes, if the tool looks new",
+   "D": "Only during rainy season"
+  },
+  "correct": "B"
+ },
+ "28": {
+  "qno": 28,
+  "category": "Electrical",
+  "question": "What is Lockout-Tagout (LOTO) used for?",
+  "options": {
+   "A": "Locking a storage container",
+   "B": "De-energizing and isolating equipment before maintenance or repair",
+   "C": "Tagging tools with the owner's name",
+   "D": "Locking the site gate at night"
+  },
+  "correct": "B"
+ },
+ "29": {
+  "qno": 29,
+  "category": "Electrical",
+  "question": "What does a Ground Fault Circuit Interrupter (GFCI) protect against?",
+  "options": {
+   "A": "Electric shock, by cutting power when current leakage is detected",
+   "B": "Rust on metal tools",
+   "C": "Overheating of concrete",
+   "D": "Dust build-up in generators"
+  },
+  "correct": "A"
+ },
+ "30": {
+  "qno": 30,
+  "category": "Electrical",
+  "question": "What should a worker do if they find a damaged electrical cable on site?",
+  "options": {
+   "A": "Repair it with tape and keep using it",
+   "B": "Report it, isolate/de-energize it, and have it replaced by a qualified person",
+   "C": "Ignore it if it still seems to work",
+   "D": "Step over it carefully and continue"
+  },
+  "correct": "B"
+ },
+ "31": {
+  "qno": 31,
+  "category": "Electrical",
+  "question": "Who is permitted to work on a live (energized) electrical panel?",
+  "options": {
+   "A": "Any worker who feels confident",
+   "B": "Only an authorized, qualified electrician following proper safety procedure",
+   "C": "Any supervisor, regardless of training",
+   "D": "New workers, as on-the-job training"
+  },
+  "correct": "B"
+ },
+ "32": {
+  "qno": 32,
+  "category": "Electrical",
+  "question": "How should temporary electrical wiring be routed on a construction site?",
+  "options": {
+   "A": "Across walkways where people will trip on it",
+   "B": "Overhead or protected/covered, kept clear of walkways and water",
+   "C": "Through standing water for a shortcut",
+   "D": "Loosely coiled in the mud"
+  },
+  "correct": "B"
+ },
+ "33": {
+  "qno": 33,
+  "category": "Scaffolding",
+  "question": "What must a scaffold's base rest on?",
+  "options": {
+   "A": "Loose soil with no support",
+   "B": "A level, sound footing such as base plates or mud sills",
+   "C": "Stacked bricks that are not fixed",
+   "D": "Anything available, stability doesn't matter"
+  },
+  "correct": "B"
+ },
+ "34": {
+  "qno": 34,
+  "category": "Scaffolding",
+  "question": "What happens if a scaffold's rated load capacity is exceeded?",
+  "options": {
+   "A": "Nothing, capacity ratings are only a guideline",
+   "B": "It risks structural failure or collapse",
+   "C": "The scaffold automatically gets stronger",
+   "D": "It only matters for scaffolds above 50 storeys"
+  },
+  "correct": "B"
+ },
+ "35": {
+  "qno": 35,
+  "category": "Scaffolding",
+  "question": "Who is authorized to erect, alter, or dismantle a scaffold?",
+  "options": {
+   "A": "Any available worker",
+   "B": "A trained and designated competent person",
+   "C": "Only the site security guard",
+   "D": "Whoever arrives first that morning"
+  },
+  "correct": "B"
+ },
+ "36": {
+  "qno": 36,
+  "category": "Scaffolding",
+  "question": "What is required for a scaffold platform's decking/planking?",
+  "options": {
+   "A": "It can have large gaps, as long as most of it is covered",
+   "B": "It must be fully planked/decked with no dangerous gaps",
+   "C": "Only half the platform needs boards",
+   "D": "Loose boards resting unsecured are fine"
+  },
+  "correct": "B"
+ },
+ "37": {
+  "qno": 37,
+  "category": "Scaffolding",
+  "question": "What should a worker do if they notice a scaffold is missing a guardrail?",
+  "options": {
+   "A": "Use it anyway and be extra careful",
+   "B": "Not use it, and report it immediately to a supervisor for repair",
+   "C": "Add a rope themselves and continue",
+   "D": "Only avoid the exact missing section"
+  },
+  "correct": "B"
+ },
+ "38": {
+  "qno": 38,
+  "category": "Excavation",
+  "question": "At what trench depth is a protective system (sloping, shoring, or shielding) generally required?",
+  "options": {
+   "A": "5 feet (1.5 m) or deeper",
+   "B": "Only below 50 feet",
+   "C": "Protective systems are never required for trenches",
+   "D": "Only if it is raining"
+  },
+  "correct": "A"
+ },
+ "39": {
+  "qno": 39,
+  "category": "Excavation",
+  "question": "How far back from a trench edge should excavated soil (spoil) be placed?",
+  "options": {
+   "A": "At least 2 feet (0.6 m) back from the edge",
+   "B": "Right at the very edge",
+   "C": "Distance doesn't matter",
+   "D": "Only 2 inches back is enough"
+  },
+  "correct": "A"
+ },
+ "40": {
+  "qno": 40,
+  "category": "Excavation",
+  "question": "Which of these is NOT a recognized trench protective system?",
+  "options": {
+   "A": "Sloping the trench walls",
+   "B": "Shoring the trench walls",
+   "C": "Using a trench box/shield",
+   "D": "Standing a worker at the bottom to hold the walls by hand"
+  },
+  "correct": "D"
+ },
+ "41": {
+  "qno": 41,
+  "category": "Excavation",
+  "question": "What must be done before starting any excavation work?",
+  "options": {
+   "A": "Identify and mark underground utilities (gas, electric, water lines)",
+   "B": "Just start digging and see what's there",
+   "C": "Excavation planning is only needed for very large sites",
+   "D": "Ask a passerby if they know what's underground"
+  },
+  "correct": "A"
+ },
+ "42": {
+  "qno": 42,
+  "category": "Excavation",
+  "question": "Why might a deep trench need atmospheric (gas) testing before entry?",
+  "options": {
+   "A": "Hazardous or oxygen-deficient gases can accumulate in deep or enclosed excavations",
+   "B": "To check if it's a good place for lunch",
+   "C": "Gas testing is never needed in trenches",
+   "D": "Only needed if the trench has a paint smell"
+  },
+  "correct": "A"
+ },
+ "43": {
+  "qno": 43,
+  "category": "Civil",
+  "question": "What must be done to protruding reinforcement (rebar) ends on a site?",
+  "options": {
+   "A": "Leave them exposed and sharp",
+   "B": "Cap them with rebar caps or protective covers to prevent impalement injuries",
+   "C": "Bend them flat only if convenient",
+   "D": "Mark them with tape only, no cap needed"
+  },
+  "correct": "B"
+ },
+ "44": {
+  "qno": 44,
+  "category": "Civil",
+  "question": "When can formwork/shuttering be safely removed from a concrete structure?",
+  "options": {
+   "A": "As soon as the concrete looks dry on the surface",
+   "B": "Only after the concrete has reached adequate strength, per the engineer's schedule",
+   "C": "Whenever it's convenient for the schedule",
+   "D": "Immediately after pouring, to save time"
+  },
+  "correct": "B"
+ },
+ "45": {
+  "qno": 45,
+  "category": "Civil",
+  "question": "What is essential before starting demolition work on a structure?",
+  "options": {
+   "A": "A pre-demolition survey and an approved method statement/sequence",
+   "B": "Just start from the top and knock it down randomly",
+   "C": "No planning is required for small structures",
+   "D": "Only the machine operator's personal judgement"
+  },
+  "correct": "A"
+ },
+ "46": {
+  "qno": 46,
+  "category": "Civil",
+  "question": "What is a key hazard when operating a concrete pump line/hose?",
+  "options": {
+   "A": "The hose whipping or the line blocking/bursting under pressure",
+   "B": "The concrete being too colorful",
+   "C": "The pump being too quiet",
+   "D": "There are no hazards with concrete pump hoses"
+  },
+  "correct": "A"
+ },
+ "47": {
+  "qno": 47,
+  "category": "Civil",
+  "question": "What should be limited when stacking bricks, blocks, or masonry units on site?",
+  "options": {
+   "A": "The stacking height, to prevent the stack from toppling",
+   "B": "Nothing — stack as high as physically possible",
+   "C": "Only the color of the bricks used",
+   "D": "The stacking pattern, but not the height"
+  },
+  "correct": "A"
+ },
+ "48": {
+  "qno": 48,
+  "category": "Civil",
+  "question": "What precaution is needed for a newly built, unsupported freestanding masonry wall?",
+  "options": {
+   "A": "Temporary bracing/propping until it gains adequate strength or is tied into the structure",
+   "B": "No precaution needed once the mortar looks dry",
+   "C": "Push against it to test its strength",
+   "D": "Leave it exposed to strong wind with no support"
+  },
+  "correct": "A"
+ },
+ "49": {
+  "qno": 49,
+  "category": "Fire Safety",
+  "question": "Which fire extinguisher class is designed for ordinary combustibles like wood and paper?",
+  "options": {
+   "A": "Class A",
+   "B": "Class C",
+   "C": "Class D",
+   "D": "Class K"
+  },
+  "correct": "A"
+ },
+ "50": {
+  "qno": 50,
+  "category": "Fire Safety",
+  "question": "Which fire extinguisher type is safe to use on an electrical fire?",
+  "options": {
+   "A": "A Class C (non-conductive agent) extinguisher",
+   "B": "A plain water extinguisher",
+   "C": "Any extinguisher works the same on electrical fires",
+   "D": "Throwing water directly on the panel"
+  },
+  "correct": "A"
+ },
+ "51": {
+  "qno": 51,
+  "category": "Fire Safety",
+  "question": "What does the 'PASS' technique for using a fire extinguisher stand for?",
+  "options": {
+   "A": "Pull, Aim, Squeeze, Sweep",
+   "B": "Push, Alarm, Stop, Shout",
+   "C": "Point, Activate, Spray, Stand-by",
+   "D": "Pull, Alert, Spray, Stop"
+  },
+  "correct": "A"
+ },
+ "52": {
+  "qno": 52,
+  "category": "Fire Safety",
+  "question": "How should flammable materials (fuel, solvents, gas cylinders) be stored on site?",
+  "options": {
+   "A": "In a ventilated area/cabinet, away from ignition sources and heat",
+   "B": "Stacked next to the welding/grinding area",
+   "C": "Inside the site office next to heaters",
+   "D": "Storage location doesn't matter as long as it's labeled"
+  },
+  "correct": "A"
+ },
+ "53": {
+  "qno": 53,
+  "category": "Fire Safety",
+  "question": "During a site fire evacuation, what should workers avoid using?",
+  "options": {
+   "A": "The marked emergency exit stairs",
+   "B": "Elevators/lifts",
+   "C": "The muster/assembly point",
+   "D": "The site's fire alarm"
+  },
+  "correct": "B"
+ },
+ "54": {
+  "qno": 54,
+  "category": "Crane & Rigging",
+  "question": "Is it ever safe to stand or walk beneath a suspended (crane-lifted) load?",
+  "options": {
+   "A": "No — never stand or walk under a suspended load",
+   "B": "Yes, briefly, if you move quickly",
+   "C": "Yes, if the crane operator waves you through",
+   "D": "Yes, as long as you're wearing a hard hat"
+  },
+  "correct": "A"
+ },
+ "55": {
+  "qno": 55,
+  "category": "Crane & Rigging",
+  "question": "What is the purpose of a tag line attached to a suspended load?",
+  "options": {
+   "A": "To help control the load's rotation and swing from the ground",
+   "B": "To decorate the load for visibility",
+   "C": "To measure the load's weight",
+   "D": "To power the crane's hydraulics"
+  },
+  "correct": "A"
+ },
+ "56": {
+  "qno": 56,
+  "category": "Crane & Rigging",
+  "question": "What must be checked before a crane lift begins?",
+  "options": {
+   "A": "Rigging/slings condition and the load chart for capacity vs. lift weight/radius",
+   "B": "Only that the crane is painted the right color",
+   "C": "Nothing — the operator can judge it by eye",
+   "D": "Only the time of day"
+  },
+  "correct": "A"
+ },
+ "57": {
+  "qno": 57,
+  "category": "Crane & Rigging",
+  "question": "Who should direct a crane operator when the load path is not fully visible?",
+  "options": {
+   "A": "A trained, designated signal person using standard hand signals or radio",
+   "B": "Any bystander who happens to be nearby",
+   "C": "No one — the operator should guess",
+   "D": "The load itself, since it can't move on its own"
+  },
+  "correct": "A"
+ },
+ "58": {
+  "qno": 58,
+  "category": "Crane & Rigging",
+  "question": "What is the correct manual lifting technique for a heavy object?",
+  "options": {
+   "A": "Bend the knees, keep the back straight, and hold the load close to the body",
+   "B": "Bend at the waist with straight legs and lift far from the body",
+   "C": "Twist the spine while lifting to save time",
+   "D": "Lift with one hand while the other holds a phone"
+  },
+  "correct": "A"
+ },
+ "59": {
+  "qno": 59,
+  "category": "General EHS",
+  "question": "What kind of tasks typically require a formal 'Permit to Work' before starting?",
+  "options": {
+   "A": "High-risk activities such as hot work, confined-space entry, or work at height",
+   "B": "Any activity, no matter how minor, including a coffee break",
+   "C": "Permits are never used in construction",
+   "D": "Only tasks the supervisor personally dislikes"
+  },
+  "correct": "A"
+ },
+ "60": {
+  "qno": 60,
+  "category": "General EHS",
+  "question": "Why is it important to report a near-miss, even if no one was injured?",
+  "options": {
+   "A": "It helps identify and fix hazards before they cause a real injury",
+   "B": "It's just paperwork with no real value",
+   "C": "Only injuries need to be reported, near-misses don't matter",
+   "D": "Reporting a near-miss will always result in punishment, so it should be avoided"
+  },
+  "correct": "A"
+ },
+ "61": {
+  "sheet": "Health",
+  "question": "How can a worker get Leptospirosis?",
+  "options": {
+   "A": "By breathing fresh air",
+   "B": "Contact with water or soil contaminated by animal urine",
+   "C": "By wearing PPE",
+   "D": "By drinking clean water"
+  },
+  "correct": "B",
+  "qno": 61,
+  "category": "Health"
+ },
+ "62": {
+  "sheet": "Health",
+  "question": "Which workers are at higher risk of Leptospirosis?",
+  "options": {
+   "A": "Office staff only",
+   "B": "Workers involved in excavation, tunneling, drainage, and waterlogged areas",
+   "C": "Drivers only",
+   "D": "Visitors"
+  },
+  "correct": "B",
+  "qno": 62,
+  "category": "Health"
+ },
+ "63": {
+  "sheet": "Health",
+  "question": "If a worker experiences Vertigo while working at height, what should they do?",
+  "options": {
+   "A": "Continue working",
+   "B": "Stop work immediately and inform the supervisor",
+   "C": "Run downstairs quickly",
+   "D": "Ignore the symptoms"
+  },
+  "correct": "B",
+  "qno": 63,
+  "category": "Health"
+ },
+ "64": {
+  "sheet": "Health",
+  "question": "A worker reports a spinning sensation while climbing scaffolding. What should be done first?",
+  "options": {
+   "A": "Encourage him to finish the task",
+   "B": "Stop work and arrange medical evaluation immediately",
+   "C": "Ignore it if he feels better",
+   "D": "Transfer him to another scaffold"
+  },
+  "correct": "B",
+  "qno": 64,
+  "category": "Health"
+ },
+ "65": {
+  "sheet": "Health",
+  "question": "What can happen if a worker does not get enough sleep?",
+  "options": {
+   "A": "Better performance",
+   "B": "Fatigue, poor concentration, and increased accident risk",
+   "C": "Increased strength",
+   "D": "Faster work completion"
+  },
+  "correct": "B",
+  "qno": 65,
+  "category": "Health"
+ },
+ "66": {
+  "sheet": "Health",
+  "question": "Why should alcohol or drugs never be consumed before work?",
+  "options": {
+   "A": "It increases expenses",
+   "B": "It affects judgment, reaction time, and safety",
+   "C": "It causes thirst",
+   "D": "It affects attendance only"
+  },
+  "correct": "B",
+  "qno": 66,
+  "category": "Health"
+ },
+ "67": {
+  "sheet": "Health",
+  "question": "Why is hand washing important before eating?",
+  "options": {
+   "A": "To save water",
+   "B": "To prevent infections and diseases",
+   "C": "To cool the body",
+   "D": "To improve appetite"
+  },
+  "correct": "B",
+  "qno": 67,
+  "category": "Health"
+ },
+ "68": {
+  "sheet": "LSR",
+  "question": "Which is a Line of Fire hazard?",
+  "options": {
+   "A": "Repairing the Machines",
+   "B": "Standing in front of moving equipment",
+   "C": "Working near Hotwork",
+   "D": "Working without PPE"
+  },
+  "correct": "B",
+  "qno": 68,
+  "category": "Life Saving Rules"
+ },
+ "69": {
+  "sheet": "LSR",
+  "question": "When working at height, what is mandatory?",
+  "options": {
+   "A": "Safety shoes only",
+   "B": "Full body harness with 100% tie-off",
+   "C": "Gloves only",
+   "D": "Reflective vest only"
+  },
+  "correct": "B",
+  "qno": 69,
+  "category": "Life Saving Rules"
+ },
+ "70": {
+  "sheet": "LSR",
+  "question": "Can you remove a machine guard without authorization?",
+  "options": {
+   "A": "Yes",
+   "B": "Yes, if experienced",
+   "C": "No, authorization is required",
+   "D": "Only during emergency"
+  },
+  "correct": "C",
+  "qno": 70,
+  "category": "Life Saving Rules"
+ }
+}

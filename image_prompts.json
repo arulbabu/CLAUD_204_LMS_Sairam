@@ -1,0 +1,176 @@
+{
+ "style_prefix": "Photorealistic candid photo on an Indian construction site, documentary style, natural daylight, realistic PPE and equipment detail. ",
+ "style_suffix": " Clean composition, single clear subject, no text, no captions, no watermarks, no arrows, no icons, no illustration elements.",
+ "questions": {
+  "2": {
+   "A": "A simple narrow leather waist belt with a metal buckle lying on a wooden site table, construction tools in background — a plain single waist belt only, no shoulder or leg straps.",
+   "B": "An Indian construction worker wearing a complete full-body safety harness with shoulder straps, chest strap, thigh straps and a steel dorsal D-ring on the upper back, standing on site, front three-quarter view.",
+   "C": "An Indian construction worker with a thick rough manila rope tied in a crude knot around his chest over his shirt, standing on a construction site — improvised and unsafe.",
+   "D": "A wide black leather gym weightlifting belt with velcro and buckle lying on a site bench — a gym accessory, clearly not fall-protection equipment."
+  },
+  "4": {
+   "A": "Close-up of ordinary thin prescription reading glasses with slim frames on an Indian worker's face, orange grinding sparks flying nearby, the small lenses clearly leaving the sides of the eyes exposed.",
+   "B": "An Indian worker wearing sealed chemical-splash safety goggles plus a clear polycarbonate full face shield over them, bright grinder sparks bouncing harmlessly off the shield.",
+   "C": "An Indian worker wearing dark fashion sunglasses on a construction site while orange sparks from an angle grinder fly around his unprotected face.",
+   "D": "An Indian worker grinding steel with an angle grinder with completely bare eyes, no eyewear at all, squinting as bright sparks fly directly toward his face."
+  },
+  "9": {
+   "A": "Close-up of a full-body safety harness worn by an Indian worker, front view, showing a steel D-ring mounted on the front chest strap at sternum level.",
+   "B": "Rear view close-up of a full-body safety harness on an Indian worker, showing the steel dorsal D-ring positioned on the upper back between the shoulder blades with a lanyard clipped to it.",
+   "C": "Side view of a full-body safety harness on an Indian worker showing a steel D-ring mounted at the side of the hip on the waist belt.",
+   "D": "An Indian construction worker's white hard hat with a steel D-ring absurdly bolted to the very top of the helmet shell, close-up."
+  },
+  "10": {
+   "A": "A long aluminium extension ladder leaning against a tall brick wall at a very shallow flat angle of about 45 degrees, its base pulled far away from the wall, on a construction site.",
+   "B": "A long aluminium extension ladder leaning against a tall brick wall at the correct steep climbing angle of about 75 degrees, base one quarter of the height away from the wall, an Indian worker holding the base steady.",
+   "C": "A long aluminium extension ladder standing almost perfectly vertical, pressed flat at 90 degrees against a tall brick wall, looking unstable and about to tip backward.",
+   "D": "An aluminium extension ladder carelessly thrown against a wall at an awkward crooked sideways angle, one foot off the ground, clearly placed with no measurement at all."
+  },
+  "11": {
+   "A": "A scaffold working platform with a proper steel top guardrail at waist height (about 1 metre above the deck) plus a midrail and toe board, an Indian worker standing safely behind it.",
+   "B": "A scaffold working platform edge with only a tiny steel rail running at ankle height, an Indian worker standing beside it, the open drop clearly visible above the useless low rail.",
+   "C": "A scaffold working platform with a completely open unguarded edge, no guardrail at all, an Indian worker standing near the exposed drop.",
+   "D": "A scaffold platform edge with only a single thin sagging nylon rope stretched loosely between posts as the only barrier, clearly flimsy."
+  },
+  "18": {
+   "A": "A scaffold platform edge fitted with a decorative painted wooden trim strip in bright festival colours, purely cosmetic, on an Indian construction site.",
+   "B": "Close-up of a scaffold platform edge with a proper timber toe board along the deck edge, a steel wrench resting against the inside of the board which stops it sliding off the edge.",
+   "C": "An Indian worker climbing the outside of a scaffold gripping the low timber toe board at platform-edge level like a handhold, clearly misusing it.",
+   "D": "A scaffold platform where several timber toe boards are stacked flat on top of each other in the middle of the deck like height-boosting blocks, a worker about to step on the unstable stack."
+  },
+  "21": {
+   "A": "An Indian worker climbing a ladder awkwardly with a heavy power drill clutched in one hand, only one hand gripping the rung, body off balance.",
+   "B": "An Indian worker climbing a ladder correctly with both hands on the side rails, his hammer, screwdrivers and spanners neatly secured in a leather tool belt pouch at his waist.",
+   "C": "One Indian worker at the bottom of a ladder throwing a hammer up through the air toward a second worker who leans off the ladder trying to catch it.",
+   "D": "An Indian worker climbing a ladder with a long screwdriver clenched between his teeth, both this dangerous and absurd, close view of his strained face."
+  },
+  "22": {
+   "A": "An Indian worker holding an angle grinder, carefully comparing the new cutting disc against the tool before fitting, the metal wheel guard properly mounted on the grinder.",
+   "B": "An Indian worker forcing an oversized cutting disc that is too large onto a small angle grinder spindle, the disc overhanging badly, no guard fitted.",
+   "C": "Low angle photo of an Indian worker's feet wearing open rubber sandals right next to a running angle grinder on the ground, sparks flying near his exposed toes.",
+   "D": "An angle grinder being used with its wheel guard removed completely, the spinning disc fully exposed, stream of orange sparks flying straight at the operator."
+  },
+  "23": {
+   "A": "An Indian maintenance worker using a compressed-air nozzle to blow dust and metal shavings out of an open machine housing, debris flying away from him.",
+   "B": "An Indian worker pointing a compressed-air gun directly at a co-worker's dusty shirt and bare forearm at close range, dust blasting off the clothing onto skin — dangerous misuse.",
+   "C": "An Indian worker inflating a large truck tyre with an air hose while watching the pressure gauge in his other hand.",
+   "D": "A pneumatic nail gun connected to a coiled yellow air hose being used normally by an Indian worker on timber formwork."
+  },
+  "24": {
+   "A": "Three cheap thin extension cords plugged into each other end-to-end in a long daisy chain, connectors lying in mud across an Indian construction site.",
+   "B": "A single heavy-duty industrial yellow extension cord, neatly routed and elevated off the ground on insulated hooks along a dry wall, powering one tool, inspection tag on the plug.",
+   "C": "An orange extension cord with its joint connector lying submerged in a muddy rainwater puddle on a construction site, still plugged in.",
+   "D": "A flimsy thin white household two-pin extension cord powering a huge heavy-duty concrete cutting saw on a construction site, cord visibly too light for the machine."
+  },
+  "28": {
+   "A": "A brass padlock locking the hasp of a corrugated steel storage shed door on a construction site, tools visible through the gap.",
+   "B": "Close-up of an electrical isolator switch on an industrial panel locked in the OFF position with a red safety padlock and a bright red-and-white danger tag hanging from it, maintenance tools nearby.",
+   "C": "A handwritten name label tied with string to the handle of a steel toolbox on a site workbench.",
+   "D": "A heavy chain and padlock securing the main steel entrance gate of a construction site at dusk, site boards visible."
+  },
+  "32": {
+   "A": "A black electrical cable stretched tight across a busy construction site walkway at ankle height, workers' boots about to catch on it — obvious trip hazard.",
+   "B": "Temporary site power cables routed neatly overhead on tall yellow insulated stands above a walkway, completely clear of foot traffic, dry ground below.",
+   "C": "An electrical power cable running directly through a long muddy rainwater puddle on a construction site, half submerged.",
+   "D": "A long electrical cable left loosely coiled in sticky wet mud near a site entrance, connectors buried in the dirt."
+  },
+  "33": {
+   "A": "A steel scaffold standard (vertical leg) sinking and tilting into loose soft excavated soil with no support plate, visibly unstable.",
+   "B": "A steel scaffold leg standing on a square steel base plate centred on a solid timber mud sill board, on firm level ground — textbook correct footing.",
+   "C": "A steel scaffold leg balanced on a wobbly stack of loose red bricks, bricks misaligned, clearly makeshift and dangerous.",
+   "D": "A steel scaffold leg propped on random construction debris — broken concrete chunks and a bent metal sheet — on uneven ground."
+  },
+  "36": {
+   "A": "A scaffold working platform with wide open gaps between scattered planks, the drop to the ground visible through the gaps.",
+   "B": "A scaffold working platform fully decked with tight-fitting timber planks edge to edge, no gaps, secured with couplers, an Indian worker standing on it confidently.",
+   "C": "A scaffold platform with planks covering only one half of the frame, the other half completely open bare steel tubes.",
+   "D": "Loose unsecured scaffold planks sliding apart under an Indian worker's boot as he steps on them, planks skewed at angles."
+  },
+  "40": {
+   "A": "A wide excavation trench on an Indian site with both walls cut back at a gentle safe slope angle, benched steps of soil, workers visible at the bottom.",
+   "B": "A trench with vertical walls supported by hydraulic aluminium shoring struts braced between both faces at regular intervals.",
+   "C": "A deep trench with a heavy steel trench box shield installed, workers working safely inside the protected steel enclosure.",
+   "D": "An Indian worker standing at the bottom of a deep trench pressing his bare hands flat against the raw earth wall as if holding it up — absurd and extremely unsafe."
+  },
+  "43": {
+   "A": "A row of exposed vertical steel rebar ends protruding from a concrete foundation, tips bare, sharp and rusty at waist height — impalement hazard.",
+   "B": "A row of vertical steel rebar ends each fitted with a bright orange plastic mushroom safety cap, neat and uniform on an Indian construction site.",
+   "C": "A row of rebar ends where only two or three bars are crudely bent over sideways and the rest still stand sharp and exposed.",
+   "D": "Vertical rebar ends wrapped with a few thin loose turns of red-white striped warning tape only, sharp tips still visible through the tape."
+  },
+  "52": {
+   "A": "A yellow ventilated steel flammable-liquids storage cabinet with louvred vents standing in an open shaded area of a construction site, far from any work activity, LPG cylinders chained upright beside it.",
+   "B": "Red diesel jerry cans and an LPG cylinder stacked directly beside an active welding station with bright sparks showering over them — extremely dangerous.",
+   "C": "Petrol cans and paint thinner bottles stored inside a cramped site office cabin right next to a glowing electric room heater.",
+   "D": "Fuel drums and solvent cans dumped unorganised in a dark unventilated storeroom corner, one drum leaking onto the floor."
+  },
+  "53": {
+   "A": "Indian workers calmly walking down a wide concrete emergency exit staircase in single file during a site evacuation drill, green exit signage visible above.",
+   "B": "A construction site material hoist / elevator with its doors standing open, smoke haze in the air, completely empty as evacuating workers walk past it toward the stairs.",
+   "C": "A group of Indian construction workers gathered in orderly rows at an open-air assembly area on site, supervisor counting heads on a clipboard.",
+   "D": "An Indian worker's hand pulling down the lever of a red wall-mounted fire alarm call point on a site wall."
+  },
+  "54": {
+   "A": "A crane lifting a bundle of steel beams high overhead while the ground area directly beneath is cordoned off with red-and-white barrier tape and cones, all workers standing well outside the zone.",
+   "B": "An Indian worker sprinting directly underneath a large concrete block suspended from a crane hook, load hanging right above his head.",
+   "C": "A crane operator leaning from his cab window waving a worker to walk through underneath the suspended load above.",
+   "D": "An Indian worker standing calmly directly below a huge suspended steel load, pointing at his yellow hard hat as if it protects him."
+  },
+  "58": {
+   "A": "An Indian worker lifting a heavy cement bag correctly: knees deeply bent, back straight and upright, bag held close against his torso, squatting form.",
+   "B": "An Indian worker lifting a heavy cement bag dangerously: legs locked straight, bending fully at the waist, back rounded, the bag held far out in front at arm's length.",
+   "C": "An Indian worker mid-lift twisting his upper body sharply sideways while holding a heavy box, spine visibly rotated under load.",
+   "D": "An Indian worker trying to lift a heavy sack with one hand while his other hand holds a mobile phone to his ear."
+  },
+  "61": {
+   "A": "An Indian construction worker standing on open high ground taking a deep breath of clean fresh morning air, arms relaxed, clear sky.",
+   "B": "An Indian worker wading bare-legged through stagnant muddy floodwater in a waterlogged trench, a rat visible on debris near the water's edge.",
+   "C": "An Indian worker neatly dressed in full PPE — gloves, gumboots, helmet and hi-vis vest — standing on a dry construction site.",
+   "D": "An Indian worker drinking clean water from a clear sealed bottle during a site break, water visibly clean."
+  },
+  "62": {
+   "A": "Indian office staff working at computers in a clean air-conditioned site office cabin, dry and tidy.",
+   "B": "Indian workers digging in a deep waterlogged excavation trench, standing in muddy stagnant water with shovels, drainage pipes visible.",
+   "C": "An Indian truck driver sitting in the dry cab of a tipper truck on a construction site, window down.",
+   "D": "Visitors in clean clothes and white visitor helmets being escorted along a dry walkway at the edge of a construction site."
+  },
+  "68": {
+   "A": "An Indian technician safely repairing a switched-off machine placed on a workbench, tools laid out neatly, machine clearly powered down.",
+   "B": "An Indian worker standing directly in the path of a large reversing dump truck on site, the truck bearing down behind him as he faces away.",
+   "C": "An Indian worker standing at a safe distance to the side of a welding hot-work area, sparks contained behind a welding screen.",
+   "D": "An Indian worker on a quiet dry site walking without helmet or vest, no machinery anywhere near him."
+  },
+  "69": {
+   "A": "A pair of brown steel-toe safety shoes alone on the edge of a high concrete slab, nothing else — footwear only.",
+   "B": "An Indian worker at height on a steel structure wearing a full-body harness with BOTH lanyard hooks clipped to a steel lifeline above — 100 percent tie-off.",
+   "C": "A pair of grey cotton work gloves lying alone on a high steel beam, nothing else.",
+   "D": "A single orange reflective safety vest hanging alone on a scaffold pole at height, nothing else."
+  }
+ },
+ "correct": {
+  "2": "B",
+  "4": "B",
+  "9": "B",
+  "10": "B",
+  "11": "A",
+  "18": "B",
+  "21": "B",
+  "22": "A",
+  "23": "B",
+  "24": "B",
+  "28": "B",
+  "32": "B",
+  "33": "B",
+  "36": "B",
+  "40": "D",
+  "43": "B",
+  "52": "A",
+  "53": "B",
+  "54": "A",
+  "58": "A",
+  "61": "B",
+  "62": "B",
+  "68": "B",
+  "69": "B"
+ }
+}

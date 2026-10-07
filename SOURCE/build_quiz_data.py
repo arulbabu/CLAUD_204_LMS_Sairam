@@ -17,8 +17,33 @@ tr = json.load(open(os.path.join(BASE, "translations.json"), encoding="utf-8"))
 prompts = json.load(open(os.path.join(BASE, "image_prompts.json"), encoding="utf-8"))
 
 IMG_QS = sorted([int(k) for k in prompts["questions"]]) + [1, 13]
-SCENE = {1: "assets/images/q1.png", 10: "assets/images/q10.png", 13: "assets/images/q13.png",
-         26: "assets/images/q26.png", 33: "assets/images/q33.png"}
+SCENE_SRC = os.path.join(BASE, "SOURCE", "Generated_Scenes")
+IMG_ROOT = os.path.join(APP, "assets", "images")
+
+def convert_scenes():
+    """API scene PNGs (16:9) -> app assets/images/qN.jpg"""
+    converted, missing = 0, []
+    for qno in range(1, 71):
+        src = os.path.join(SCENE_SRC, f"q{qno}.png")
+        dst = os.path.join(IMG_ROOT, f"q{qno}.jpg")
+        if not os.path.exists(src):
+            missing.append(f"q{qno}")
+            continue
+        if os.path.exists(dst) and os.path.getmtime(dst) >= os.path.getmtime(src):
+            converted += 1
+            continue
+        im = Image.open(src).convert("RGB")
+        im.thumbnail((1280, 1280), Image.LANCZOS)
+        im.save(dst, "JPEG", quality=82, optimize=True)
+        converted += 1
+    return converted, missing
+
+def scene_path(qno):
+    if os.path.exists(os.path.join(SCENE_SRC, f"q{qno}.png")):
+        return f"assets/images/q{qno}.jpg"
+    legacy = {1: "assets/images/q1.png", 10: "assets/images/q10.png", 13: "assets/images/q13.png",
+              26: "assets/images/q26.png", 33: "assets/images/q33.png"}
+    return legacy.get(qno)
 
 def convert_images():
     os.makedirs(OPT_DIR, exist_ok=True)
@@ -58,8 +83,9 @@ def build_js():
         out.append(f"      ta: {js_str(t['q']['ta'])},")
         out.append(f"      hi: {js_str(t['q']['hi'])}")
         out.append("    },")
-        if qno in SCENE:
-            out.append(f"    image: {js_str(SCENE[qno])},")
+        sp = scene_path(qno)
+        if sp:
+            out.append(f"    image: {js_str(sp)},")
         out.append('    imageCaption: "",')
         if qno in IMG_QS:
             out.append("    optionImages: {")
@@ -88,7 +114,9 @@ def build_js():
 
 if __name__ == "__main__":
     c, m = convert_images()
-    print(f"converted/present: {c}, missing: {len(m)} {m[:10]}")
+    print(f"options converted/present: {c}, missing: {len(m)} {m[:10]}")
+    cs, ms = convert_scenes()
+    print(f"scenes converted/present: {cs}, missing: {len(ms)} {ms[:10]}")
     js = build_js()
     path = os.path.join(APP, "js", "quiz-data.js")
     with open(path, "w", encoding="utf-8") as f:

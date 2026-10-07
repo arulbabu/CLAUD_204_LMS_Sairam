@@ -1,0 +1,103 @@
+22:30:39 START scenes: 70 images, model=gemini-3-pro-image
+22:31:01 [1/70] q1 OK 829KB 22s
+22:31:32 [2/70] q2 OK 875KB 30s
+22:31:56 [3/70] q3 OK 825KB 22s
+22:32:17 [4/70] q4 OK 752KB 20s
+22:32:40 [5/70] q5 OK 695KB 22s
+22:33:03 [6/70] q6 OK 820KB 21s
+22:33:39 [7/70] q7 OK 770KB 35s
+22:34:17 [8/70] q8 OK 732KB 36s
+22:34:50 [9/70] q9 OK 836KB 31s
+22:35:15 [10/70] q10 OK 1010KB 23s
+22:35:36 [11/70] q11 OK 862KB 20s
+22:36:02 [12/70] q12 OK 865KB 25s
+22:36:24 [13/70] q13 OK 817KB 20s
+22:36:44 [14/70] q14 OK 905KB 19s
+22:37:13 [15/70] q15 ERR IncompleteRead: IncompleteRead(790992 bytes read)
+22:37:54 [15/70] q15 OK 955KB 31s
+22:38:22 [16/70] q16 OK 817KB 27s
+22:38:50 [17/70] q17 OK 870KB 26s
+22:39:20 [18/70] q18 OK 950KB 29s
+22:39:43 [19/70] q19 OK 789KB 21s
+22:40:03 [20/70] q20 OK 912KB 18s
+22:40:22 [21/70] q21 OK 898KB 18s
+22:40:46 [22/70] q22 OK 819KB 22s
+22:41:14 [23/70] q23 OK 793KB 26s
+22:41:36 [24/70] q24 OK 967KB 21s
+22:42:01 [25/70] q25 OK 781KB 23s
+22:42:26 [26/70] q26 OK 770KB 24s
+22:42:49 [27/70] q27 OK 895KB 22s
+22:43:12 [28/70] q28 OK 872KB 21s
+22:43:47 [29/70] q29 OK 860KB 34s
+22:44:10 [30/70] q30 OK 930KB 21s
+22:44:33 [31/70] q31 OK 938KB 21s
+22:44:55 [32/70] q32 OK 1004KB 21s
+22:45:18 [33/70] q33 OK 881KB 21s
+22:45:41 [34/70] q34 OK 898KB 22s
+22:46:03 [35/70] q35 OK 969KB 20s
+22:46:25 [36/70] q36 OK 947KB 21s
+22:46:46 [37/70] q37 OK 815KB 19s
+22:47:07 [38/70] q38 OK 979KB 20s
+22:47:29 [39/70] q39 OK 925KB 20s
+22:47:51 [40/70] q40 OK 971KB 21s
+22:48:13 [41/70] q41 OK 927KB 21s
+22:48:56 [42/70] q42 OK 883KB 42s
+22:49:27 [43/70] q43 OK 912KB 30s
+22:49:51 [44/70] q44 OK 913KB 22s
+22:50:14 [45/70] q45 OK 841KB 21s
+22:50:41 [46/70] q46 OK 948KB 25s
+22:51:07 [47/70] q47 OK 1024KB 25s
+22:51:30 [48/70] q48 OK 927KB 21s
+22:51:54 [49/70] q49 OK 913KB 22s
+22:52:18 [50/70] q50 OK 960KB 23s
+22:52:41 [51/70] q51 OK 813KB 21s
+22:53:08 [52/70] q52 OK 951KB 25s
+22:53:34 [53/70] q53 OK 840KB 24s
+22:53:58 [54/70] q54 OK 779KB 23s
+22:54:26 [55/70] q55 OK 815KB 27s
+22:54:54 [56/70] q56 OK 957KB 26s
+22:55:17 [57/70] q57 OK 871KB 22s
+22:55:43 [58/70] q58 OK 886KB 25s
+22:56:08 [59/70] q59 OK 815KB 23s
+22:56:47 [60/70] q60 OK 869KB 38s
+22:57:17 [61/70] q61 OK 974KB 28s
+22:57:54 [62/70] q62 OK 986KB 35s
+22:58:24 [63/70] q63 OK 922KB 28s
+22:58:52 [64/70] q64 OK 819KB 27s
+22:59:16 [65/70] q65 OK 808KB 23s
+22:59:52 [66/70] q66 OK 858KB 34s
+23:00:26 [67/70] q67 OK 837KB 32s
+23:00:57 [68/70] q68 OK 970KB 30s
+23:00:59 [69/70] q69 HTTP 402 {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.
+23:01:10 [69/70] q69 HTTP 402 {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.
+23:01:21 [69/70] q69 HTTP 402 {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.
+23:01:32 [69/70] q69 HTTP 402 {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.
+23:01:45 [70/70] q70 HTTP 402 {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.
+23:01:56 [70/70] q70 HTTP 402 {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.
+23:02:07 [70/70] q70 HTTP 402 {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.
+23:02:18 [70/70] q70 HTTP 402 {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.
+23:02:30 DONE. fails: ['q69', 'q70']

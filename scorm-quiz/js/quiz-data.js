@@ -8,7 +8,7 @@ var QUIZ_QUESTIONS = [
       ta: "கட்டுமான தளத்தில் ஹார்ட் ஹேட் (பாதுகாப்பு தலைக்கவசம்) அணிவதன் முதன்மை நோக்கம் என்ன?",
       hi: "निर्माण स्थल पर हार्ड हैट (सुरक्षा हेलमेट) पहनने का मुख्य उद्देश्य क्या है?"
     },
-    image: "assets/images/q1.png",
+    image: "assets/images/q1.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q1-A.jpg",
@@ -47,6 +47,7 @@ var QUIZ_QUESTIONS = [
       ta: "உயரத்தில் வீழ்ச்சி-தடுப்பு வேலைக்கு எந்த வகை பாதுகாப்பு கச்சை (ஹார்னஸ்) பயன்படுத்த வேண்டும்?",
       hi: "ऊंचाई पर फॉल-अरेस्ट कार्य के लिए किस प्रकार का हार्नेस इस्तेमाल करना चाहिए?"
     },
+    image: "assets/images/q2.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q2-A.jpg",
@@ -85,6 +86,7 @@ var QUIZ_QUESTIONS = [
       ta: "தளத்தில் எந்த தொடர்ச்சியான சத்த அளவில் காது பாதுகாப்பு அணிய வேண்டும்?",
       hi: "साइट पर किस निरंतर शोर स्तर पर कान की सुरक्षा पहननी चाहिए?"
     },
+    image: "assets/images/q3.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -117,6 +119,7 @@ var QUIZ_QUESTIONS = [
       ta: "ஆங்கிள் கிரைண்டர் பயன்படுத்தும்போது சரியான கண் பாதுகாப்பு எது?",
       hi: "एंगल ग्राइंडर इस्तेमाल करते समय सही नेत्र सुरक्षा कौन सी है?"
     },
+    image: "assets/images/q4.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q4-A.jpg",
@@ -155,6 +158,7 @@ var QUIZ_QUESTIONS = [
       ta: "தொழிலாளர்கள் தளத்தில் அதிக தெரிவுத்திறன் (ஹை-விஸ்) உடை ஏன் அணிகிறார்கள்?",
       hi: "कर्मचारी साइट पर हाई-विज़िबिलिटी (हाई-विज़) वेस्ट क्यों पहनते हैं?"
     },
+    image: "assets/images/q5.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -187,6 +191,7 @@ var QUIZ_QUESTIONS = [
       ta: "அபாயக் கட்டுப்பாடுகளின் படிநிலையில் தனிநபர் பாதுகாப்பு உபகரணம் (PPE) எங்கே உள்ளது?",
       hi: "खतरा नियंत्रण पदानुक्रम में व्यक्तिगत सुरक्षा उपकरण (PPE) कहाँ आता है?"
     },
+    image: "assets/images/q6.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -219,6 +224,7 @@ var QUIZ_QUESTIONS = [
       ta: "ஸ்டீல்-டோ / பாதுகாப்பு பூட்ஸ் வழங்கும் முக்கிய பாதுகாப்பு என்ன?",
       hi: "स्टील-टो / सेफ्टी बूट्स की मुख्य सुरक्षा क्या है?"
     },
+    image: "assets/images/q7.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -251,6 +257,7 @@ var QUIZ_QUESTIONS = [
       ta: "தளத்தில் ரெஸ்பிரேட்டர் (எ.கா., N95 மாஸ்க்) எப்போது பயன்படுத்த வேண்டும்?",
       hi: "साइट पर रेस्पिरेटर (जैसे N95 मास्क) का उपयोग कब करना चाहिए?"
     },
+    image: "assets/images/q8.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -283,6 +290,7 @@ var QUIZ_QUESTIONS = [
       ta: "முழு உடல் கச்சையில், வீழ்ச்சி தடுப்புக்கான முக்கிய D-வளையம் பொதுவாக எங்கே அமைந்துள்ளது?",
       hi: "फुल-बॉडी हार्नेस पर फॉल अरेस्ट के लिए मुख्य D-रिंग सामान्यतः कहाँ होती है?"
     },
+    image: "assets/images/q9.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q9-A.jpg",
@@ -321,7 +329,7 @@ var QUIZ_QUESTIONS = [
       ta: "ஒரு நீட்டு ஏணியை சுவரில் சாய்த்து வைக்கும்போது, பாதுகாப்பான கோணம் (4:1 விதி) என்ன?",
       hi: "दीवार के सहारे एक्सटेंशन सीढ़ी लगाते समय, सुरक्षित कोण (4:1 नियम) क्या है?"
     },
-    image: "assets/images/q10.png",
+    image: "assets/images/q10.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q10-A.jpg",
@@ -360,6 +368,7 @@ var QUIZ_QUESTIONS = [
       ta: "சாரக்கட்டு மேல் பாதுகாப்பு கைப்பிடிச் சட்டத்தின் குறைந்தபட்ச நிலையான உயரம் என்ன?",
       hi: "स्कैफोल्ड टॉप गार्डरेल की न्यूनतम मानक ऊँचाई क्या है?"
     },
+    image: "assets/images/q11.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q11-A.jpg",
@@ -398,6 +407,7 @@ var QUIZ_QUESTIONS = [
       ta: "எந்த பொதுவான உயரத்திற்கு மேல் தொழிலாளர்கள் வீழ்ச்சி-பாதுகாப்பு உபகரணங்களை பயன்படுத்த வேண்டும்?",
       hi: "किस सामान्य ऊँचाई से ऊपर कर्मचारियों को फॉल-प्रोटेक्शन उपकरण इस्तेमाल करने चाहिए?"
     },
+    image: "assets/images/q12.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -430,7 +440,7 @@ var QUIZ_QUESTIONS = [
       ta: "ஏணியில் ஏறும்போது ஒரு தொழிலாளி எத்தனை தொடர்பு புள்ளிகளை பராமரிக்க வேண்டும்?",
       hi: "सीढ़ी पर चढ़ते समय एक कर्मचारी को कितने संपर्क बिंदु बनाए रखने चाहिए?"
     },
-    image: "assets/images/q13.png",
+    image: "assets/images/q13.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q13-A.jpg",
@@ -469,6 +479,7 @@ var QUIZ_QUESTIONS = [
       ta: "ஏணியில் நிற்கும்போது ஒரு தொழிலாளி ஒருபோதும் என்ன செய்யக்கூடாது?",
       hi: "सीढ़ी पर खड़े होकर कर्मचारी को कभी क्या नहीं करना चाहिए?"
     },
+    image: "assets/images/q14.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -501,6 +512,7 @@ var QUIZ_QUESTIONS = [
       ta: "கட்டுமான தளத்தில் பாதுகாப்பு வலைகள் பொதுவாக எப்போது பயன்படுத்தப்படுகின்றன?",
       hi: "निर्माण स्थल पर सुरक्षा जाल सामान्यतः कब उपयोग होते हैं?"
     },
+    image: "assets/images/q15.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -533,6 +545,7 @@ var QUIZ_QUESTIONS = [
       ta: "வீழ்ச்சி-தடுப்பு நங்கூரப் புள்ளி ஒவ்வொரு இணைக்கப்பட்ட தொழிலாளிக்கும் எவ்வளவு சுமையை தாங்க வேண்டும்?",
       hi: "फॉल-अरेस्ट एंकर पॉइंट को प्रति जुड़े कर्मचारी कितना भार सहना चाहिए?"
     },
+    image: "assets/images/q16.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -565,6 +578,7 @@ var QUIZ_QUESTIONS = [
       ta: "சாரக்கட்டு எவ்வளவு அடிக்கடி ஆய்வு செய்யப்பட வேண்டும்?",
       hi: "स्कैफोल्ड का निरीक्षण कितनी बार होना चाहिए?"
     },
+    image: "assets/images/q17.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -597,6 +611,7 @@ var QUIZ_QUESTIONS = [
       ta: "சாரக்கட்டு தளத்தில் டோ போர்டின் (toe board) நோக்கம் என்ன?",
       hi: "स्कैफोल्ड प्लेटफॉर्म पर टो बोर्ड का उद्देश्य क्या है?"
     },
+    image: "assets/images/q18.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q18-A.jpg",
@@ -635,6 +650,7 @@ var QUIZ_QUESTIONS = [
       ta: "பவர் டூலின் பாதுகாப்பு கவசம் (guard) வழியில் இருந்தால் தொழிலாளி என்ன செய்ய வேண்டும்?",
       hi: "अगर पावर टूल का सेफ्टी गार्ड रास्ते में हो तो कर्मचारी को क्या करना चाहिए?"
     },
+    image: "assets/images/q19.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -667,6 +683,7 @@ var QUIZ_QUESTIONS = [
       ta: "எந்த மின்சார கைக் கருவியையும் பயன்படுத்தும் முன் என்ன சரிபார்க்க வேண்டும்?",
       hi: "किसी भी इलेक्ट्रिक हैंड टूल का उपयोग करने से पहले क्या जांचना चाहिए?"
     },
+    image: "assets/images/q20.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -699,6 +716,7 @@ var QUIZ_QUESTIONS = [
       ta: "ஏணியில் கருவிகளை மேலே கொண்டு செல்ல சரியான வழி என்ன?",
       hi: "सीढ़ी पर औज़ार ऊपर ले जाने का सही तरीका क्या है?"
     },
+    image: "assets/images/q21.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q21-A.jpg",
@@ -737,6 +755,7 @@ var QUIZ_QUESTIONS = [
       ta: "ஆங்கிள் கிரைண்டர் பயன்படுத்தும் முன் என்ன உறுதி செய்ய வேண்டும்?",
       hi: "एंगल ग्राइंडर इस्तेमाल करने से पहले क्या सत्यापित करना चाहिए?"
     },
+    image: "assets/images/q22.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q22-A.jpg",
@@ -775,6 +794,7 @@ var QUIZ_QUESTIONS = [
       ta: "தளத்தில் அழுத்தப்பட்ட காற்றை (compressed air) எதற்கு ஒருபோதும் பயன்படுத்தக்கூடாது?",
       hi: "साइट पर कंप्रेस्ड एयर का उपयोग कभी किसके लिए नहीं करना चाहिए?"
     },
+    image: "assets/images/q23.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q23-A.jpg",
@@ -813,6 +833,7 @@ var QUIZ_QUESTIONS = [
       ta: "கட்டுமான தளத்தில் மின்சார நீட்டிப்பு கம்பிகளை எப்படி பயன்படுத்த வேண்டும்?",
       hi: "निर्माण स्थल पर इलेक्ट्रिक एक्सटेंशन कॉर्ड कैसे इस्तेमाल करने चाहिए?"
     },
+    image: "assets/images/q24.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q24-A.jpg",
@@ -851,6 +872,7 @@ var QUIZ_QUESTIONS = [
       ta: "சேதமடைந்த அல்லது பழுதான கருவியை என்ன செய்ய வேண்டும்?",
       hi: "क्षतिग्रस्त या खराब टूल का क्या करना चाहिए?"
     },
+    image: "assets/images/q25.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -883,7 +905,7 @@ var QUIZ_QUESTIONS = [
       ta: "மேல்நிலை மின் கம்பிகளுக்கு (50kV வரை) அருகில் பணிபுரியும் உபகரணங்களுக்கான குறைந்தபட்ச பாதுகாப்பான தூரம் என்ன?",
       hi: "ओवरहेड पावर लाइनों (50kV तक) के पास काम करने वाले उपकरण के लिए न्यूनतम सुरक्षित दूरी क्या है?"
     },
-    image: "assets/images/q26.png",
+    image: "assets/images/q26.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -916,6 +938,7 @@ var QUIZ_QUESTIONS = [
       ta: "ஈரமான கைகளுடன் அல்லது தேங்கிய நீரில் மின்சார கருவிகளை இயக்குவது பாதுகாப்பானதா?",
       hi: "क्या गीले हाथों से या खड़े पानी में बिजली के उपकरण चलाना सुरक्षित है?"
     },
+    image: "assets/images/q27.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -948,6 +971,7 @@ var QUIZ_QUESTIONS = [
       ta: "லாக்அவுட்-டேக்அவுட் (LOTO) எதற்காக பயன்படுத்தப்படுகிறது?",
       hi: "लॉकआउट-टैगआउट (LOTO) किसके लिए उपयोग होता है?"
     },
+    image: "assets/images/q28.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q28-A.jpg",
@@ -986,6 +1010,7 @@ var QUIZ_QUESTIONS = [
       ta: "GFCI (Ground Fault Circuit Interrupter) எதிலிருந்து பாதுகாக்கிறது?",
       hi: "GFCI (ग्राउंड फॉल्ट सर्किट इंटरप्टर) किससे बचाता है?"
     },
+    image: "assets/images/q29.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1018,6 +1043,7 @@ var QUIZ_QUESTIONS = [
       ta: "தளத்தில் சேதமடைந்த மின் கேபிளை கண்டால் தொழிலாளி என்ன செய்ய வேண்டும்?",
       hi: "साइट पर क्षतिग्रस्त बिजली केबल मिलने पर कर्मचारी को क्या करना चाहिए?"
     },
+    image: "assets/images/q30.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1050,6 +1076,7 @@ var QUIZ_QUESTIONS = [
       ta: "இயங்கும் (மின்சாரம் உள்ள) மின் பேனலில் யார் வேலை செய்ய அனுமதிக்கப்படுகிறார்கள்?",
       hi: "लाइव (एनर्जाइज़्ड) इलेक्ट्रिकल पैनल पर काम करने की अनुमति किसे है?"
     },
+    image: "assets/images/q31.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1082,6 +1109,7 @@ var QUIZ_QUESTIONS = [
       ta: "கட்டுமான தளத்தில் தற்காலிக மின் கம்பிகளை எப்படி அமைக்க வேண்டும்?",
       hi: "निर्माण स्थल पर अस्थायी बिजली वायरिंग कैसे बिछानी चाहिए?"
     },
+    image: "assets/images/q32.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q32-A.jpg",
@@ -1120,7 +1148,7 @@ var QUIZ_QUESTIONS = [
       ta: "சாரக்கட்டின் அடித்தளம் எதன் மீது இருக்க வேண்டும்?",
       hi: "स्कैफोल्ड (मचान) का आधार किस पर टिका होना चाहिए?"
     },
-    image: "assets/images/q33.png",
+    image: "assets/images/q33.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q33-A.jpg",
@@ -1159,6 +1187,7 @@ var QUIZ_QUESTIONS = [
       ta: "சாரக்கட்டின் மதிப்பிடப்பட்ட சுமை திறன் மீறப்பட்டால் என்ன நடக்கும்?",
       hi: "यदि स्कैफोल्ड की रेटेड लोड क्षमता पार हो जाए तो क्या होगा?"
     },
+    image: "assets/images/q34.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1191,6 +1220,7 @@ var QUIZ_QUESTIONS = [
       ta: "சாரக்கட்டை அமைக்க, மாற்ற அல்லது பிரிக்க யாருக்கு அங்கீகாரம் உள்ளது?",
       hi: "स्कैफोल्ड खड़ा करने, बदलने या हटाने के लिए कौन अधिकृत है?"
     },
+    image: "assets/images/q35.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1223,6 +1253,7 @@ var QUIZ_QUESTIONS = [
       ta: "சாரக்கட்டு தளத்தின் பலகை அமைப்பிற்கு என்ன தேவை?",
       hi: "स्कैफोल्ड प्लेटफॉर्म की डेकिंग/प्लैंकिंग के लिए क्या आवश्यक है?"
     },
+    image: "assets/images/q36.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q36-A.jpg",
@@ -1261,6 +1292,7 @@ var QUIZ_QUESTIONS = [
       ta: "சாரக்கட்டில் கைப்பிடிச் சட்டம் இல்லாததை கவனித்தால் தொழிலாளி என்ன செய்ய வேண்டும்?",
       hi: "यदि कर्मचारी देखे कि स्कैफोल्ड में गार्डरेल गायब है तो क्या करना चाहिए?"
     },
+    image: "assets/images/q37.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1293,6 +1325,7 @@ var QUIZ_QUESTIONS = [
       ta: "எந்த அகழி ஆழத்தில் பாதுகாப்பு அமைப்பு (சாய்வு, முட்டு அல்லது கவசம்) பொதுவாக தேவை?",
       hi: "किस खाई की गहराई पर सुरक्षात्मक प्रणाली (स्लोपिंग, शोरिंग या शील्डिंग) सामान्यतः आवश्यक है?"
     },
+    image: "assets/images/q38.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1325,6 +1358,7 @@ var QUIZ_QUESTIONS = [
       ta: "அகழி விளிம்பிலிருந்து தோண்டிய மண் (spoil) எவ்வளவு தூரம் பின்னால் வைக்கப்பட வேண்டும்?",
       hi: "खाई के किनारे से खुदाई की मिट्टी (स्पॉइल) कितनी दूर रखनी चाहिए?"
     },
+    image: "assets/images/q39.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1357,6 +1391,7 @@ var QUIZ_QUESTIONS = [
       ta: "இவற்றில் எது அங்கீகரிக்கப்பட்ட அகழி பாதுகாப்பு அமைப்பு அல்ல?",
       hi: "इनमें से कौन मान्यता प्राप्त खाई सुरक्षा प्रणाली नहीं है?"
     },
+    image: "assets/images/q40.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q40-A.jpg",
@@ -1395,6 +1430,7 @@ var QUIZ_QUESTIONS = [
       ta: "எந்த தோண்டும் வேலையையும் தொடங்கும் முன் என்ன செய்ய வேண்டும்?",
       hi: "कोई भी खुदाई कार्य शुरू करने से पहले क्या करना चाहिए?"
     },
+    image: "assets/images/q41.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1427,6 +1463,7 @@ var QUIZ_QUESTIONS = [
       ta: "ஆழமான அகழிக்குள் நுழையும் முன் ஏன் வளிமண்டல (வாயு) சோதனை தேவைப்படலாம்?",
       hi: "गहरी खाई में प्रवेश से पहले वायुमंडलीय (गैस) परीक्षण क्यों आवश्यक हो सकता है?"
     },
+    image: "assets/images/q42.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1459,6 +1496,7 @@ var QUIZ_QUESTIONS = [
       ta: "தளத்தில் துருத்திக்கொண்டிருக்கும் கம்பி (rebar) முனைகளுக்கு என்ன செய்ய வேண்டும்?",
       hi: "साइट पर बाहर निकले सरिया (रीबार) के सिरों का क्या करना चाहिए?"
     },
+    image: "assets/images/q43.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q43-A.jpg",
@@ -1497,6 +1535,7 @@ var QUIZ_QUESTIONS = [
       ta: "காங்கிரீட் கட்டமைப்பிலிருந்து ஃபார்ம்வொர்க்/ஷட்டரிங் எப்போது பாதுகாப்பாக அகற்றலாம்?",
       hi: "कंक्रीट संरचना से फॉर्मवर्क/शटरिंग कब सुरक्षित रूप से हटाया जा सकता है?"
     },
+    image: "assets/images/q44.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1529,6 +1568,7 @@ var QUIZ_QUESTIONS = [
       ta: "கட்டமைப்பின் இடிப்பு வேலையை தொடங்கும் முன் எது அவசியம்?",
       hi: "किसी संरचना पर विध्वंस कार्य शुरू करने से पहले क्या आवश्यक है?"
     },
+    image: "assets/images/q45.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1561,6 +1601,7 @@ var QUIZ_QUESTIONS = [
       ta: "காங்கிரீட் பம்ப் லைன்/குழாய் இயக்கும்போது முக்கிய ஆபத்து என்ன?",
       hi: "कंक्रीट पंप लाइन/होज़ चलाते समय मुख्य खतरा क्या है?"
     },
+    image: "assets/images/q46.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1593,6 +1634,7 @@ var QUIZ_QUESTIONS = [
       ta: "தளத்தில் செங்கல், பிளாக் அல்லது கொத்து அலகுகளை அடுக்கும்போது எதை கட்டுப்படுத்த வேண்டும்?",
       hi: "साइट पर ईंटें, ब्लॉक या चिनाई इकाइयां रखते समय क्या सीमित करना चाहिए?"
     },
+    image: "assets/images/q47.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1625,6 +1667,7 @@ var QUIZ_QUESTIONS = [
       ta: "புதிதாக கட்டப்பட்ட, ஆதரவற்ற தனித்த கொத்து சுவருக்கு என்ன முன்னெச்சரிக்கை தேவை?",
       hi: "नई बनी, बिना सहारे की फ्रीस्टैंडिंग चिनाई दीवार के लिए क्या सावधानी चाहिए?"
     },
+    image: "assets/images/q48.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1657,6 +1700,7 @@ var QUIZ_QUESTIONS = [
       ta: "மரம் மற்றும் காகிதம் போன்ற சாதாரண எரிபொருட்களுக்கு எந்த தீயணைப்பான் வகுப்பு வடிவமைக்கப்பட்டுள்ளது?",
       hi: "लकड़ी और कागज़ जैसी सामान्य ज्वलनशील वस्तुओं के लिए कौन सी अग्निशामक श्रेणी बनी है?"
     },
+    image: "assets/images/q49.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1689,6 +1733,7 @@ var QUIZ_QUESTIONS = [
       ta: "மின்சார தீயில் எந்த வகை தீயணைப்பான் பயன்படுத்த பாதுகாப்பானது?",
       hi: "बिजली की आग पर कौन सा अग्निशामक इस्तेमाल करना सुरक्षित है?"
     },
+    image: "assets/images/q50.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1721,6 +1766,7 @@ var QUIZ_QUESTIONS = [
       ta: "தீயணைப்பான் பயன்படுத்தும் 'PASS' நுட்பம் எதைக் குறிக்கிறது?",
       hi: "अग्निशामक उपयोग की 'PASS' तकनीक का क्या अर्थ है?"
     },
+    image: "assets/images/q51.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1753,6 +1799,7 @@ var QUIZ_QUESTIONS = [
       ta: "தளத்தில் எரியக்கூடிய பொருட்களை (எரிபொருள், கரைப்பான், வாயு சிலிண்டர்) எப்படி சேமிக்க வேண்டும்?",
       hi: "साइट पर ज्वलनशील सामग्री (ईंधन, सॉल्वेंट, गैस सिलेंडर) कैसे स्टोर करनी चाहिए?"
     },
+    image: "assets/images/q52.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q52-A.jpg",
@@ -1791,6 +1838,7 @@ var QUIZ_QUESTIONS = [
       ta: "தள தீ வெளியேற்றத்தின் போது தொழிலாளர்கள் எதை பயன்படுத்தக்கூடாது?",
       hi: "साइट पर आग से निकासी के दौरान कर्मचारियों को किसका उपयोग नहीं करना चाहिए?"
     },
+    image: "assets/images/q53.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q53-A.jpg",
@@ -1829,6 +1877,7 @@ var QUIZ_QUESTIONS = [
       ta: "தொங்கும் (கிரேன் தூக்கிய) சுமையின் கீழ் நிற்பது அல்லது நடப்பது எப்போதாவது பாதுகாப்பானதா?",
       hi: "क्या लटके हुए (क्रेन से उठाए) भार के नीचे खड़ा होना या चलना कभी सुरक्षित है?"
     },
+    image: "assets/images/q54.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q54-A.jpg",
@@ -1867,6 +1916,7 @@ var QUIZ_QUESTIONS = [
       ta: "தொங்கும் சுமையில் இணைக்கப்பட்ட டேக் லைனின் நோக்கம் என்ன?",
       hi: "लटके भार से जुड़ी टैग लाइन का उद्देश्य क्या है?"
     },
+    image: "assets/images/q55.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1899,6 +1949,7 @@ var QUIZ_QUESTIONS = [
       ta: "கிரேன் தூக்குதல் தொடங்கும் முன் என்ன சரிபார்க்க வேண்டும்?",
       hi: "क्रेन लिफ्ट शुरू होने से पहले क्या जांचना चाहिए?"
     },
+    image: "assets/images/q56.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1931,6 +1982,7 @@ var QUIZ_QUESTIONS = [
       ta: "சுமை பாதை முழுமையாக தெரியாதபோது கிரேன் இயக்குபவருக்கு யார் வழிகாட்ட வேண்டும்?",
       hi: "जब भार का रास्ता पूरी तरह दिखाई न दे तो क्रेन ऑपरेटर को कौन निर्देशित करे?"
     },
+    image: "assets/images/q57.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -1963,6 +2015,7 @@ var QUIZ_QUESTIONS = [
       ta: "கனமான பொருளுக்கான சரியான கைமுறை தூக்கும் நுட்பம் என்ன?",
       hi: "भारी वस्तु के लिए सही मैनुअल लिफ्टिंग तकनीक क्या है?"
     },
+    image: "assets/images/q58.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q58-A.jpg",
@@ -2001,6 +2054,7 @@ var QUIZ_QUESTIONS = [
       ta: "எந்த வகையான பணிகளுக்கு பொதுவாக தொடங்கும் முன் முறையான 'வேலை அனுமதி' (Permit to Work) தேவை?",
       hi: "किस प्रकार के कार्यों के लिए सामान्यतः शुरू करने से पहले औपचारिक 'परमिट टू वर्क' चाहिए?"
     },
+    image: "assets/images/q59.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -2033,6 +2087,7 @@ var QUIZ_QUESTIONS = [
       ta: "யாரும் காயமடையாவிட்டாலும் நியர்-மிஸ் (near-miss) புகாரளிப்பது ஏன் முக்கியம்?",
       hi: "किसी के घायल न होने पर भी नियर-मिस की रिपोर्ट करना क्यों महत्वपूर्ण है?"
     },
+    image: "assets/images/q60.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -2065,6 +2120,7 @@ var QUIZ_QUESTIONS = [
       ta: "ஒரு தொழிலாளிக்கு லெப்டோஸ்பைரோசிஸ் எப்படி வரலாம்?",
       hi: "एक कर्मचारी को लेप्टोस्पायरोसिस कैसे हो सकता है?"
     },
+    image: "assets/images/q61.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q61-A.jpg",
@@ -2103,6 +2159,7 @@ var QUIZ_QUESTIONS = [
       ta: "எந்த தொழிலாளர்களுக்கு லெப்டோஸ்பைரோசிஸ் அபாயம் அதிகம்?",
       hi: "किन कर्मचारियों को लेप्टोस्पायरोसिस का खतरा अधिक है?"
     },
+    image: "assets/images/q62.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q62-A.jpg",
@@ -2141,6 +2198,7 @@ var QUIZ_QUESTIONS = [
       ta: "உயரத்தில் வேலை செய்யும்போது தொழிலாளிக்கு தலைசுற்றல் (Vertigo) ஏற்பட்டால் என்ன செய்ய வேண்டும்?",
       hi: "ऊंचाई पर काम करते समय कर्मचारी को वर्टिगो हो तो क्या करना चाहिए?"
     },
+    image: "assets/images/q63.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -2173,6 +2231,7 @@ var QUIZ_QUESTIONS = [
       ta: "சாரக்கட்டில் ஏறும்போது தலை சுற்றுவதாக ஒரு தொழிலாளி கூறுகிறார். முதலில் என்ன செய்ய வேண்டும்?",
       hi: "स्कैफोल्डिंग पर चढ़ते समय कर्मचारी चक्कर आने की शिकायत करता है। पहले क्या करना चाहिए?"
     },
+    image: "assets/images/q64.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -2205,6 +2264,7 @@ var QUIZ_QUESTIONS = [
       ta: "தொழிலாளிக்கு போதுமான தூக்கம் இல்லாவிட்டால் என்ன நடக்கும்?",
       hi: "यदि कर्मचारी पर्याप्त नींद न ले तो क्या हो सकता है?"
     },
+    image: "assets/images/q65.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -2237,6 +2297,7 @@ var QUIZ_QUESTIONS = [
       ta: "வேலைக்கு முன் மது அல்லது போதைப்பொருள் ஏன் ஒருபோதும் உட்கொள்ளக்கூடாது?",
       hi: "काम से पहले शराब या ड्रग्स का सेवन कभी क्यों नहीं करना चाहिए?"
     },
+    image: "assets/images/q66.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -2269,6 +2330,7 @@ var QUIZ_QUESTIONS = [
       ta: "சாப்பிடும் முன் கை கழுவுவது ஏன் முக்கியம்?",
       hi: "खाने से पहले हाथ धोना क्यों ज़रूरी है?"
     },
+    image: "assets/images/q67.jpg",
     imageCaption: "",
     options: {
       A: {
@@ -2301,6 +2363,7 @@ var QUIZ_QUESTIONS = [
       ta: "எது 'லைன் ஆஃப் ஃபயர்' (Line of Fire) ஆபத்து?",
       hi: "कौन सा 'लाइन ऑफ फायर' खतरा है?"
     },
+    image: "assets/images/q68.jpg",
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q68-A.jpg",

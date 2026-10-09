@@ -6,6 +6,7 @@
   var timeLeft = TIME_PER_QUESTION;
   var answers = []; // track per-question result
   var currentLang = "en";
+  var answeredCorrect = null; // null = unanswered; true/false once locked
   var randomOrder = false;
   var questionOrder = []; // array of indices into QUIZ_QUESTIONS
 
@@ -28,6 +29,7 @@
   var resultSummary = document.getElementById("resultSummary");
   var restartBtn = document.getElementById("restartBtn");
   var settingsBtn = document.getElementById("settingsBtn");
+  var muteBtn = document.getElementById("muteBtn");
   var langButtons = document.querySelectorAll(".lang-btn");
   var randomToggle = document.getElementById("randomToggle");
 
@@ -68,7 +70,25 @@
         currentLang = btn.dataset.lang;
         langButtons.forEach(function (b) { b.classList.toggle("active", b === btn); });
         renderQuestion(); // re-render current question in new language without resetting timer/progress
+        // Re-speak in the newly chosen language, matching the current state:
+        // unanswered -> the question; answered -> the outcome.
+        var qno = currentQno();
+        if (answeredCorrect === null) {
+          QuizAudio.playQuestion(qno, currentLang);
+        } else if (answeredCorrect) {
+          QuizAudio.playCorrect(qno, currentLang);
+        } else {
+          QuizAudio.playWrong(qno, currentLang);
+        }
       });
+    });
+
+    muteBtn.addEventListener("click", function () {
+      var m = QuizAudio.toggleMute();
+      muteBtn.textContent = m ? "\uD83D\uDD07" : "\uD83D\uDD0A";
+      muteBtn.classList.toggle("muted", m);
+      muteBtn.title = m ? "Unmute voice-over" : "Mute voice-over";
+      if (!m && answeredCorrect === null) QuizAudio.playQuestion(currentQno(), currentLang);
     });
 
     randomToggle.addEventListener("change", function () {
@@ -87,6 +107,11 @@
 
   function currentQuestion() {
     return QUIZ_QUESTIONS[questionOrder[currentIndex]];
+  }
+
+  function currentQno() {
+    var q = currentQuestion();
+    return q.qno || questionOrder[currentIndex] + 1;
   }
 
   function renderQuestion() {
@@ -123,6 +148,7 @@
   function loadQuestion(index) {
     clearInterval(timer);
     selectedAnswer = null;
+    answeredCorrect = null;
     var q = currentQuestion();
 
     optionsGrid.innerHTML = "";
@@ -165,6 +191,14 @@
     timeLeft = TIME_PER_QUESTION;
     updateTimerUI();
     timer = setInterval(tick, 1000);
+
+    // Voice-over: read the question aloud, and warm the next question's clips.
+    QuizAudio.playQuestion(currentQno(), currentLang);
+    var nextIdx = questionOrder[index + 1];
+    if (nextIdx !== undefined) {
+      var nq = QUIZ_QUESTIONS[nextIdx];
+      QuizAudio.preload(nq.qno || nextIdx + 1, currentLang);
+    }
   }
 
   function updateTimerUI() {
@@ -212,6 +246,15 @@
     answers.push({ question: questionOrder[currentIndex], chosen: chosenLetter, correct: isCorrect });
     if (isCorrect) correctCount++;
 
+    // Voice-over the outcome: correct -> answer text; wrong (or timeout) ->
+    // "The right answer is" + answer text.
+    answeredCorrect = isCorrect;
+    if (isCorrect) {
+      QuizAudio.playCorrect(currentQno(), currentLang);
+    } else {
+      QuizAudio.playWrong(currentQno(), currentLang);
+    }
+
     nextBtn.disabled = false;
   }
 
@@ -225,6 +268,7 @@
   }
 
   function finishQuiz() {
+    QuizAudio.stop();
     progressFill.style.width = "100%";
     var total = QUIZ_QUESTIONS.length;
     var percent = Math.round((correctCount / total) * 100);

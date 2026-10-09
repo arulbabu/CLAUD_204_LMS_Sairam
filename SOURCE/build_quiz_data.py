@@ -77,6 +77,7 @@ def build_js():
         q = qs[str(qno)]
         t = tr[str(qno)]
         out.append("  {")
+        out.append(f"    qno: {qno},")
         out.append(f"    category: {js_str(q['category'])},")
         out.append("    question: {")
         out.append(f"      en: {js_str(q['question'])},")

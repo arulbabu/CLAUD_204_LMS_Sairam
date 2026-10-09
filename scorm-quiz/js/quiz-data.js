@@ -2,6 +2,7 @@
 // Generated from Construction_Safety_Quiz_60Q.xlsx + Construction_Safety_Quiz_10Q_New.xlsx
 var QUIZ_QUESTIONS = [
   {
+    qno: 1,
     category: "PPE",
     question: {
       en: "What is the primary purpose of a hard hat on a construction site?",
@@ -41,6 +42,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 2,
     category: "PPE",
     question: {
       en: "Which type of harness must be used for fall-arrest work at height?",
@@ -80,6 +82,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 3,
     category: "PPE",
     question: {
       en: "At what continuous noise level should hearing protection be worn on site?",
@@ -113,6 +116,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 4,
     category: "PPE",
     question: {
       en: "Which eye protection is correct when using an angle grinder?",
@@ -152,6 +156,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 5,
     category: "PPE",
     question: {
       en: "Why do workers wear high-visibility (hi-vis) vests on site?",
@@ -185,6 +190,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 6,
     category: "PPE",
     question: {
       en: "Where does Personal Protective Equipment (PPE) sit in the hierarchy of hazard controls?",
@@ -218,6 +224,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 7,
     category: "PPE",
     question: {
       en: "What is the main protection offered by steel-toe / safety boots?",
@@ -251,6 +258,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 8,
     category: "PPE",
     question: {
       en: "When should a respirator (e.g., N95 mask) be used on site?",
@@ -284,6 +292,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 9,
     category: "PPE",
     question: {
       en: "On a full-body harness, where is the main D-ring for fall arrest normally located?",
@@ -323,6 +332,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 10,
     category: "Work at Height",
     question: {
       en: "When placing an extension ladder against a wall, what is the safe angle (the 4:1 rule)?",
@@ -362,6 +372,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 11,
     category: "Work at Height",
     question: {
       en: "What is the minimum standard height for a scaffold top guardrail?",
@@ -401,6 +412,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 12,
     category: "Work at Height",
     question: {
       en: "Above what typical height must workers use fall-protection equipment (harness, guardrails, or nets)?",
@@ -434,6 +446,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 13,
     category: "Work at Height",
     question: {
       en: "How many points of contact should a worker maintain while climbing a ladder?",
@@ -473,6 +486,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 14,
     category: "Work at Height",
     question: {
       en: "What should a worker never do while standing on a ladder?",
@@ -506,6 +520,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 15,
     category: "Work at Height",
     question: {
       en: "When are safety nets typically used on a construction site?",
@@ -539,6 +554,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 16,
     category: "Work at Height",
     question: {
       en: "What load must a fall-arrest anchor point be rated to support per attached worker?",
@@ -572,6 +588,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 17,
     category: "Work at Height",
     question: {
       en: "How often should a scaffold be inspected?",
@@ -605,6 +622,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 18,
     category: "Work at Height",
     question: {
       en: "What is the purpose of a toe board on a scaffold platform?",
@@ -644,6 +662,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 19,
     category: "Tools Handling",
     question: {
       en: "What should a worker do if a power tool's safety guard is in the way?",
@@ -677,6 +696,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 20,
     category: "Tools Handling",
     question: {
       en: "What must be checked before using any electrical hand tool?",
@@ -710,6 +730,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 21,
     category: "Tools Handling",
     question: {
       en: "What is the correct way to bring tools up a ladder?",
@@ -749,6 +770,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 22,
     category: "Tools Handling",
     question: {
       en: "Before using an angle grinder, what must be verified?",
@@ -788,6 +810,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 23,
     category: "Tools Handling",
     question: {
       en: "What should compressed air never be used for on site?",
@@ -827,6 +850,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 24,
     category: "Tools Handling",
     question: {
       en: "How should electrical extension cords be used on a construction site?",
@@ -866,6 +890,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 25,
     category: "Tools Handling",
     question: {
       en: "What should be done with a damaged or malfunctioning tool?",
@@ -899,6 +924,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 26,
     category: "Electrical",
     question: {
       en: "What is the minimum safe clearance distance for equipment working near overhead power lines (up to 50kV)?",
@@ -932,6 +958,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 27,
     category: "Electrical",
     question: {
       en: "Is it safe to operate electrical tools with wet hands or in standing water?",
@@ -965,6 +992,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 28,
     category: "Electrical",
     question: {
       en: "What is Lockout-Tagout (LOTO) used for?",
@@ -1004,6 +1032,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 29,
     category: "Electrical",
     question: {
       en: "What does a Ground Fault Circuit Interrupter (GFCI) protect against?",
@@ -1037,6 +1066,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 30,
     category: "Electrical",
     question: {
       en: "What should a worker do if they find a damaged electrical cable on site?",
@@ -1070,6 +1100,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 31,
     category: "Electrical",
     question: {
       en: "Who is permitted to work on a live (energized) electrical panel?",
@@ -1103,6 +1134,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 32,
     category: "Electrical",
     question: {
       en: "How should temporary electrical wiring be routed on a construction site?",
@@ -1142,6 +1174,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 33,
     category: "Scaffolding",
     question: {
       en: "What must a scaffold's base rest on?",
@@ -1181,6 +1214,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 34,
     category: "Scaffolding",
     question: {
       en: "What happens if a scaffold's rated load capacity is exceeded?",
@@ -1214,6 +1248,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 35,
     category: "Scaffolding",
     question: {
       en: "Who is authorized to erect, alter, or dismantle a scaffold?",
@@ -1247,6 +1282,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 36,
     category: "Scaffolding",
     question: {
       en: "What is required for a scaffold platform's decking/planking?",
@@ -1286,6 +1322,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 37,
     category: "Scaffolding",
     question: {
       en: "What should a worker do if they notice a scaffold is missing a guardrail?",
@@ -1319,6 +1356,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 38,
     category: "Excavation",
     question: {
       en: "At what trench depth is a protective system (sloping, shoring, or shielding) generally required?",
@@ -1352,6 +1390,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 39,
     category: "Excavation",
     question: {
       en: "How far back from a trench edge should excavated soil (spoil) be placed?",
@@ -1385,6 +1424,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 40,
     category: "Excavation",
     question: {
       en: "Which of these is NOT a recognized trench protective system?",
@@ -1424,6 +1464,7 @@ var QUIZ_QUESTIONS = [
     correct: "D"
   },
   {
+    qno: 41,
     category: "Excavation",
     question: {
       en: "What must be done before starting any excavation work?",
@@ -1457,6 +1498,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 42,
     category: "Excavation",
     question: {
       en: "Why might a deep trench need atmospheric (gas) testing before entry?",
@@ -1490,6 +1532,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 43,
     category: "Civil",
     question: {
       en: "What must be done to protruding reinforcement (rebar) ends on a site?",
@@ -1529,6 +1572,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 44,
     category: "Civil",
     question: {
       en: "When can formwork/shuttering be safely removed from a concrete structure?",
@@ -1562,6 +1606,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 45,
     category: "Civil",
     question: {
       en: "What is essential before starting demolition work on a structure?",
@@ -1595,6 +1640,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 46,
     category: "Civil",
     question: {
       en: "What is a key hazard when operating a concrete pump line/hose?",
@@ -1628,6 +1674,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 47,
     category: "Civil",
     question: {
       en: "What should be limited when stacking bricks, blocks, or masonry units on site?",
@@ -1661,6 +1708,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 48,
     category: "Civil",
     question: {
       en: "What precaution is needed for a newly built, unsupported freestanding masonry wall?",
@@ -1694,6 +1742,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 49,
     category: "Fire Safety",
     question: {
       en: "Which fire extinguisher class is designed for ordinary combustibles like wood and paper?",
@@ -1727,6 +1776,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 50,
     category: "Fire Safety",
     question: {
       en: "Which fire extinguisher type is safe to use on an electrical fire?",
@@ -1760,6 +1810,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 51,
     category: "Fire Safety",
     question: {
       en: "What does the 'PASS' technique for using a fire extinguisher stand for?",
@@ -1793,6 +1844,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 52,
     category: "Fire Safety",
     question: {
       en: "How should flammable materials (fuel, solvents, gas cylinders) be stored on site?",
@@ -1832,6 +1884,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 53,
     category: "Fire Safety",
     question: {
       en: "During a site fire evacuation, what should workers avoid using?",
@@ -1871,6 +1924,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 54,
     category: "Crane & Rigging",
     question: {
       en: "Is it ever safe to stand or walk beneath a suspended (crane-lifted) load?",
@@ -1910,6 +1964,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 55,
     category: "Crane & Rigging",
     question: {
       en: "What is the purpose of a tag line attached to a suspended load?",
@@ -1943,6 +1998,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 56,
     category: "Crane & Rigging",
     question: {
       en: "What must be checked before a crane lift begins?",
@@ -1976,6 +2032,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 57,
     category: "Crane & Rigging",
     question: {
       en: "Who should direct a crane operator when the load path is not fully visible?",
@@ -2009,6 +2066,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 58,
     category: "Crane & Rigging",
     question: {
       en: "What is the correct manual lifting technique for a heavy object?",
@@ -2048,6 +2106,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 59,
     category: "General EHS",
     question: {
       en: "What kind of tasks typically require a formal 'Permit to Work' before starting?",
@@ -2081,6 +2140,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 60,
     category: "General EHS",
     question: {
       en: "Why is it important to report a near-miss, even if no one was injured?",
@@ -2114,6 +2174,7 @@ var QUIZ_QUESTIONS = [
     correct: "A"
   },
   {
+    qno: 61,
     category: "Health",
     question: {
       en: "How can a worker get Leptospirosis?",
@@ -2153,6 +2214,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 62,
     category: "Health",
     question: {
       en: "Which workers are at higher risk of Leptospirosis?",
@@ -2192,6 +2254,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 63,
     category: "Health",
     question: {
       en: "If a worker experiences Vertigo while working at height, what should they do?",
@@ -2225,6 +2288,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 64,
     category: "Health",
     question: {
       en: "A worker reports a spinning sensation while climbing scaffolding. What should be done first?",
@@ -2258,6 +2322,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 65,
     category: "Health",
     question: {
       en: "What can happen if a worker does not get enough sleep?",
@@ -2291,6 +2356,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 66,
     category: "Health",
     question: {
       en: "Why should alcohol or drugs never be consumed before work?",
@@ -2324,6 +2390,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 67,
     category: "Health",
     question: {
       en: "Why is hand washing important before eating?",
@@ -2357,6 +2424,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 68,
     category: "Life Saving Rules",
     question: {
       en: "Which is a Line of Fire hazard?",
@@ -2396,6 +2464,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 69,
     category: "Life Saving Rules",
     question: {
       en: "When working at height, what is mandatory?",
@@ -2434,6 +2503,7 @@ var QUIZ_QUESTIONS = [
     correct: "B"
   },
   {
+    qno: 70,
     category: "Life Saving Rules",
     question: {
       en: "Can you remove a machine guard without authorization?",

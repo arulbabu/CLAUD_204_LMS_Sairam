@@ -22,9 +22,9 @@ LEAD_IN = {
 # Spoken reaction played the moment the learner picks, before the answer audio.
 REACTION = {
     "right": {
-        "en": "Correct! Well done.",
-        "ta": "\u0b9a\u0bb0\u0bbf! \u0ba8\u0ba9\u0bcd\u0bb1\u0bbe\u0b95 \u0b9a\u0bc6\u0baf\u0bcd\u0ba4\u0bc0\u0bb0\u0bcd\u0b95\u0bb3\u0bcd.",
-        "hi": "\u0938\u0939\u0940! \u0936\u093e\u092c\u093e\u0936.",
+        "en": "Correct answer!",
+        "ta": "\u0b9a\u0bb0\u0bbf\u0baf\u0bbe\u0ba9 \u0bb5\u0bbf\u0b9f\u0bc8!",
+        "hi": "\u0938\u0939\u0940 \u0909\u0924\u094d\u0924\u0930!",
     },
     "wrong": {
         "en": "That's not right.",

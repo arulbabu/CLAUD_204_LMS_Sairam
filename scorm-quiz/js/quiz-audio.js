@@ -81,6 +81,14 @@ var QuizAudio = (function () {
     },
 
     /**
+     * Just the right/wrong reaction, with no answer given away. Used when
+     * auto-reveal is off.
+     */
+    playReaction: function (isCorrect, lang) {
+      playChain([src(lang, "react-" + (isCorrect ? "right" : "wrong") + "-" + lang)], true);
+    },
+
+    /**
      * Read one option aloud — fired only by the option's speaker button, never
      * by hover, so it can never be confused with answering.
      */

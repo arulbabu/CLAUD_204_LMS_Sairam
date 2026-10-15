@@ -36,14 +36,67 @@
         <button class="lang-btn" data-lang="ta">தமிழ்</button>
         <button class="lang-btn" data-lang="hi">हिंदी</button>
       </div>
-      <label class="random-toggle" id="randomToggleWrap">
+      <div class="timer-circle" id="timerDisplay">30</div>
+      <button class="settings-btn" id="settingsBtn" title="Settings">&#9881;</button>
+    </div>
+  </div>
+
+  <!-- Settings overlay: voice-over, question order, answer reveal, and which
+       footer controls are shown. Opened by the gear in the header. -->
+  <div class="settings-overlay hidden" id="settingsOverlay" role="dialog"
+       aria-modal="true" aria-labelledby="settingsTitle">
+    <div class="settings-panel" id="settingsPanel">
+      <div class="settings-head">
+        <h3 id="settingsTitle">Settings</h3>
+        <button class="settings-close" id="settingsClose" aria-label="Close settings">&times;</button>
+      </div>
+
+      <label class="setting-row" for="voToggle">
+        <span class="setting-copy">
+          <span class="setting-name">Voice-over</span>
+          <span class="setting-hint">Read questions and answers aloud</span>
+        </span>
+        <input type="checkbox" id="voToggle" checked />
+        <span class="toggle-track"><span class="toggle-thumb"></span></span>
+      </label>
+
+      <label class="setting-row" for="randomToggle">
+        <span class="setting-copy">
+          <span class="setting-name">Random order</span>
+          <span class="setting-hint">Shuffle the questions (restarts the quiz)</span>
+        </span>
         <input type="checkbox" id="randomToggle" />
         <span class="toggle-track"><span class="toggle-thumb"></span></span>
-        <span class="toggle-text">Random</span>
       </label>
-      <div class="timer-circle" id="timerDisplay">30</div>
-      <button class="settings-btn" id="muteBtn" title="Mute voice-over">&#128266;</button>
-      <button class="settings-btn" id="settingsBtn" title="Settings">&#9881;</button>
+
+      <label class="setting-row" for="autoAnswerToggle">
+        <span class="setting-copy">
+          <span class="setting-name">Auto reveal answer</span>
+          <span class="setting-hint">Off: the answer stays hidden until you press Show Answer</span>
+        </span>
+        <input type="checkbox" id="autoAnswerToggle" checked />
+        <span class="toggle-track"><span class="toggle-thumb"></span></span>
+      </label>
+
+      <label class="setting-row" for="showAnswerBtnToggle">
+        <span class="setting-copy">
+          <span class="setting-name">Show Answer button</span>
+          <span class="setting-hint">Reveal and replay the answer on demand</span>
+        </span>
+        <input type="checkbox" id="showAnswerBtnToggle" checked />
+        <span class="toggle-track"><span class="toggle-thumb"></span></span>
+      </label>
+
+      <label class="setting-row" for="prevBtnToggle">
+        <span class="setting-copy">
+          <span class="setting-name">Previous button</span>
+          <span class="setting-hint">Step back to an earlier question</span>
+        </span>
+        <input type="checkbox" id="prevBtnToggle" checked />
+        <span class="toggle-track"><span class="toggle-thumb"></span></span>
+      </label>
+
+      <button class="next-btn settings-done" id="settingsDone">Done</button>
     </div>
   </div>
 
@@ -74,7 +127,11 @@
 
   <div class="quiz-footer">
     <div class="slide-count" id="slideCount">1 / 5</div>
-    <button class="next-btn" id="nextBtn" disabled>Next</button>
+    <div class="footer-actions">
+      <button class="nav-btn" id="prevBtn" disabled>&#8592; Previous</button>
+      <button class="nav-btn show-answer-btn" id="showAnswerBtn">Show Answer</button>
+      <button class="next-btn" id="nextBtn" disabled>Next</button>
+    </div>
   </div>
 
   <!-- Result screen -->

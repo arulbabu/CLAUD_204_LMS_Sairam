@@ -4,11 +4,19 @@
   var correctCount = 0;
   var timer = null;
   var timeLeft = TIME_PER_QUESTION;
-  var answers = []; // track per-question result
+  var answers = {}; // qIndex -> {chosen, correct, revealed}
   var currentLang = "en";
   var answeredCorrect = null; // null = unanswered; true/false once locked
   var randomOrder = false;
   var questionOrder = []; // array of indices into QUIZ_QUESTIONS
+  var revealed = false;   // has the correct answer been shown for this question?
+
+  /* Settings, all live in the overlay. autoReveal off means answering locks
+     the options but does NOT mark/speak the correct one — the learner presses
+     Show Answer when they want it. */
+  var autoReveal = true;
+  var showAnswerEnabled = true;
+  var prevEnabled = true;
 
   var questionMeta = document.getElementById("questionMeta");
   var questionText = document.getElementById("questionText");
@@ -16,6 +24,8 @@
   var imageCaption = document.getElementById("imageCaption");
   var optionsGrid = document.getElementById("optionsGrid");
   var nextBtn = document.getElementById("nextBtn");
+  var prevBtn = document.getElementById("prevBtn");
+  var showAnswerBtn = document.getElementById("showAnswerBtn");
   var timerDisplay = document.getElementById("timerDisplay");
   var questionCard = document.getElementById("questionCard");
   var progressFill = document.getElementById("progressFill");
@@ -29,7 +39,13 @@
   var resultSummary = document.getElementById("resultSummary");
   var restartBtn = document.getElementById("restartBtn");
   var settingsBtn = document.getElementById("settingsBtn");
-  var muteBtn = document.getElementById("muteBtn");
+  var settingsOverlay = document.getElementById("settingsOverlay");
+  var settingsClose = document.getElementById("settingsClose");
+  var settingsDone = document.getElementById("settingsDone");
+  var voToggle = document.getElementById("voToggle");
+  var autoAnswerToggle = document.getElementById("autoAnswerToggle");
+  var showAnswerBtnToggle = document.getElementById("showAnswerBtnToggle");
+  var prevBtnToggle = document.getElementById("prevBtnToggle");
   var langButtons = document.querySelectorAll(".lang-btn");
   var randomToggle = document.getElementById("randomToggle");
 
@@ -60,9 +76,46 @@
     loadQuestion(0);
 
     nextBtn.addEventListener("click", onNext);
+    prevBtn.addEventListener("click", onPrev);
+    showAnswerBtn.addEventListener("click", onShowAnswer);
     restartBtn.addEventListener("click", restartQuiz);
-    settingsBtn.addEventListener("click", function () {
-      alert("Settings: (placeholder) — add mute/exit/review options here.");
+
+    /* ---------- Settings overlay ---------- */
+    settingsBtn.addEventListener("click", openSettings);
+    settingsClose.addEventListener("click", closeSettings);
+    settingsDone.addEventListener("click", closeSettings);
+    settingsOverlay.addEventListener("click", function (ev) {
+      if (ev.target === settingsOverlay) closeSettings();   // click the backdrop
+    });
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape" && !settingsOverlay.classList.contains("hidden")) {
+        closeSettings();
+      }
+    });
+
+    voToggle.addEventListener("change", function () {
+      var muted = !voToggle.checked;
+      QuizAudio.setMuted(muted);
+      // Turning it back on re-speaks whatever the learner is looking at.
+      if (!muted) speakCurrentState();
+    });
+
+    autoAnswerToggle.addEventListener("change", function () {
+      autoReveal = autoAnswerToggle.checked;
+      // If they switch auto-reveal ON while sitting on an answered-but-hidden
+      // question, honour it immediately rather than making them press Show.
+      if (autoReveal && answeredCorrect !== null && !revealed) revealAnswer(true);
+      updateFooter();
+    });
+
+    showAnswerBtnToggle.addEventListener("change", function () {
+      showAnswerEnabled = showAnswerBtnToggle.checked;
+      updateFooter();
+    });
+
+    prevBtnToggle.addEventListener("change", function () {
+      prevEnabled = prevBtnToggle.checked;
+      updateFooter();
     });
 
     langButtons.forEach(function (btn) {
@@ -70,25 +123,8 @@
         currentLang = btn.dataset.lang;
         langButtons.forEach(function (b) { b.classList.toggle("active", b === btn); });
         renderQuestion(); // re-render current question in new language without resetting timer/progress
-        // Re-speak in the newly chosen language, matching the current state:
-        // unanswered -> the question; answered -> the outcome.
-        var qno = currentQno();
-        if (answeredCorrect === null) {
-          QuizAudio.playQuestion(qno, currentLang);
-        } else if (answeredCorrect) {
-          QuizAudio.playCorrect(qno, currentLang);
-        } else {
-          QuizAudio.playWrong(qno, currentLang);
-        }
+        speakCurrentState();
       });
-    });
-
-    muteBtn.addEventListener("click", function () {
-      var m = QuizAudio.toggleMute();
-      muteBtn.textContent = m ? "\uD83D\uDD07" : "\uD83D\uDD0A";
-      muteBtn.classList.toggle("muted", m);
-      muteBtn.title = m ? "Unmute voice-over" : "Mute voice-over";
-      if (!m && answeredCorrect === null) QuizAudio.playQuestion(currentQno(), currentLang);
     });
 
     randomToggle.addEventListener("change", function () {
@@ -96,13 +132,56 @@
       buildOrder();
       currentIndex = 0;
       correctCount = 0;
-      answers = [];
+      answers = {};
       loadQuestion(0);
     });
 
     window.addEventListener("beforeunload", function () {
       ScormAPI.commit();
     });
+  }
+
+  function openSettings() {
+    settingsOverlay.classList.remove("hidden");
+    settingsClose.focus();
+  }
+
+  function closeSettings() {
+    settingsOverlay.classList.add("hidden");
+    settingsBtn.focus();
+  }
+
+  /** Re-speak the current state in the current language. */
+  function speakCurrentState() {
+    var qno = currentQno();
+    if (answeredCorrect === null) {
+      QuizAudio.playQuestion(qno, currentLang);
+    } else if (!revealed) {
+      // Answered, but the answer is deliberately still hidden: react only.
+      QuizAudio.playReaction(answeredCorrect, currentLang);
+    } else if (answeredCorrect) {
+      QuizAudio.playCorrect(qno, currentLang);
+    } else {
+      QuizAudio.playWrong(qno, currentLang);
+    }
+  }
+
+  /**
+   * Footer button visibility and enablement, derived from the settings plus
+   * where the learner is. Called after every state change.
+   */
+  function updateFooter() {
+    prevBtn.classList.toggle("hidden", !prevEnabled);
+    prevBtn.disabled = currentIndex === 0;
+
+    // Show Answer is only meaningful while the answer is still hidden.
+    var canShow = showAnswerEnabled && !revealed;
+    showAnswerBtn.classList.toggle("hidden", !canShow);
+    showAnswerBtn.textContent = answeredCorrect === null ? "Show Answer" : "Reveal Answer";
+
+    // With auto-reveal off, Next unlocks as soon as they answer; the reveal is
+    // optional, never mandatory.
+    nextBtn.disabled = answeredCorrect === null;
   }
 
   function currentQuestion() {
@@ -207,8 +286,10 @@
 
   function loadQuestion(index) {
     clearInterval(timer);
-    selectedAnswer = null;
-    answeredCorrect = null;
+    var prior = answers[questionOrder[index]];
+    selectedAnswer = prior ? prior.chosen : null;
+    answeredCorrect = prior ? prior.correct : null;
+    revealed = prior ? !!prior.revealed : false;
     var q = currentQuestion();
 
     optionsGrid.innerHTML = "";
@@ -253,15 +334,30 @@
       el.style.animation = "";
     });
 
-    nextBtn.disabled = true;
     nextBtn.textContent = index === QUIZ_QUESTIONS.length - 1 ? "Finish" : "Next";
 
     progressFill.style.width = (index / QUIZ_QUESTIONS.length) * 100 + "%";
     slideCount.textContent = (index + 1) + " / " + QUIZ_QUESTIONS.length;
 
+    // Revisiting an answered question (Previous): restore its locked state
+    // silently instead of re-running the clock and the voice-over.
+    if (answeredCorrect !== null) {
+      var buttons = optionsGrid.querySelectorAll(".option-btn");
+      buttons.forEach(function (btn) {
+        btn.disabled = true;
+        if (btn.dataset.letter === selectedAnswer) btn.classList.add("selected");
+      });
+      if (revealed) revealAnswer(false);
+      timerDisplay.textContent = "\u2713";
+      timerDisplay.classList.remove("low");
+      updateFooter();
+      return;
+    }
+
     timeLeft = TIME_PER_QUESTION;
     updateTimerUI();
     timer = setInterval(tick, 1000);
+    updateFooter();
 
     // Voice-over: read the question aloud, and warm the next question's clips.
     QuizAudio.playQuestion(currentQno(), currentLang);
@@ -296,6 +392,11 @@
     lockOptions(letter);
   }
 
+  /**
+   * Record the answer and lock the options. Marking and speaking the CORRECT
+   * option is deliberately not done here — that is revealAnswer()'s job, so
+   * that auto-reveal off can keep the answer hidden.
+   */
   function lockOptions(chosenLetter) {
     clearInterval(timer);
     var q = currentQuestion();
@@ -304,30 +405,78 @@
 
     buttons.forEach(function (btn) {
       btn.disabled = true;
-      var letter = btn.dataset.letter;
-      if (letter === q.correct) {
-        btn.classList.add("correct");
-      } else if (letter === chosenLetter && !isCorrect) {
-        btn.classList.add("incorrect");
-      }
-      if (letter === chosenLetter) {
+      if (btn.dataset.letter === chosenLetter) {
         btn.classList.add("selected");
       }
     });
 
-    answers.push({ question: questionOrder[currentIndex], chosen: chosenLetter, correct: isCorrect });
-    if (isCorrect) correctCount++;
-
-    // Voice-over the outcome: correct -> answer text; wrong (or timeout) ->
-    // "The right answer is" + answer text.
+    answers[questionOrder[currentIndex]] = {
+      chosen: chosenLetter, correct: isCorrect, revealed: false
+    };
     answeredCorrect = isCorrect;
-    if (isCorrect) {
-      QuizAudio.playCorrect(currentQno(), currentLang);
-    } else {
-      QuizAudio.playWrong(currentQno(), currentLang);
-    }
 
-    nextBtn.disabled = false;
+    if (autoReveal) {
+      revealAnswer(true);
+    } else {
+      // Tell them right/wrong without giving the answer away.
+      QuizAudio.playReaction(isCorrect, currentLang);
+      updateFooter();
+    }
+  }
+
+  /**
+   * Mark the correct option (and the wrong pick, if any) and speak the answer.
+   * Reached from an auto-reveal answer, from Show Answer, or from a timeout.
+   * `speak` is false only when re-rendering an already-revealed question.
+   */
+  function revealAnswer(speak) {
+    var q = currentQuestion();
+    var buttons = optionsGrid.querySelectorAll(".option-btn");
+
+    buttons.forEach(function (btn) {
+      btn.disabled = true;
+      var letter = btn.dataset.letter;
+      if (letter === q.correct) {
+        btn.classList.add("correct");
+      } else if (btn.classList.contains("selected") && letter !== q.correct) {
+        btn.classList.add("incorrect");
+      }
+    });
+
+    revealed = true;
+    var rec = answers[questionOrder[currentIndex]];
+    if (rec) rec.revealed = true;
+    if (speak) {
+      // Not yet answered (pressed Show Answer outright) reads as a miss.
+      if (answeredCorrect) {
+        QuizAudio.playCorrect(currentQno(), currentLang);
+      } else {
+        QuizAudio.playWrong(currentQno(), currentLang);
+      }
+    }
+    updateFooter();
+  }
+
+  /** Show Answer / Reveal Answer: reveal if hidden, otherwise replay the audio. */
+  function onShowAnswer() {
+    if (answeredCorrect === null) {
+      // Revealing without answering counts the question as unanswered-wrong,
+      // and stops the clock so the score cannot drift afterwards.
+      clearInterval(timer);
+      selectedAnswer = null;
+      answeredCorrect = false;
+      answers[questionOrder[currentIndex]] = { chosen: null, correct: false, revealed: false };
+    }
+    if (!revealed) {
+      revealAnswer(true);
+    } else {
+      // Already visible: this is a replay request.
+      if (answeredCorrect) {
+        QuizAudio.playCorrect(currentQno(), currentLang);
+      } else {
+        QuizAudio.playWrong(currentQno(), currentLang);
+      }
+    }
   }
 
   function onNext() {
@@ -339,10 +488,23 @@
     }
   }
 
+  function onPrev() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      loadQuestion(currentIndex);
+    }
+  }
+
   function finishQuiz() {
     QuizAudio.stop();
+    clearInterval(timer);
     progressFill.style.width = "100%";
     var total = QUIZ_QUESTIONS.length;
+    // Score from the answer records, so revisiting via Previous cannot
+    // double-count a question.
+    correctCount = Object.keys(answers).reduce(function (n, k) {
+      return n + (answers[k].correct ? 1 : 0);
+    }, 0);
     var percent = Math.round((correctCount / total) * 100);
     var passed = percent >= PASS_PERCENT;
 
@@ -364,7 +526,7 @@
     buildOrder();
     currentIndex = 0;
     correctCount = 0;
-    answers = [];
+    answers = {};
     resultScreen.classList.add("hidden");
     quizBody.classList.remove("hidden");
     quizFooter.classList.remove("hidden");

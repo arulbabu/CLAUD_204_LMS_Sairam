@@ -6,9 +6,9 @@
  },
  "reaction": {
   "right": {
-   "en": "Correct! Well done.",
-   "ta": "சரி! நன்றாக செய்தீர்கள்.",
-   "hi": "सही! शाबाश."
+   "en": "Correct answer!",
+   "ta": "சரியான விடை!",
+   "hi": "सही उत्तर!"
   },
   "wrong": {
    "en": "That's not right.",

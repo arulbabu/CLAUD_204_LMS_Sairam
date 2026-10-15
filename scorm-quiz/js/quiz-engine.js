@@ -114,6 +114,65 @@
     return q.qno || questionOrder[currentIndex] + 1;
   }
 
+  /* Small speaker affordance inside each option. Clicking it reads the option
+     aloud; it is explicitly NOT an answer (see the click handler). */
+  function speakerHTML(letter) {
+    return '<span class="option-speak" role="button" tabindex="-1" ' +
+           'aria-label="Read option ' + letter + ' aloud" title="Read aloud">' +
+           "\uD83D\uDD0A</span>";
+  }
+
+  /**
+   * Show an image progressively: the inline blur stand-in paints immediately,
+   * the real file fades in once decoded. Intrinsic width/height are set up
+   * front so the card never reflows when the image lands.
+   */
+  function showImage(imgEl, path) {
+    var lqip = typeof QUIZ_LQIP !== "undefined" ? QUIZ_LQIP[path] : null;
+    var dims = typeof QUIZ_IMG_DIMS !== "undefined" ? QUIZ_IMG_DIMS[path] : null;
+    if (dims) {
+      imgEl.width = dims[0];
+      imgEl.height = dims[1];
+    }
+    imgEl.classList.remove("img-loaded");
+    imgEl.style.backgroundImage = lqip ? "url(" + lqip + ")" : "";
+    imgEl.setAttribute("decoding", "async");
+
+    var real = new Image();
+    real.onload = function () {
+      // Only apply if this is still the image the card wants.
+      if (imgEl.dataset.want !== path) return;
+      imgEl.src = path;
+      imgEl.classList.add("img-loaded");
+    };
+    real.onerror = function () {
+      if (imgEl.dataset.want !== path) return;
+      imgEl.src = path;              // let the browser show its own fallback
+      imgEl.classList.add("img-loaded");
+    };
+    imgEl.dataset.want = path;
+    // Paint the blur right away rather than holding the previous question's photo.
+    imgEl.removeAttribute("src");
+    real.src = path;
+  }
+
+  /** Fetch the next question's images during the current question's dwell time. */
+  function preloadImages(qObj) {
+    if (!qObj) return;
+    var paths = [];
+    if (qObj.image) paths.push(qObj.image);
+    if (qObj.optionImages) {
+      Object.keys(qObj.optionImages).forEach(function (k) {
+        paths.push(qObj.optionImages[k]);
+      });
+    }
+    paths.forEach(function (p) {
+      var im = new Image();
+      im.decoding = "async";
+      im.src = p;
+    });
+  }
+
   function renderQuestion() {
     var q = currentQuestion();
 
@@ -122,11 +181,12 @@
 
     var imgWrap = questionImage.parentElement;
     if (q.image) {
-      questionImage.src = q.image;
+      showImage(questionImage, q.image);
       imgWrap.style.display = "";
       quizBody.classList.remove("no-scene-image");
     } else {
       questionImage.removeAttribute("src");
+      delete questionImage.dataset.want;
       imgWrap.style.display = "none";
       quizBody.classList.add("no-scene-image");
     }
@@ -161,28 +221,26 @@
       btn.dataset.letter = letter;
       if (hasImages && q.optionImages[letter]) {
         btn.innerHTML =
-          '<span class="option-img-wrap"><img class="option-img" src="' + q.optionImages[letter] + '" alt="Option ' + letter + '" /><span class="option-letter option-letter-img">' + letter + '</span></span>' +
-          '<span class="option-label">' + text(q.options[letter]) + "</span>";
+          '<span class="option-img-wrap"><img class="option-img" alt="Option ' + letter + '" loading="lazy" decoding="async" /><span class="option-letter option-letter-img">' + letter + '</span></span>' +
+          '<span class="option-label">' + text(q.options[letter]) + "</span>" +
+          speakerHTML(letter);
+        showImage(btn.querySelector(".option-img"), q.optionImages[letter]);
       } else {
         btn.innerHTML =
-          '<span class="option-letter">' + letter + '</span><span class="option-label">' + text(q.options[letter]) + "</span>";
+          '<span class="option-letter">' + letter + '</span><span class="option-label">' + text(q.options[letter]) + "</span>" +
+          speakerHTML(letter);
       }
-      btn.addEventListener("click", function () {
+      btn.addEventListener("click", function (ev) {
+        // The speaker icon reads the option aloud; it must NOT count as an answer.
+        var spk = ev.target.closest ? ev.target.closest(".option-speak") : null;
+        if (spk) {
+          ev.preventDefault();
+          ev.stopPropagation();
+          QuizAudio.playOption(currentQno(), letter, currentLang);
+          return;
+        }
         selectAnswer(letter, btn);
       });
-      // Read the option aloud on hover (desktop) and on touch (mobile),
-      // as long as the question hasn't been answered yet.
-      btn.addEventListener("mouseenter", function () {
-        if (answeredCorrect !== null) return;
-        QuizAudio.playOption(currentQno(), letter, currentLang);
-      });
-      btn.addEventListener("mouseleave", function () {
-        QuizAudio.cancelOption();
-      });
-      btn.addEventListener("touchstart", function () {
-        if (answeredCorrect !== null) return;
-        QuizAudio.playOption(currentQno(), letter, currentLang, 0);
-      }, { passive: true });
       optionsGrid.appendChild(btn);
     });
 
@@ -211,6 +269,7 @@
     if (nextIdx !== undefined) {
       var nq = QUIZ_QUESTIONS[nextIdx];
       QuizAudio.preload(nq.qno || nextIdx + 1, currentLang);
+      preloadImages(nq);
     }
   }
 

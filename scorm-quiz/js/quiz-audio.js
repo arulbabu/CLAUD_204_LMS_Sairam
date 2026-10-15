@@ -2,7 +2,7 @@
  *
  * Clips live at assets/audio/<lang>/:
  *   q<N>-q.mp3          question text
- *   q<N>-opt<L>.mp3     option L's text (hover / tap read-aloud)
+ *   q<N>-opt<L>.mp3     option L's text (read aloud via the option's speaker icon)
  *   q<N>-ans.mp3        the correct option text
  *   lead-<lang>.mp3     "The right answer is" (prefixed on a wrong answer)
  *   react-right-<lang>.mp3 / react-wrong-<lang>.mp3  spoken pick reaction
@@ -16,8 +16,7 @@ var QuizAudio = (function () {
   var audio = null;      // the <audio> element currently playing
   var queue = [];        // remaining srcs in the active chain
   var token = 0;         // invalidates callbacks from superseded chains
-  var hoverTimer = null; // debounce for option read-aloud
-  var priority = false;  // a question/outcome chain is playing: hover must not cut it
+  var priority = false;  // a question/outcome chain is playing
 
   function src(lang, name) {
     return BASE + lang + "/" + name + ".mp3";
@@ -27,7 +26,6 @@ var QuizAudio = (function () {
     token++;
     queue = [];
     priority = false;
-    if (hoverTimer) { clearTimeout(hoverTimer); hoverTimer = null; }
     if (audio) {
       audio.onended = null;
       audio.onerror = null;
@@ -83,31 +81,11 @@ var QuizAudio = (function () {
     },
 
     /**
-     * Read one option aloud (hover or tap). Debounced, and never interrupts
-     * the question or outcome voice-over.
+     * Read one option aloud — fired only by the option's speaker button, never
+     * by hover, so it can never be confused with answering.
      */
-    playOption: function (qno, letter, lang, delay) {
-      if (muted) return;
-      if (hoverTimer) { clearTimeout(hoverTimer); hoverTimer = null; }
-      var wait = typeof delay === "number" ? delay : 350;
-      hoverTimer = setTimeout(function () {
-        hoverTimer = null;
-        if (priority && audio) return;       // let the question finish speaking
-        playChain([src(lang, "q" + qno + "-opt" + letter)], false);
-      }, wait);
-    },
-
-    /** Pointer left the option before the debounce fired. */
-    cancelOption: function () {
-      if (hoverTimer) { clearTimeout(hoverTimer); hoverTimer = null; }
-      if (!priority && audio) {
-        token++;
-        queue = [];
-        audio.onended = null;
-        audio.onerror = null;
-        try { audio.pause(); } catch (e) {}
-        audio = null;
-      }
+    playOption: function (qno, letter, lang) {
+      playChain([src(lang, "q" + qno + "-opt" + letter)], false);
     },
 
     stop: stop,

@@ -25,6 +25,7 @@ VOICES = {
 # Slightly under default: instructional clarity, still natural.
 RATE = "-6%"
 PITCH = "+0Hz"
+CONCURRENCY = 4
 
 
 def log(msg):
@@ -57,7 +58,7 @@ async def make(text, lang, name):
             await tts.save(raw)
             if os.path.getsize(raw) < 1500:
                 raise RuntimeError("empty audio")
-            normalize(raw, final)
+            await asyncio.to_thread(normalize, raw, final)
             os.remove(raw)
             log(f"  {lang}/{name} OK {os.path.getsize(final)//1024}KB")
             return "ok"
@@ -75,22 +76,37 @@ async def main():
     vo = json.load(open(os.path.join(BASE, "vo_script.json"), encoding="utf-8"))
     langs = ("en", "ta", "hi")
 
-    jobs = [(vo["leadIn"][L], L, f"lead-{L}") for L in langs]
+    jobs = []
+    if lo <= 1:
+        # Shared clips: the "right answer is" lead-in and the pick reactions.
+        for L in langs:
+            jobs.append((vo["leadIn"][L], L, f"lead-{L}"))
+            jobs.append((vo["reaction"]["right"][L], L, f"react-right-{L}"))
+            jobs.append((vo["reaction"]["wrong"][L], L, f"react-wrong-{L}"))
     for qno in range(lo, hi + 1):
         e = vo["questions"][str(qno)]
         for L in langs:
             jobs.append((e["q"][L], L, f"q{qno}-q"))
             jobs.append((e["correct"][L], L, f"q{qno}-ans"))
+            for letter, texts in e.get("options", {}).items():
+                jobs.append((texts[L], L, f"q{qno}-opt{letter}"))
 
     log(f"START edge vo q{lo}-{hi}: {len(jobs)} clips")
     tally = {"ok": 0, "skip": 0, "fail": 0}
     fails = []
-    for text, lang, name in jobs:
-        r = await make(text, lang, name)
+    sem = asyncio.Semaphore(CONCURRENCY)
+
+    async def run(job):
+        text, lang, name = job
+        async with sem:
+            r = await make(text, lang, name)
         tally[r] += 1
         if r == "fail":
             fails.append(f"{lang}/{name}")
+
+    await asyncio.gather(*(run(j) for j in jobs))
     log(f"DONE {tally} fails: {fails if fails else 'none'}")
+
 
 
 if __name__ == "__main__":

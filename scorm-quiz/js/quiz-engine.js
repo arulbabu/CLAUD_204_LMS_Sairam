@@ -170,6 +170,19 @@
       btn.addEventListener("click", function () {
         selectAnswer(letter, btn);
       });
+      // Read the option aloud on hover (desktop) and on touch (mobile),
+      // as long as the question hasn't been answered yet.
+      btn.addEventListener("mouseenter", function () {
+        if (answeredCorrect !== null) return;
+        QuizAudio.playOption(currentQno(), letter, currentLang);
+      });
+      btn.addEventListener("mouseleave", function () {
+        QuizAudio.cancelOption();
+      });
+      btn.addEventListener("touchstart", function () {
+        if (answeredCorrect !== null) return;
+        QuizAudio.playOption(currentQno(), letter, currentLang, 0);
+      }, { passive: true });
       optionsGrid.appendChild(btn);
     });
 

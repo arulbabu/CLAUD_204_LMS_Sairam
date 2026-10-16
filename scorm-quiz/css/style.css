@@ -189,6 +189,84 @@ body {
   transform: translateX(15px);
 }
 
+/* ---------- Landing screen ---------- */
+.landing {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.landing-card {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(0, 31, 56, 0.35);
+  padding: 34px 30px 30px;
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+  animation: cardIn 0.6s cubic-bezier(0.22, 1.2, 0.36, 1);
+}
+
+.landing-logo {
+  width: min(300px, 78%);
+  height: auto;
+  margin-bottom: 18px;
+}
+
+.landing-title {
+  margin: 0 0 8px;
+  font-size: clamp(22px, 5vw, 30px);
+  font-weight: 800;
+  color: var(--lt-blue);
+}
+
+.landing-sub {
+  margin: 0 0 20px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #43627D;
+}
+
+.landing-facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.landing-fact {
+  background: rgba(0, 79, 138, 0.07);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--text-dark);
+}
+
+.landing-fact b { color: var(--lt-blue); font-weight: 800; }
+
+.landing-start {
+  width: 100%;
+  max-width: 300px;
+  font-size: 17px;
+  padding: 15px 30px;
+}
+
+.landing-note {
+  margin: 16px 0 0;
+  font-size: 12.5px;
+  color: #5B7A94;
+}
+
 /* ---------- Settings overlay ---------- */
 .settings-overlay {
   position: fixed;
@@ -289,6 +367,29 @@ body {
 
 /* The overlay's switch sits on white, so the off-state needs a visible track. */
 .setting-row .toggle-track { background: #C7D4E0; }
+
+/* A settings row whose control is a number box rather than a switch. */
+.setting-row-input { cursor: default; }
+
+.setting-number {
+  width: 86px;
+  flex: 0 0 auto;
+  padding: 9px 10px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--lt-blue);
+  text-align: center;
+  background: #fff;
+}
+
+.setting-number:focus {
+  outline: none;
+  border-color: var(--lt-cyan);
+  box-shadow: 0 0 0 3px rgba(60, 196, 218, 0.25);
+}
 
 .settings-done {
   width: 100%;
@@ -496,18 +597,14 @@ body {
 }
 
 .quiz-header .brand img {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  border-radius: 50%;
+  height: 38px;
+  width: auto;
+  max-width: 190px;
+  min-width: 0;
+  border-radius: 8px;
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(255,255,255,0.35), 0 0 16px rgba(60,196,218,0.8);
-  animation: logoPulse 3s ease-in-out infinite;
-}
-
-@keyframes logoPulse {
-  0%, 100% { box-shadow: 0 0 0 3px rgba(255,255,255,0.35), 0 0 10px rgba(60,196,218,0.5); }
-  50%      { box-shadow: 0 0 0 3px rgba(255,255,255,0.55), 0 0 22px rgba(253,185,19,0.9); }
+  padding: 4px 8px;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.35), 0 0 16px rgba(60,196,218,0.5);
 }
 
 .quiz-header .brand-title {
@@ -582,6 +679,21 @@ body {
 .timer-circle.low {
   background: linear-gradient(135deg, #FF3D3D, #FF5EA0);
   animation: timerPanic 0.8s ease-in-out infinite;
+}
+
+/* Paused: the clock is visibly frozen, no panic pulse. */
+.timer-circle.paused {
+  background: #8299AC;
+  box-shadow: none;
+  animation: none;
+  opacity: 0.85;
+}
+
+/* Timed out: spent, and silent. */
+.timer-circle.timeout {
+  background: #6E8398;
+  box-shadow: none;
+  animation: none;
 }
 
 @keyframes timerPanic {
@@ -1169,11 +1281,13 @@ body {
 @media (max-width: 480px) {
   .quiz-header { padding: 8px 12px; gap: 6px; }
   .quiz-header .brand-title { font-size: 14px; }
-  .quiz-header .brand img { width: 30px; height: 30px; min-width: 30px; }
+  .quiz-header .brand img { height: 26px; width: auto; max-width: 110px; min-width: 0; padding: 3px 5px; }
   .header-right { gap: 6px; }
   .lang-btn { padding: 4px 7px; font-size: 10px; }
   .timer-circle { width: 34px; height: 34px; min-width: 34px; font-size: 12px; }
   .settings-btn { min-width: 30px; min-height: 30px; font-size: 16px; padding: 6px; }
+  .landing-card { padding: 24px 18px 22px; border-radius: 18px; }
+  .landing-logo { width: min(220px, 80%); }
 }
 
 /* ---------- Reduced motion ---------- */

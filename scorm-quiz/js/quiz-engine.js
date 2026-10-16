@@ -17,6 +17,9 @@
   var autoReveal = true;
   var showAnswerEnabled = true;
   var prevEnabled = true;
+  var timerPaused = false;
+  var secondsPerQuestion = TIME_PER_QUESTION;
+  var timedOut = false;   // clock ran out with no pick: stay silent, reveal nothing
 
   var questionMeta = document.getElementById("questionMeta");
   var questionText = document.getElementById("questionText");
@@ -48,6 +51,13 @@
   var prevBtnToggle = document.getElementById("prevBtnToggle");
   var langButtons = document.querySelectorAll(".lang-btn");
   var randomToggle = document.getElementById("randomToggle");
+  var pauseTimerToggle = document.getElementById("pauseTimerToggle");
+  var secondsInput = document.getElementById("secondsInput");
+  var landingScreen = document.getElementById("landingScreen");
+  var quizCard = document.getElementById("quizCard");
+  var startBtn = document.getElementById("startBtn");
+  var landingCount = document.getElementById("landingCount");
+  var landingTime = document.getElementById("landingTime");
 
   var PASS_PERCENT = 70;
 
@@ -73,7 +83,11 @@
   function init() {
     ScormAPI.init();
     buildOrder();
-    loadQuestion(0);
+
+    landingCount.textContent = QUIZ_QUESTIONS.length;
+    landingTime.textContent = secondsPerQuestion + "s";
+    secondsInput.value = secondsPerQuestion;
+    startBtn.addEventListener("click", startQuiz);
 
     nextBtn.addEventListener("click", onNext);
     prevBtn.addEventListener("click", onPrev);
@@ -104,7 +118,7 @@
       autoReveal = autoAnswerToggle.checked;
       // If they switch auto-reveal ON while sitting on an answered-but-hidden
       // question, honour it immediately rather than making them press Show.
-      if (autoReveal && answeredCorrect !== null && !revealed) revealAnswer(true);
+      if (autoReveal && answeredCorrect !== null && !revealed && !timedOut) revealAnswer(true);
       updateFooter();
     });
 
@@ -136,6 +150,25 @@
       loadQuestion(0);
     });
 
+    pauseTimerToggle.addEventListener("change", function () {
+      timerPaused = pauseTimerToggle.checked;
+      applyPause();
+    });
+
+    secondsInput.addEventListener("change", function () {
+      var v = parseInt(secondsInput.value, 10);
+      if (isNaN(v)) v = secondsPerQuestion;
+      v = Math.min(600, Math.max(5, v));
+      secondsInput.value = v;
+      secondsPerQuestion = v;
+      landingTime.textContent = v + "s";
+      // A still-running question adopts the new limit right away.
+      if (answeredCorrect === null && !timedOut) {
+        timeLeft = v;
+        updateTimerUI();
+      }
+    });
+
     window.addEventListener("beforeunload", function () {
       ScormAPI.commit();
     });
@@ -146,6 +179,21 @@
     settingsClose.focus();
   }
 
+  /** Landing screen hands over to the quiz. */
+  function startQuiz() {
+    landingScreen.classList.add("hidden");
+    quizCard.classList.remove("hidden");
+    loadQuestion(0);
+  }
+
+  /** Stop or resume the countdown for the question on screen. */
+  function applyPause() {
+    clearInterval(timer);
+    timerDisplay.classList.toggle("paused", timerPaused);
+    if (timerPaused || answeredCorrect !== null || timedOut) return;
+    timer = setInterval(tick, 1000);
+  }
+
   function closeSettings() {
     settingsOverlay.classList.add("hidden");
     settingsBtn.focus();
@@ -154,6 +202,7 @@
   /** Re-speak the current state in the current language. */
   function speakCurrentState() {
     var qno = currentQno();
+    if (timedOut && !revealed) return;   // timed out: silence until Show Answer
     if (answeredCorrect === null) {
       QuizAudio.playQuestion(qno, currentLang);
     } else if (!revealed) {
@@ -286,6 +335,8 @@
 
   function loadQuestion(index) {
     clearInterval(timer);
+    timedOut = false;
+    timerDisplay.classList.remove("timeout");
     var prior = answers[questionOrder[index]];
     selectedAnswer = prior ? prior.chosen : null;
     answeredCorrect = prior ? prior.correct : null;
@@ -354,9 +405,11 @@
       return;
     }
 
-    timeLeft = TIME_PER_QUESTION;
+    timeLeft = secondsPerQuestion;
+    timedOut = false;
+    timerDisplay.classList.remove("timeout");
     updateTimerUI();
-    timer = setInterval(tick, 1000);
+    applyPause();
     updateFooter();
 
     // Voice-over: read the question aloud, and warm the next question's clips.
@@ -380,10 +433,27 @@
     updateTimerUI();
     if (timeLeft <= 0) {
       clearInterval(timer);
-      if (selectedAnswer === null) {
-        lockOptions(null);
-      }
+      if (selectedAnswer === null) timeOut();
     }
+  }
+
+  /**
+   * Clock ran out with nothing picked. The options lock, the question counts
+   * as missed, and that is all: no voice-over fires and the correct answer
+   * stays hidden until the learner asks for it with Show Answer.
+   */
+  function timeOut() {
+    timedOut = true;
+    QuizAudio.stop();
+    optionsGrid.querySelectorAll(".option-btn").forEach(function (btn) {
+      btn.disabled = true;
+    });
+    answers[questionOrder[currentIndex]] = { chosen: null, correct: false, revealed: false };
+    answeredCorrect = false;
+    timerDisplay.textContent = "0";
+    timerDisplay.classList.remove("low");
+    timerDisplay.classList.add("timeout");
+    updateFooter();
   }
 
   function selectAnswer(letter, btnEl) {

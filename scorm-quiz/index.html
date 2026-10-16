@@ -22,13 +22,29 @@
   <span>&#128293;</span><!-- 🔥 -->
 </div>
 
-<div class="quiz-card">
+<!-- Landing screen: the quiz only starts once Start is pressed. -->
+<div class="landing" id="landingScreen">
+  <div class="landing-card">
+    <img class="landing-logo" src="assets/logo.png" alt="L&amp;T Construction" />
+    <h1 class="landing-title">Construction Safety Quiz</h1>
+    <p class="landing-sub">Heavy Civil Infrastructure &mdash; safety awareness assessment</p>
+    <div class="landing-facts">
+      <span class="landing-fact"><b id="landingCount">70</b> questions</span>
+      <span class="landing-fact"><b>3</b> languages</span>
+      <span class="landing-fact"><b id="landingTime">30s</b> per question</span>
+    </div>
+    <button class="next-btn landing-start" id="startBtn">Start Quiz</button>
+    <p class="landing-note">English &middot; தமிழ் &middot; हिंदी &mdash; switch any time from the header</p>
+  </div>
+</div>
+
+<div class="quiz-card hidden" id="quizCard">
 
   <!-- Header: Logo | L&T - Quiz | language + random + timer + settings (right-aligned) -->
   <div class="quiz-header">
     <div class="brand">
-      <img src="assets/logo.svg" alt="L&amp;T Logo" />
-      <span class="brand-title">L&amp;T - Quiz</span>
+      <img src="assets/logo.png" alt="L&amp;T Construction" />
+      <span class="brand-title">Safety Quiz</span>
     </div>
     <div class="header-right">
       <div class="lang-switch" id="langSwitch" role="group" aria-label="Language">
@@ -68,6 +84,24 @@
         <input type="checkbox" id="randomToggle" />
         <span class="toggle-track"><span class="toggle-thumb"></span></span>
       </label>
+
+      <label class="setting-row" for="pauseTimerToggle">
+        <span class="setting-copy">
+          <span class="setting-name">Pause timer</span>
+          <span class="setting-hint">Freeze the countdown and take as long as you need</span>
+        </span>
+        <input type="checkbox" id="pauseTimerToggle" />
+        <span class="toggle-track"><span class="toggle-thumb"></span></span>
+      </label>
+
+      <div class="setting-row setting-row-input">
+        <span class="setting-copy">
+          <span class="setting-name">Seconds per question</span>
+          <span class="setting-hint">Applies from the next question onwards (5&ndash;600)</span>
+        </span>
+        <input type="number" class="setting-number" id="secondsInput"
+               min="5" max="600" step="5" value="30" aria-label="Seconds per question" />
+      </div>
 
       <label class="setting-row" for="autoAnswerToggle">
         <span class="setting-copy">

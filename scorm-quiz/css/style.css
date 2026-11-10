@@ -657,7 +657,9 @@ body {
 .settings-btn:active { transform: rotate(240deg) scale(0.92); }
 
 
-/* ---------- Timer ---------- */
+/* ---------- Timer ----------
+   Lives in the question card's top-right corner (client-marked position).
+   Clickable: pauses/resumes the countdown when that setting is enabled. */
 .timer-circle {
   width: 44px;
   height: 44px;
@@ -673,8 +675,27 @@ body {
   border: 3px solid rgba(255,255,255,0.85);
   box-shadow: 0 0 14px rgba(253,185,19,0.65);
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
 }
+
+.timer-circle:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(253,185,19,0.85);
+}
+
+.timer-circle:active { transform: scale(0.94); }
+
+.timer-circle:focus-visible {
+  outline: 3px solid var(--lt-cyan);
+  outline-offset: 2px;
+}
+
+/* Pausing is off in settings: the clock is not interactive. */
+.timer-circle.no-pause { cursor: default; }
+.timer-circle.no-pause:hover { transform: none; box-shadow: 0 0 14px rgba(253,185,19,0.65); }
 
 .timer-circle.low {
   background: linear-gradient(135deg, #FF3D3D, #FF5EA0);
@@ -1076,6 +1097,71 @@ body {
   flex-shrink: 0;
 }
 
+/* ---------- Warning Info ----------
+   Sits in the footer band between the slide count and the nav buttons —
+   the position the client marked. It is sized by its own message (the
+   flex basis is content-driven, capped so long text wraps rather than
+   crushing the buttons), and uses the L&T palette: deep blue surface,
+   yellow accent rail and icon. */
+.warning-info {
+  flex: 0 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 16px 9px 13px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0,63,114,0.97), rgba(2,77,135,0.97));
+  border: 1px solid rgba(253,185,19,0.55);
+  border-left: 5px solid var(--lt-yellow);
+  box-shadow: 0 6px 18px rgba(0,63,114,0.28);
+  color: #fff;
+  text-align: left;
+  animation: warnIn 0.42s cubic-bezier(0.22, 1.4, 0.36, 1) both;
+}
+
+.warning-info[hidden] { display: none; }
+
+.warning-icon {
+  font-size: 19px;
+  line-height: 1.25;
+  color: var(--lt-yellow);
+  flex-shrink: 0;
+  animation: warnPulse 1.9s ease-in-out infinite;
+}
+
+.warning-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.warning-title {
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  color: var(--lt-yellow);
+}
+
+.warning-text {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #F2F8FF;
+}
+
+@keyframes warnIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes warnPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.72; transform: scale(1.12); }
+}
+
 .slide-count {
   font-size: 14px;
   font-weight: 800;
@@ -1149,6 +1235,13 @@ body {
     gap: 8px;
   }
   .slide-count { text-align: center; }
+  /* The warning spans the stacked footer instead of competing for one row. */
+  .warning-info {
+    order: -1;
+    flex: 1 1 auto;
+    padding: 8px 12px 8px 10px;
+  }
+  .warning-text { font-size: 12px; }
   .footer-actions {
     justify-content: center;
     gap: 6px;

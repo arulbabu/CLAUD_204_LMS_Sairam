@@ -18,6 +18,7 @@
   var showAnswerEnabled = true;
   var prevEnabled = true;
   var timerPaused = false;
+  var clickPauseEnabled = true;   // clicking the timer may pause it
   var secondsPerQuestion = TIME_PER_QUESTION;
   var timedOut = false;   // clock ran out with no pick: stay silent, reveal nothing
 
@@ -52,12 +53,19 @@
   var langButtons = document.querySelectorAll(".lang-btn");
   var randomToggle = document.getElementById("randomToggle");
   var pauseTimerToggle = document.getElementById("pauseTimerToggle");
+  var clickPauseToggle = document.getElementById("clickPauseToggle");
   var secondsInput = document.getElementById("secondsInput");
   var landingScreen = document.getElementById("landingScreen");
   var quizCard = document.getElementById("quizCard");
   var startBtn = document.getElementById("startBtn");
   var landingCount = document.getElementById("landingCount");
   var landingTime = document.getElementById("landingTime");
+  var warningInfo = document.getElementById("warningInfo");
+  var warningTitle = document.getElementById("warningTitle");
+  var warningText = document.getElementById("warningText");
+
+  /* Warning Info panel heading, per language. */
+  var WARNING_HEADING = { en: "Warning Info", ta: "எச்சரிக்கை தகவல்", hi: "चेतावनी सूचना" };
 
   var PASS_PERCENT = 70;
 
@@ -137,6 +145,7 @@
         currentLang = btn.dataset.lang;
         langButtons.forEach(function (b) { b.classList.toggle("active", b === btn); });
         renderQuestion(); // re-render current question in new language without resetting timer/progress
+        if (revealed) showWarning();   // keep the warning in sync with the language
         speakCurrentState();
       });
     });
@@ -153,6 +162,22 @@
     pauseTimerToggle.addEventListener("change", function () {
       timerPaused = pauseTimerToggle.checked;
       applyPause();
+    });
+
+    /* Client feedback: clicking the timer pauses/resumes it. The ability to do
+       so is itself a setting (clickPauseToggle) — when that is off the clock is
+       not interactive and the class removes the hover affordance. */
+    clickPauseToggle.addEventListener("change", function () {
+      clickPauseEnabled = clickPauseToggle.checked;
+      timerDisplay.classList.toggle("no-pause", !clickPauseEnabled);
+    });
+
+    timerDisplay.addEventListener("click", toggleTimerPause);
+    timerDisplay.addEventListener("keydown", function (ev) {
+      if (ev.key === "Enter" || ev.key === " ") {
+        ev.preventDefault();
+        toggleTimerPause();
+      }
     });
 
     secondsInput.addEventListener("change", function () {
@@ -192,6 +217,19 @@
     timerDisplay.classList.toggle("paused", timerPaused);
     if (timerPaused || answeredCorrect !== null || timedOut) return;
     timer = setInterval(tick, 1000);
+  }
+
+  /**
+   * Click (or Enter/Space) on the timer toggles the pause, keeping the
+   * settings checkbox in step so the two controls never disagree. Does
+   * nothing once the question is already answered or timed out.
+   */
+  function toggleTimerPause() {
+    if (!clickPauseEnabled) return;
+    if (answeredCorrect !== null || timedOut) return;
+    timerPaused = !timerPaused;
+    pauseTimerToggle.checked = timerPaused;
+    applyPause();
   }
 
   function closeSettings() {
@@ -336,6 +374,7 @@
   function loadQuestion(index) {
     clearInterval(timer);
     timedOut = false;
+    hideWarning();
     timerDisplay.classList.remove("timeout");
     var prior = answers[questionOrder[index]];
     selectedAnswer = prior ? prior.chosen : null;
@@ -495,6 +534,30 @@
   }
 
   /**
+   * Warning Info: a short, important safety message shown in the footer band
+   * at the same moment the answer is revealed — whether the learner answered,
+   * pressed Show Answer, or auto-reveal fired. Only questions that carry a
+   * `warning` field show one.
+   */
+  function showWarning() {
+    var q = currentQuestion();
+    var msg = q.warning ? text(q.warning) : "";
+    if (!msg) { hideWarning(); return; }
+    warningTitle.textContent = WARNING_HEADING[currentLang] || WARNING_HEADING.en;
+    warningText.textContent = msg;
+    warningInfo.hidden = false;
+    // Replay the entrance animation on each reveal.
+    warningInfo.style.animation = "none";
+    void warningInfo.offsetWidth;
+    warningInfo.style.animation = "";
+  }
+
+  function hideWarning() {
+    warningInfo.hidden = true;
+    warningText.textContent = "";
+  }
+
+  /**
    * Mark the correct option (and the wrong pick, if any) and speak the answer.
    * Reached from an auto-reveal answer, from Show Answer, or from a timeout.
    * `speak` is false only when re-rendering an already-revealed question.
@@ -516,6 +579,7 @@
     revealed = true;
     var rec = answers[questionOrder[currentIndex]];
     if (rec) rec.revealed = true;
+    showWarning();   // fires with the reveal, per client spec
     if (speak) {
       // Not yet answered (pressed Show Answer outright) reads as a miss.
       if (answeredCorrect) {
@@ -597,6 +661,7 @@
     currentIndex = 0;
     correctCount = 0;
     answers = {};
+    hideWarning();
     resultScreen.classList.add("hidden");
     quizBody.classList.remove("hidden");
     quizFooter.classList.remove("hidden");

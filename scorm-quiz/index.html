@@ -52,7 +52,6 @@
         <button class="lang-btn" data-lang="ta">தமிழ்</button>
         <button class="lang-btn" data-lang="hi">हिंदी</button>
       </div>
-      <div class="timer-circle" id="timerDisplay">30</div>
       <button class="settings-btn" id="settingsBtn" title="Settings">&#9881;</button>
     </div>
   </div>
@@ -91,6 +90,15 @@
           <span class="setting-hint">Freeze the countdown and take as long as you need</span>
         </span>
         <input type="checkbox" id="pauseTimerToggle" />
+        <span class="toggle-track"><span class="toggle-thumb"></span></span>
+      </label>
+
+      <label class="setting-row" for="clickPauseToggle">
+        <span class="setting-copy">
+          <span class="setting-name">Click timer to pause</span>
+          <span class="setting-hint">Let the trainee pause by clicking the countdown</span>
+        </span>
+        <input type="checkbox" id="clickPauseToggle" checked />
         <span class="toggle-track"><span class="toggle-thumb"></span></span>
       </label>
 
@@ -141,10 +149,13 @@
   <!-- Quiz body -->
   <div class="quiz-body" id="quizBody">
 
-    <!-- Question card: stands out on its own -->
+    <!-- Question card: stands out on its own. The timer lives here, top-right,
+         per client markup. Clicking it pauses/resumes when that is enabled. -->
     <div class="question-card" id="questionCard">
       <div class="question-card-top">
         <div class="question-meta" id="questionMeta">Question 1 of 60</div>
+        <div class="timer-circle" id="timerDisplay" role="button" tabindex="0"
+             title="Click to pause / resume">30</div>
       </div>
       <p class="question-text" id="questionText">Loading question...</p>
     </div>
@@ -161,6 +172,17 @@
 
   <div class="quiz-footer">
     <div class="slide-count" id="slideCount">1 / 5</div>
+
+    <!-- Warning Info: appears in the footer band the moment the answer is
+         revealed (learner pick or auto-reveal). Sized by its own message. -->
+    <div class="warning-info" id="warningInfo" role="alert" aria-live="polite" hidden>
+      <span class="warning-icon" aria-hidden="true">&#9888;</span>
+      <span class="warning-body">
+        <span class="warning-title" id="warningTitle">Warning Info</span>
+        <span class="warning-text" id="warningText"></span>
+      </span>
+    </div>
+
     <div class="footer-actions">
       <button class="nav-btn" id="prevBtn" disabled>&#8592; Previous</button>
       <button class="nav-btn show-answer-btn" id="showAnswerBtn">Show Answer</button>

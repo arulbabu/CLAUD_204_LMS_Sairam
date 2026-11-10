@@ -1,5 +1,8 @@
-// Construction Safety Quiz — 70 questions, multilingual (English / Tamil / Hindi)
+// Construction Safety Quiz — 68 questions, multilingual (English / Tamil / Hindi)
 // Generated from Construction_Safety_Quiz_60Q.xlsx + Construction_Safety_Quiz_10Q_New.xlsx
+// Revised per client feedback v2 (Nov 2026): Q29 and Q36 removed, correct answers
+// rebalanced across A-D, Warning Info messages added, option wording professionalised.
+// Original question numbers are preserved so the client's feedback references resolve.
 var QUIZ_QUESTIONS = [
   {
     qno: 1,
@@ -59,27 +62,27 @@ var QUIZ_QUESTIONS = [
     },
     options: {
       A: {
-        en: "A single waist belt",
-        ta: "ஒற்றை இடுப்பு பெல்ட் மட்டும்",
-        hi: "केवल एक कमर बेल्ट"
+        en: "Safety belt with a single rope",
+        ta: "ஒரே கயிறு கொண்ட பாதுகாப்பு பெல்ட்",
+        hi: "एक ही रस्सी वाली सुरक्षा बेल्ट"
       },
       B: {
-        en: "A full-body harness",
-        ta: "முழு உடல் கச்சை (ஃபுல்-பாடி ஹார்னஸ்)",
-        hi: "फुल-बॉडी हार्नेस"
+        en: "Half-body harness with a single rope",
+        ta: "ஒரே கயிறு கொண்ட அரை-உடல் ஹார்னஸ்",
+        hi: "एक ही रस्सी वाला आधा-शरीर हार्नेस"
       },
       C: {
-        en: "A rope tied around the chest",
-        ta: "மார்பில் கட்டிய கயிறு",
-        hi: "छाती के चारों ओर बंधी रस्सी"
+        en: "A weightlifting support belt",
+        ta: "எடை தூக்குவதற்கான சப்போர்ட் பெல்ட்",
+        hi: "वज़न उठाने के लिए सपोर्ट बेल्ट"
       },
       D: {
-        en: "A weightlifting belt",
-        ta: "பளு தூக்கும் பெல்ட்",
-        hi: "वेटलिफ्टिंग बेल्ट"
+        en: "A full-body harness with a shock-absorbing lanyard",
+        ta: "அதிர்ச்சியை உறிஞ்சும் லான்யார்டுடன் கூடிய முழு-உடல் ஹார்னஸ்",
+        hi: "शॉक-अब्ज़ॉर्बिंग लैनयार्ड वाला पूरा-शरीर हार्नेस"
       }
     },
-    correct: "B"
+    correct: "D"
   },
   {
     qno: 3,
@@ -93,9 +96,9 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "Above 85 decibels (8-hour average)",
-        ta: "85 டெசிபலுக்கு மேல் (8 மணி நேர சராசரி)",
-        hi: "85 डेसिबल से ऊपर (8 घंटे का औसत)"
+        en: "Only when using a jackhammer",
+        ta: "ஜாக்ஹேமர் பயன்படுத்தும்போது மட்டும்",
+        hi: "केवल जैकहैमर इस्तेमाल करते समय"
       },
       B: {
         en: "Above 30 decibels",
@@ -103,9 +106,9 @@ var QUIZ_QUESTIONS = [
         hi: "30 डेसिबल से ऊपर"
       },
       C: {
-        en: "Only when using a jackhammer",
-        ta: "ஜாக்ஹேமர் பயன்படுத்தும்போது மட்டும்",
-        hi: "केवल जैकहैमर इस्तेमाल करते समय"
+        en: "Above 85 decibels (8-hour average)",
+        ta: "85 டெசிபலுக்கு மேல் (8 மணி நேர சராசரி)",
+        hi: "85 डेसिबल से ऊपर (8 घंटे का औसत)"
       },
       D: {
         en: "Hearing protection is optional on construction sites",
@@ -113,7 +116,7 @@ var QUIZ_QUESTIONS = [
         hi: "निर्माण स्थलों पर कान की सुरक्षा वैकल्पिक है"
       }
     },
-    correct: "A"
+    correct: "C"
   },
   {
     qno: 4,
@@ -127,9 +130,9 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q4-A.jpg",
-      B: "assets/images/options/q4-B.jpg",
+      B: "assets/images/options/q4-D.jpg",
       C: "assets/images/options/q4-C.jpg",
-      D: "assets/images/options/q4-D.jpg"
+      D: "assets/images/options/q4-B.jpg"
     },
     options: {
       A: {
@@ -138,9 +141,9 @@ var QUIZ_QUESTIONS = [
         hi: "केवल साधारण नज़र का चश्मा"
       },
       B: {
-        en: "Safety goggles or a full face shield",
-        ta: "பாதுகாப்பு கண்ணாடி அல்லது முழு முக கவசம்",
-        hi: "सेफ्टी गॉगल्स या फुल फेस शील्ड"
+        en: "No eye protection is needed for short tasks",
+        ta: "சிறிய வேலைகளுக்கு கண் பாதுகாப்பு தேவையில்லை",
+        hi: "छोटे कार्यों के लिए नेत्र सुरक्षा की आवश्यकता नहीं"
       },
       C: {
         en: "Sunglasses",
@@ -148,12 +151,12 @@ var QUIZ_QUESTIONS = [
         hi: "धूप का चश्मा"
       },
       D: {
-        en: "No eye protection is needed for short tasks",
-        ta: "சிறிய வேலைகளுக்கு கண் பாதுகாப்பு தேவையில்லை",
-        hi: "छोटे कार्यों के लिए नेत्र सुरक्षा की आवश्यकता नहीं"
+        en: "Safety goggles or a full face shield",
+        ta: "பாதுகாப்பு கண்ணாடி அல்லது முழு முக கவசம்",
+        hi: "सेफ्टी गॉगल्स या फुल फेस शील्ड"
       }
     },
-    correct: "B"
+    correct: "D"
   },
   {
     qno: 5,
@@ -167,24 +170,24 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "To look fashionable",
-        ta: "நாகரீகமாக தோற்றமளிக்க",
-        hi: "फैशनेबल दिखने के लिए"
+        en: "To protect against chemical exposure",
+        ta: "இரசாயனத் தொடர்பிலிருந்து பாதுகாக்க",
+        hi: "रसायनों के संपर्क से बचाने के लिए"
       },
       B: {
-        en: "To be easily seen by vehicle and equipment operators",
-        ta: "வாகனம் மற்றும் இயந்திர இயக்குநர்களால் எளிதில் பார்க்கப்படுவதற்கு",
-        hi: "वाहन और उपकरण चालकों द्वारा आसानी से दिखने के लिए"
+        en: "To improve worker visibility and prevent struck-by accidents",
+        ta: "தொழிலாளி நன்றாகத் தெரியும்படி செய்து, வாகனம்/பொருள் மோதும் விபத்துகளைத் தடுக்க",
+        hi: "मज़दूर साफ़ दिखाई दे और टकराने वाले हादसे न हों, इसके लिए"
       },
       C: {
-        en: "To keep warm in cold weather",
-        ta: "குளிர் காலத்தில் சூடாக இருக்க",
-        hi: "ठंड के मौसम में गर्म रहने के लिए"
+        en: "To protect from electrical shock",
+        ta: "மின் அதிர்ச்சியிலிருந்து பாதுகாக்க",
+        hi: "बिजली के झटके से बचाने के लिए"
       },
       D: {
-        en: "To show seniority on the project",
-        ta: "திட்டத்தில் மூப்பு நிலையை காட்ட",
-        hi: "प्रोजेक्ट में वरिष्ठता दिखाने के लिए"
+        en: "To reduce noise exposure",
+        ta: "சத்தத்தின் தாக்கத்தைக் குறைக்க",
+        hi: "शोर के असर को कम करने के लिए"
       }
     },
     correct: "B"
@@ -201,14 +204,14 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "The first and most effective control",
-        ta: "முதல் மற்றும் மிகவும் பயனுள்ள கட்டுப்பாடு",
-        hi: "पहला और सबसे प्रभावी नियंत्रण"
-      },
-      B: {
         en: "The last line of defense, used after other controls",
         ta: "கடைசி பாதுகாப்பு வரிசை, மற்ற கட்டுப்பாடுகளுக்குப் பிறகு பயன்படுத்தப்படும்",
         hi: "रक्षा की अंतिम पंक्ति, अन्य नियंत्रणों के बाद उपयोग होती है"
+      },
+      B: {
+        en: "The first and most effective control",
+        ta: "முதல் மற்றும் மிகவும் பயனுள்ள கட்டுப்பாடு",
+        hi: "पहला और सबसे प्रभावी नियंत्रण"
       },
       C: {
         en: "PPE replaces the need for engineering controls",
@@ -216,12 +219,12 @@ var QUIZ_QUESTIONS = [
         hi: "PPE इंजीनियरिंग नियंत्रणों की जगह लेता है"
       },
       D: {
-        en: "PPE is only needed if a supervisor is watching",
-        ta: "மேற்பார்வையாளர் பார்க்கும்போது மட்டுமே PPE தேவை",
-        hi: "PPE केवल तब चाहिए जब सुपरवाइज़र देख रहा हो"
+        en: "PPE alone is sufficient control for any high-risk task",
+        ta: "எந்த அதிக ஆபத்துள்ள வேலைக்கும் PPE (தனிநபர் பாதுகாப்பு உபகரணம்) மட்டுமே போதுமான கட்டுப்பாடு",
+        hi: "किसी भी उच्च जोखिम वाले काम के लिए अकेला PPE (व्यक्तिगत सुरक्षा उपकरण) ही पर्याप्त नियंत्रण है"
       }
     },
-    correct: "B"
+    correct: "A"
   },
   {
     qno: 7,
@@ -235,27 +238,27 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
+        en: "Improving grip on scaffold planks",
+        ta: "சாரப் பலகைகள் மீது பிடி மேம்படுத்துவது",
+        hi: "मचान के तख्तों पर पकड़ बेहतर करना"
+      },
+      B: {
         en: "Protection from falling or rolling heavy objects onto the foot",
         ta: "விழும் அல்லது உருளும் கனமான பொருட்களிலிருந்து பாதத்தை பாதுகாத்தல்",
         hi: "गिरने वाली या लुढ़कने वाली भारी वस्तुओं से पैर की रक्षा"
       },
-      B: {
-        en: "Making the worker taller",
-        ta: "தொழிலாளியை உயரமாக காட்டுவது",
-        hi: "कर्मचारी को लंबा दिखाना"
-      },
       C: {
-        en: "Keeping feet cool in summer",
-        ta: "கோடையில் பாதங்களை குளிர்ச்சியாக வைத்திருப்பது",
-        hi: "गर्मियों में पैरों को ठंडा रखना"
+        en: "Reducing fatigue during long shifts",
+        ta: "நீண்ட ஷிப்ட்டில் சோர்வைக் குறைப்பது",
+        hi: "लंबी शिफ़्ट में थकान कम करना"
       },
       D: {
-        en: "Improving running speed",
-        ta: "ஓடும் வேகத்தை அதிகரிப்பது",
-        hi: "दौड़ने की गति बढ़ाना"
+        en: "Preventing slips on wet concrete",
+        ta: "ஈரமான கான்கிரீட்டில் வழுக்குவதைத் தடுப்பது",
+        hi: "गीले कंक्रीट पर फिसलने से रोकना"
       }
     },
-    correct: "A"
+    correct: "B"
   },
   {
     qno: 8,
@@ -274,22 +277,22 @@ var QUIZ_QUESTIONS = [
         hi: "केवल जब कर्मचारी का मन हो"
       },
       B: {
+        en: "Only when the site is being formally audited",
+        ta: "தளத்தில் முறையான தணிக்கை நடக்கும்போது மட்டும்",
+        hi: "सिर्फ़ जब साइट का औपचारिक ऑडिट हो रहा हो"
+      },
+      C: {
         en: "When working in dusty, fume-laden or hazardous atmospheres",
         ta: "தூசி, புகை அல்லது அபாயகரமான சூழலில் வேலை செய்யும்போது",
         hi: "धूल, धुएं या खतरनाक वातावरण में काम करते समय"
       },
-      C: {
-        en: "Only during lunch break",
-        ta: "மதிய உணவு இடைவேளையின் போது மட்டும்",
-        hi: "केवल लंच ब्रेक के दौरान"
-      },
       D: {
-        en: "Never — masks are not required in construction",
-        ta: "ஒருபோதும் இல்லை — கட்டுமானத்தில் மாஸ்க் தேவையில்லை",
-        hi: "कभी नहीं — निर्माण में मास्क की आवश्यकता नहीं"
+        en: "Only when working inside an enclosed building",
+        ta: "மூடிய கட்டிடத்திற்கு உள்ளே வேலை செய்யும்போது மட்டும்",
+        hi: "सिर्फ़ जब बंद इमारत के अंदर काम कर रहे हों"
       }
     },
-    correct: "B"
+    correct: "C"
   },
   {
     qno: 9,
@@ -303,9 +306,9 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q9-A.jpg",
-      B: "assets/images/options/q9-B.jpg",
+      B: "assets/images/options/q9-D.jpg",
       C: "assets/images/options/q9-C.jpg",
-      D: "assets/images/options/q9-D.jpg"
+      D: "assets/images/options/q9-B.jpg"
     },
     options: {
       A: {
@@ -314,9 +317,9 @@ var QUIZ_QUESTIONS = [
         hi: "केवल छाती के सामने"
       },
       B: {
-        en: "On the back, between the shoulder blades (dorsal D-ring)",
-        ta: "முதுகில், தோள்பட்டைகளுக்கு இடையில் (டார்சல் D-வளையம்)",
-        hi: "पीठ पर, कंधे की हड्डियों के बीच (डॉर्सल D-रिंग)"
+        en: "On the waist belt, at the front",
+        ta: "இடுப்பு பெல்ட்டில், முன்பக்கத்தில்",
+        hi: "कमर की बेल्ट पर, सामने की तरफ़"
       },
       C: {
         en: "On the side of the hip",
@@ -324,12 +327,12 @@ var QUIZ_QUESTIONS = [
         hi: "कूल्हे की साइड पर"
       },
       D: {
-        en: "On top of the hard hat",
-        ta: "ஹார்ட் ஹேட்டின் மேல்",
-        hi: "हार्ड हैट के ऊपर"
+        en: "On the back, between the shoulder blades (dorsal D-ring)",
+        ta: "முதுகில், தோள்பட்டைகளுக்கு இடையில் (டார்சல் D-வளையம்)",
+        hi: "पीठ पर, कंधे की हड्डियों के बीच (डॉर्सल D-रिंग)"
       }
     },
-    correct: "B"
+    correct: "D"
   },
   {
     qno: 10,
@@ -342,21 +345,21 @@ var QUIZ_QUESTIONS = [
     image: "assets/images/q10.jpg",
     imageCaption: "",
     optionImages: {
-      A: "assets/images/options/q10-A.jpg",
-      B: "assets/images/options/q10-B.jpg",
+      A: "assets/images/options/q10-B.jpg",
+      B: "assets/images/options/q10-A.jpg",
       C: "assets/images/options/q10-C.jpg",
       D: "assets/images/options/q10-D.jpg"
     },
     options: {
       A: {
-        en: "About 45 degrees",
-        ta: "சுமார் 45 டிகிரி",
-        hi: "लगभग 45 डिग्री"
-      },
-      B: {
         en: "About 75 degrees (1 foot out for every 4 feet of height)",
         ta: "சுமார் 75 டிகிரி (ஒவ்வொரு 4 அடி உயரத்திற்கும் 1 அடி வெளியே)",
         hi: "लगभग 75 डिग्री (हर 4 फीट ऊँचाई पर 1 फीट बाहर)"
+      },
+      B: {
+        en: "About 45 degrees",
+        ta: "சுமார் 45 டிகிரி",
+        hi: "लगभग 45 डिग्री"
       },
       C: {
         en: "Completely vertical (90 degrees)",
@@ -369,7 +372,7 @@ var QUIZ_QUESTIONS = [
         hi: "कोई भी कोण ठीक है जब तक वह दीवार को छूती है"
       }
     },
-    correct: "B"
+    correct: "A"
   },
   {
     qno: 11,
@@ -382,34 +385,34 @@ var QUIZ_QUESTIONS = [
     image: "assets/images/q11.jpg",
     imageCaption: "",
     optionImages: {
-      A: "assets/images/options/q11-A.jpg",
-      B: "assets/images/options/q11-B.jpg",
+      A: "assets/images/options/q11-B.jpg",
+      B: "assets/images/options/q11-A.jpg",
       C: "assets/images/options/q11-C.jpg",
       D: "assets/images/options/q11-D.jpg"
     },
     options: {
       A: {
-        en: "Around 1.0–1.1 m (about 42 inches) above the platform",
-        ta: "தளத்திற்கு மேல் சுமார் 1.0–1.1 மீ (சுமார் 42 அங்குலம்)",
-        hi: "प्लेटफॉर्म से लगभग 1.0–1.1 मीटर (लगभग 42 इंच) ऊपर"
-      },
-      B: {
         en: "15 cm (ankle height)",
         ta: "15 செமீ (கணுக்கால் உயரம்)",
         hi: "15 सेमी (टखने की ऊँचाई)"
       },
+      B: {
+        en: "Around 1.0–1.1 m (about 42 inches) above the platform",
+        ta: "தளத்திற்கு மேல் சுமார் 1.0–1.1 மீ (சுமார் 42 அங்குலம்)",
+        hi: "प्लेटफॉर्म से लगभग 1.0–1.1 मीटर (लगभग 42 इंच) ऊपर"
+      },
       C: {
-        en: "Guardrails are optional if the scaffold is low",
-        ta: "சாரக்கட்டு தாழ்வாக இருந்தால் கைப்பிடிச் சட்டம் விருப்பத்திற்குரியது",
-        hi: "यदि स्कैफोल्ड नीचा है तो गार्डरेल वैकल्पिक है"
+        en: "Only 0.5 m is required for light-duty scaffolds",
+        ta: "இலகுரக சாரக்கட்டுக்கு 0.5 m மட்டுமே தேவை",
+        hi: "हल्के काम के मचान के लिए सिर्फ़ 0.5 m ज़रूरी है"
       },
       D: {
-        en: "2.5 cm (a thin rope only)",
-        ta: "2.5 செமீ (மெல்லிய கயிறு மட்டும்)",
-        hi: "2.5 सेमी (केवल एक पतली रस्सी)"
+        en: "Around 0.6 m (about 24 inches) above the platform",
+        ta: "பிளாட்ஃபார்மிற்கு மேலே சுமார் 0.6 m (சுமார் 24 inches)",
+        hi: "प्लेटफ़ॉर्म से लगभग 0.6 m (करीब 24 inches) ऊपर"
       }
     },
-    correct: "A"
+    correct: "B"
   },
   {
     qno: 12,
@@ -423,9 +426,9 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "About 1.8 m / 6 feet or higher above a lower level",
-        ta: "கீழ் மட்டத்திலிருந்து சுமார் 1.8 மீ / 6 அடி அல்லது அதற்கு மேல்",
-        hi: "निचले स्तर से लगभग 1.8 मीटर / 6 फीट या उससे अधिक"
+        en: "About 1.8 m or higher above a lower level",
+        ta: "கீழ் மட்டத்திலிருந்து சுமார் 1.8 m அல்லது அதற்கு மேல்",
+        hi: "निचले स्तर से लगभग 1.8 m या उससे अधिक ऊँचाई पर"
       },
       B: {
         en: "Only above 30 m",
@@ -433,15 +436,20 @@ var QUIZ_QUESTIONS = [
         hi: "केवल 30 मीटर से ऊपर"
       },
       C: {
-        en: "Fall protection is never required outdoors",
-        ta: "வெளியில் வீழ்ச்சி பாதுகாப்பு ஒருபோதும் தேவையில்லை",
-        hi: "बाहर फॉल प्रोटेक्शन कभी आवश्यक नहीं"
+        en: "Only when working from a mobile elevated work platform",
+        ta: "நகரும் உயர்த்தப்பட்ட வேலை பிளாட்ஃபார்மில் (MEWP) வேலை செய்யும்போது மட்டும்",
+        hi: "सिर्फ़ जब मोबाइल एलिवेटेड वर्क प्लेटफ़ॉर्म (MEWP) से काम कर रहे हों"
       },
       D: {
-        en: "Only when a supervisor happens to be watching",
-        ta: "மேற்பார்வையாளர் பார்க்கும்போது மட்டும்",
-        hi: "केवल जब सुपरवाइज़र देख रहा हो"
+        en: "Only when the work continues for more than one full shift",
+        ta: "வேலை ஒரு முழு ஷிப்ட்டுக்கு மேல் தொடரும்போது மட்டும்",
+        hi: "सिर्फ़ जब काम एक पूरी शिफ़्ट से ज़्यादा चलता रहे"
       }
+    },
+    warning: {
+      en: "Any work at height can be dangerous. Assess the risk and use appropriate fall protection before starting work.",
+      ta: "உயரத்தில் செய்யும் எந்த வேலையும் ஆபத்தானது. வேலையைத் தொடங்கும் முன் ஆபத்தை மதிப்பிட்டு, சரியான விழுதல் தடுப்பு பாதுகாப்பைப் பயன்படுத்துங்கள்.",
+      hi: "ऊँचाई पर किया जाने वाला कोई भी काम खतरनाक हो सकता है। काम शुरू करने से पहले जोखिम का आकलन करें और सही गिरावट-सुरक्षा उपकरण इस्तेमाल करें।"
     },
     correct: "A"
   },
@@ -457,8 +465,8 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q13-A.jpg",
-      B: "assets/images/options/q13-B.jpg",
-      C: "assets/images/options/q13-C.jpg",
+      B: "assets/images/options/q13-C.jpg",
+      C: "assets/images/options/q13-B.jpg",
       D: "assets/images/options/q13-D.jpg"
     },
     options: {
@@ -468,14 +476,14 @@ var QUIZ_QUESTIONS = [
         hi: "एक हाथ, एक पैर"
       },
       B: {
-        en: "Three points of contact at all times (two hands + one foot, or two feet + one hand)",
-        ta: "எப்போதும் மூன்று தொடர்பு புள்ளிகள் (இரு கைகள் + ஒரு கால், அல்லது இரு கால்கள் + ஒரு கை)",
-        hi: "हर समय तीन संपर्क बिंदु (दो हाथ + एक पैर, या दो पैर + एक हाथ)"
-      },
-      C: {
         en: "It doesn't matter as long as you climb fast",
         ta: "வேகமாக ஏறினால் போதும், எதுவும் கவலை இல்லை",
         hi: "इससे कोई फर्क नहीं पड़ता, बस तेज़ी से चढ़ें"
+      },
+      C: {
+        en: "Three points of contact at all times (two hands + one foot, or two feet + one hand)",
+        ta: "எப்போதும் மூன்று தொடர்பு புள்ளிகள் (இரு கைகள் + ஒரு கால், அல்லது இரு கால்கள் + ஒரு கை)",
+        hi: "हर समय तीन संपर्क बिंदु (दो हाथ + एक पैर, या दो पैर + एक हाथ)"
       },
       D: {
         en: "Zero — you can carry tools in both hands while climbing",
@@ -483,7 +491,7 @@ var QUIZ_QUESTIONS = [
         hi: "शून्य — चढ़ते समय दोनों हाथों में औज़ार ले जा सकते हैं"
       }
     },
-    correct: "B"
+    correct: "C"
   },
   {
     qno: 14,
@@ -502,9 +510,9 @@ var QUIZ_QUESTIONS = [
         hi: "दोनों पैर एक ही पायदान पर रखकर सीढ़ी की ओर मुंह करना"
       },
       B: {
-        en: "Overreach sideways or lean far off the ladder's centerline",
-        ta: "பக்கவாட்டில் அதிகமாக எட்டுவது அல்லது ஏணியின் மையக்கோட்டிலிருந்து வெகு தூரம் சாய்வது",
-        hi: "साइड में ज़्यादा पहुंचना या सीढ़ी की मध्य रेखा से दूर झुकना"
+        en: "Keep three points of contact",
+        ta: "மூன்று தொடர்பு புள்ளிகளை பராமரிப்பது",
+        hi: "तीन संपर्क बिंदु बनाए रखना"
       },
       C: {
         en: "Wear a tool belt",
@@ -512,12 +520,12 @@ var QUIZ_QUESTIONS = [
         hi: "टूल बेल्ट पहनना"
       },
       D: {
-        en: "Keep three points of contact",
-        ta: "மூன்று தொடர்பு புள்ளிகளை பராமரிப்பது",
-        hi: "तीन संपर्क बिंदु बनाए रखना"
+        en: "Overreach sideways or lean far off the ladder's centerline",
+        ta: "பக்கவாட்டில் அதிகமாக எட்டுவது அல்லது ஏணியின் மையக்கோட்டிலிருந்து வெகு தூரம் சாய்வது",
+        hi: "साइड में ज़्यादा पहुंचना या सीढ़ी की मध्य रेखा से दूर झुकना"
       }
     },
-    correct: "B"
+    correct: "D"
   },
   {
     qno: 15,
@@ -531,24 +539,24 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "As decoration around the site fence",
-        ta: "தள வேலிக்கு அலங்காரமாக",
-        hi: "साइट की बाड़ के चारों ओर सजावट के रूप में"
+        en: "To prevent workers from slipping on wet floors",
+        ta: "ஈரமான தரையில் தொழிலாளர்கள் வழுக்கி விழுவதைத் தடுக்க",
+        hi: "मज़दूरों को गीले फ़र्श पर फिसलने से रोकने के लिए"
       },
       B: {
-        en: "As a fall-arrest system when guardrails or travel restraint are not practical",
-        ta: "கைப்பிடிச் சட்டம் அல்லது பயணக் கட்டுப்பாடு சாத்தியமில்லாதபோது வீழ்ச்சி-தடுப்பு அமைப்பாக",
-        hi: "जब गार्डरेल या ट्रैवल रिस्ट्रेंट व्यावहारिक न हो तो फॉल-अरेस्ट सिस्टम के रूप में"
+        en: "To catch workers or falling objects when working at height",
+        ta: "உயரத்தில் வேலை செய்யும்போது தொழிலாளர்களையோ விழும் பொருட்களையோ தடுத்துப் பிடிக்க",
+        hi: "ऊँचाई पर काम करते समय गिरते मज़दूरों या गिरती चीज़ों को रोकने के लिए"
       },
       C: {
-        en: "Only to store tools overnight",
-        ta: "இரவில் கருவிகளை சேமிக்க மட்டும்",
-        hi: "केवल रात में औज़ार रखने के लिए"
+        en: "To protect workers from noise exposure",
+        ta: "சத்தத்தின் தாக்கத்திலிருந்து தொழிலாளர்களைப் பாதுகாக்க",
+        hi: "मज़दूरों को शोर के असर से बचाने के लिए"
       },
       D: {
-        en: "To replace the need for any other fall protection everywhere",
-        ta: "எல்லா இடங்களிலும் மற்ற வீழ்ச்சி பாதுகாப்புகளின் தேவையை மாற்ற",
-        hi: "हर जगह अन्य फॉल प्रोटेक्शन की जगह लेने के लिए"
+        en: "To mark pedestrian walkways",
+        ta: "நடைபாதைகளைக் குறிக்க",
+        hi: "पैदल चलने के रास्तों को चिह्नित करने के लिए"
       }
     },
     correct: "B"
@@ -570,19 +578,19 @@ var QUIZ_QUESTIONS = [
         hi: "लगभग 5,000 पाउंड (22 kN), या दो के सुरक्षा कारक वाला इंजीनियर्ड सिस्टम"
       },
       B: {
-        en: "50 lbs — any small hook will do",
-        ta: "50 பவுண்டுகள் — எந்த சிறிய கொக்கியும் போதும்",
-        hi: "50 पाउंड — कोई भी छोटा हुक चलेगा"
+        en: "About 500 lbs (2.2 kN) per attached worker",
+        ta: "இணைக்கப்பட்ட ஒவ்வொரு தொழிலாளிக்கும் சுமார் 500 lbs (2.2 kN)",
+        hi: "जुड़े हुए प्रत्येक मज़दूर के लिए लगभग 500 lbs (2.2 kN)"
       },
       C: {
-        en: "Anchor strength does not matter",
-        ta: "நங்கூர வலிமை முக்கியமல்ல",
-        hi: "एंकर की मज़बूती मायने नहीं रखती"
+        en: "Any structural steel member, without assessment",
+        ta: "மதிப்பீடு இல்லாமல், எந்த கட்டமைப்பு எஃகு பகுதியும்",
+        hi: "बिना आकलन के, कोई भी स्ट्रक्चरल स्टील सदस्य"
       },
       D: {
-        en: "Only as much as the worker's own body weight, no more",
-        ta: "தொழிலாளியின் உடல் எடை அளவு மட்டும், அதற்கு மேல் இல்லை",
-        hi: "केवल कर्मचारी के शरीर के वज़न जितना, उससे अधिक नहीं"
+        en: "Twice the worker's own body weight",
+        ta: "தொழிலாளியின் உடல் எடையை விட இரு மடங்கு",
+        hi: "मज़दूर के अपने शरीर के वज़न का दोगुना"
       }
     },
     correct: "A"
@@ -633,25 +641,25 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q18-A.jpg",
-      B: "assets/images/options/q18-B.jpg",
-      C: "assets/images/options/q18-C.jpg",
+      B: "assets/images/options/q18-C.jpg",
+      C: "assets/images/options/q18-B.jpg",
       D: "assets/images/options/q18-D.jpg"
     },
     options: {
       A: {
-        en: "To decorate the scaffold edge",
-        ta: "சாரக்கட்டு விளிம்பை அலங்கரிக்க",
-        hi: "स्कैफोल्ड किनारे को सजाने के लिए"
+        en: "To provide a foothold when climbing onto the platform",
+        ta: "பிளாட்ஃபார்மில் ஏறும்போது கால் வைக்க இடம் தருவதற்கு",
+        hi: "प्लेटफ़ॉर्म पर चढ़ते समय पैर रखने की जगह देने के लिए"
       },
       B: {
-        en: "To prevent tools and materials from falling off the platform edge",
-        ta: "கருவிகளும் பொருட்களும் தள விளிம்பிலிருந்து விழாமல் தடுக்க",
-        hi: "औज़ारों और सामग्री को प्लेटफॉर्म किनारे से गिरने से रोकने के लिए"
-      },
-      C: {
         en: "To act as a handrail for climbing",
         ta: "ஏறுவதற்கு கைப்பிடியாக செயல்பட",
         hi: "चढ़ने के लिए हैंडरेल का काम करने के लिए"
+      },
+      C: {
+        en: "To prevent tools and materials from falling off the platform edge",
+        ta: "கருவிகளும் பொருட்களும் தள விளிம்பிலிருந்து விழாமல் தடுக்க",
+        hi: "औज़ारों और सामग्री को प्लेटफॉर्म किनारे से गिरने से रोकने के लिए"
       },
       D: {
         en: "To increase the scaffold's height",
@@ -659,41 +667,41 @@ var QUIZ_QUESTIONS = [
         hi: "स्कैफोल्ड की ऊँचाई बढ़ाने के लिए"
       }
     },
-    correct: "B"
+    correct: "C"
   },
   {
     qno: 19,
     category: "Tools Handling",
     question: {
-      en: "What should a worker do if a power tool's safety guard is in the way?",
-      ta: "பவர் டூலின் பாதுகாப்பு கவசம் (guard) வழியில் இருந்தால் தொழிலாளி என்ன செய்ய வேண்டும்?",
-      hi: "अगर पावर टूल का सेफ्टी गार्ड रास्ते में हो तो कर्मचारी को क्या करना चाहिए?"
+      en: "If a machine or power tool guard makes it difficult to perform the job, what should the worker do?",
+      ta: "ஒரு இயந்திரம் அல்லது பவர் டூலின் பாதுகாப்பு கவசம் வேலை செய்வதைக் கடினமாக்கினால், தொழிலாளி என்ன செய்ய வேண்டும்?",
+      hi: "अगर किसी मशीन या पावर टूल का सुरक्षा गार्ड काम करने में दिक्कत पैदा करे, तो मज़दूर को क्या करना चाहिए?"
     },
     image: "assets/images/q19.jpg",
     imageCaption: "",
     options: {
       A: {
-        en: "Remove the guard to work faster",
-        ta: "வேகமாக வேலை செய்ய கவசத்தை அகற்றவும்",
-        hi: "तेज़ी से काम करने के लिए गार्ड हटा दें"
+        en: "Remove the guard temporarily",
+        ta: "பாதுகாப்பு கவசத்தைத் தற்காலிகமாக அகற்றிவிடுவது",
+        hi: "सुरक्षा गार्ड को कुछ समय के लिए हटा देना"
       },
       B: {
-        en: "Never remove the guard — report the issue if it interferes with the task",
-        ta: "கவசத்தை ஒருபோதும் அகற்றாதீர்கள் — வேலைக்கு இடையூறு என்றால் புகாரளிக்கவும்",
-        hi: "गार्ड कभी न हटाएं — काम में बाधा हो तो समस्या की रिपोर्ट करें"
+        en: "Adjust or bypass the guard without approval",
+        ta: "அனுமதி இல்லாமல் பாதுகாப்பு கவசத்தை மாற்றுவது அல்லது தவிர்த்துவிடுவது",
+        hi: "मंज़ूरी के बिना सुरक्षा गार्ड को एडजस्ट करना या बायपास करना"
       },
       C: {
-        en: "Tape the guard down",
-        ta: "கவசத்தை டேப்பால் கட்டி வைக்கவும்",
-        hi: "गार्ड को टेप से बांध दें"
+        en: "Stop work and consult the supervisor for a safe solution",
+        ta: "வேலையை நிறுத்தி, பாதுகாப்பான தீர்வுக்கு மேற்பார்வையாளரை அணுகுவது",
+        hi: "काम रोककर सुरक्षित हल के लिए सुपरवाइज़र से सलाह लेना"
       },
       D: {
-        en: "Use the tool only at night without the guard",
-        ta: "இரவில் மட்டும் கவசம் இல்லாமல் கருவியை பயன்படுத்தவும்",
-        hi: "रात में ही बिना गार्ड के टूल इस्तेमाल करें"
+        en: "Ask another worker to hold the guard aside",
+        ta: "பாதுகாப்பு கவசத்தை ஒதுக்கிப் பிடித்துக்கொள்ள இன்னொரு தொழிலாளியைக் கேட்பது",
+        hi: "सुरक्षा गार्ड को हटाकर पकड़ने के लिए दूसरे मज़दूर से कहना"
       }
     },
-    correct: "B"
+    correct: "C"
   },
   {
     qno: 20,
@@ -712,22 +720,22 @@ var QUIZ_QUESTIONS = [
         hi: "कुछ नहीं — बस प्लग लगाएं और शुरू करें"
       },
       B: {
+        en: "Only the manufacturer's brand name",
+        ta: "தயாரிப்பு நிறுவனத்தின் பிராண்ட் பெயர் மட்டும்",
+        hi: "केवल निर्माता का ब्रांड नाम"
+      },
+      C: {
+        en: "Only that the tool has been used recently",
+        ta: "கருவி சமீபத்தில் பயன்படுத்தப்பட்டது என்பது மட்டும்",
+        hi: "केवल यह कि औज़ार हाल ही में इस्तेमाल हुआ है"
+      },
+      D: {
         en: "The cord, plug and casing for damage or exposed wires",
         ta: "கம்பி, பிளக் மற்றும் உறை சேதம் அல்லது வெளிப்படும் கம்பிகளுக்காக",
         hi: "कॉर्ड, प्लग और केसिंग में नुकसान या खुले तार"
-      },
-      C: {
-        en: "Only the color of the tool",
-        ta: "கருவியின் நிறம் மட்டும்",
-        hi: "केवल टूल का रंग"
-      },
-      D: {
-        en: "Only that the tool is the newest model",
-        ta: "கருவி புதிய மாடல் என்பது மட்டும்",
-        hi: "केवल यह कि टूल सबसे नया मॉडल है"
       }
     },
-    correct: "B"
+    correct: "D"
   },
   {
     qno: 21,
@@ -740,21 +748,21 @@ var QUIZ_QUESTIONS = [
     image: "assets/images/q21.jpg",
     imageCaption: "",
     optionImages: {
-      A: "assets/images/options/q21-A.jpg",
-      B: "assets/images/options/q21-B.jpg",
+      A: "assets/images/options/q21-B.jpg",
+      B: "assets/images/options/q21-A.jpg",
       C: "assets/images/options/q21-C.jpg",
       D: "assets/images/options/q21-D.jpg"
     },
     options: {
       A: {
-        en: "Carry them in one hand while climbing",
-        ta: "ஏறும்போது ஒரு கையில் எடுத்துச் செல்வது",
-        hi: "चढ़ते समय एक हाथ में ले जाना"
-      },
-      B: {
         en: "Use a tool belt, pouch, or hoist line, keeping both hands free to climb",
         ta: "கருவி பெல்ட், பை அல்லது தூக்கு கயிறு பயன்படுத்தி, இரு கைகளையும் ஏற சுதந்திரமாக வைத்திருப்பது",
         hi: "टूल बेल्ट, पाउच या होइस्ट लाइन का उपयोग, दोनों हाथ चढ़ने के लिए खाली रखना"
+      },
+      B: {
+        en: "Carry them in one hand while climbing",
+        ta: "ஏறும்போது ஒரு கையில் எடுத்துச் செல்வது",
+        hi: "चढ़ते समय एक हाथ में ले जाना"
       },
       C: {
         en: "Throw them up to a co-worker",
@@ -767,7 +775,7 @@ var QUIZ_QUESTIONS = [
         hi: "दांतों में पकड़ना"
       }
     },
-    correct: "B"
+    correct: "A"
   },
   {
     qno: 22,
@@ -780,34 +788,34 @@ var QUIZ_QUESTIONS = [
     image: "assets/images/q22.jpg",
     imageCaption: "",
     optionImages: {
-      A: "assets/images/options/q22-A.jpg",
-      B: "assets/images/options/q22-B.jpg",
+      A: "assets/images/options/q22-B.jpg",
+      B: "assets/images/options/q22-A.jpg",
       C: "assets/images/options/q22-C.jpg",
       D: "assets/images/options/q22-D.jpg"
     },
     options: {
       A: {
-        en: "That the disc matches the tool's rated speed and the guard is fitted",
-        ta: "டிஸ்க் கருவியின் மதிப்பிடப்பட்ட வேகத்துடன் பொருந்துகிறது மற்றும் கவசம் பொருத்தப்பட்டுள்ளது",
-        hi: "डिस्क टूल की रेटेड स्पीड से मेल खाती है और गार्ड लगा है"
-      },
-      B: {
         en: "That the disc is any size that fits by force",
         ta: "வலுக்கட்டாயமாக பொருந்தும் எந்த அளவு டிஸ்க்கும் சரி",
         hi: "कोई भी साइज़ की डिस्क जो ज़ोर से फिट हो जाए"
       },
+      B: {
+        en: "That the disc matches the tool's rated speed and the guard is fitted",
+        ta: "டிஸ்க் கருவியின் மதிப்பிடப்பட்ட வேகத்துடன் பொருந்துகிறது மற்றும் கவசம் பொருத்தப்பட்டுள்ளது",
+        hi: "डिस्क टूल की रेटेड स्पीड से मेल खाती है और गार्ड लगा है"
+      },
       C: {
-        en: "That the operator is wearing sandals",
-        ta: "இயக்குபவர் செருப்பு அணிந்திருப்பது",
-        hi: "ऑपरेटर सैंडल पहने है"
+        en: "That the tool has been used within the last week",
+        ta: "கருவி கடந்த ஒரு வாரத்திற்குள் பயன்படுத்தப்பட்டுள்ளது என்பது",
+        hi: "यह कि औज़ार पिछले एक हफ़्ते में इस्तेमाल हुआ है"
       },
       D: {
-        en: "That the guard has been removed for a clear view",
-        ta: "தெளிவாக பார்க்க கவசம் அகற்றப்பட்டுள்ளது",
-        hi: "साफ देखने के लिए गार्ड हटाया गया है"
+        en: "That the disc is larger than the guard opening",
+        ta: "டிஸ்க், பாதுகாப்பு கவசத் திறப்பை விட பெரியதாக இருப்பது",
+        hi: "यह कि डिस्क सुरक्षा गार्ड के खुले हिस्से से बड़ी है"
       }
     },
-    correct: "A"
+    correct: "B"
   },
   {
     qno: 23,
@@ -821,8 +829,8 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q23-A.jpg",
-      B: "assets/images/options/q23-B.jpg",
-      C: "assets/images/options/q23-C.jpg",
+      B: "assets/images/options/q23-C.jpg",
+      C: "assets/images/options/q23-B.jpg",
       D: "assets/images/options/q23-D.jpg"
     },
     options: {
@@ -832,14 +840,14 @@ var QUIZ_QUESTIONS = [
         hi: "उपकरण मैनुअल के अनुसार मशीनरी से मलबा साफ करने के लिए"
       },
       B: {
-        en: "Blowing dust or dirt off a worker's clothing or skin",
-        ta: "தொழிலாளியின் உடை அல்லது தோலில் இருந்து தூசியை ஊத",
-        hi: "कर्मचारी के कपड़ों या त्वचा से धूल उड़ाने के लिए"
-      },
-      C: {
         en: "Inflating tires to the rated pressure",
         ta: "மதிப்பிடப்பட்ட அழுத்தத்திற்கு டயர்களை நிரப்ப",
         hi: "टायरों को रेटेड प्रेशर तक फुलाने के लिए"
+      },
+      C: {
+        en: "Blowing dust or dirt off a worker's clothing or skin",
+        ta: "தொழிலாளியின் உடை அல்லது தோலில் இருந்து தூசியை ஊத",
+        hi: "कर्मचारी के कपड़ों या त्वचा से धूल उड़ाने के लिए"
       },
       D: {
         en: "Powering pneumatic tools",
@@ -847,7 +855,7 @@ var QUIZ_QUESTIONS = [
         hi: "न्यूमेटिक टूल्स चलाने के लिए"
       }
     },
-    correct: "B"
+    correct: "C"
   },
   {
     qno: 24,
@@ -861,9 +869,9 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q24-A.jpg",
-      B: "assets/images/options/q24-B.jpg",
+      B: "assets/images/options/q24-D.jpg",
       C: "assets/images/options/q24-C.jpg",
-      D: "assets/images/options/q24-D.jpg"
+      D: "assets/images/options/q24-B.jpg"
     },
     options: {
       A: {
@@ -872,22 +880,22 @@ var QUIZ_QUESTIONS = [
         hi: "एक-दूसरे में अनिश्चित काल तक जोड़कर (डेज़ी-चेन)"
       },
       B: {
+        en: "Joined with insulation tape wherever the sheath is damaged",
+        ta: "உறை சேதமடைந்த இடங்களில் இன்சுலேஷன் டேப் போட்டு இணைக்கப்பட்டிருக்க வேண்டும்",
+        hi: "जहाँ भी शीथ क्षतिग्रस्त हो वहाँ इंसुलेशन टेप लगाकर जोड़ा गया हो"
+      },
+      C: {
+        en: "Run beneath metal plates across a vehicle route",
+        ta: "வாகனம் செல்லும் பாதையைக் கடக்கும்போது உலோகத் தகடுகளுக்கு அடியில் கொண்டு செல்ல வேண்டும்",
+        hi: "वाहन के रास्ते को पार करते समय धातु की प्लेटों के नीचे से ले जाया जाए"
+      },
+      D: {
         en: "Rated for the load, inspected, and not daisy-chained or run through water",
         ta: "சுமைக்கு ஏற்ப மதிப்பிடப்பட்டு, ஆய்வு செய்யப்பட்டு, தொடர் இணைப்பு இல்லாமல், தண்ணீர் வழியாக செல்லாமல்",
         hi: "लोड के लिए रेटेड, निरीक्षण किया हुआ, बिना डेज़ी-चेन और पानी से दूर"
-      },
-      C: {
-        en: "Left submerged in puddles if needed",
-        ta: "தேவைப்பட்டால் குட்டைகளில் மூழ்கடித்து",
-        hi: "ज़रूरत हो तो पोखरों में डूबा हुआ"
-      },
-      D: {
-        en: "Any household cord will do for heavy tools",
-        ta: "கனரக கருவிகளுக்கு எந்த வீட்டு கம்பியும் போதும்",
-        hi: "भारी टूल्स के लिए कोई भी घरेलू कॉर्ड चलेगा"
       }
     },
-    correct: "B"
+    correct: "D"
   },
   {
     qno: 25,
@@ -901,27 +909,27 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "Keep using it carefully until it fully breaks",
-        ta: "முழுவதும் உடையும் வரை கவனமாக பயன்படுத்தவும்",
-        hi: "पूरी तरह टूटने तक सावधानी से इस्तेमाल करें"
-      },
-      B: {
         en: "Tag it 'Do Not Use' and remove it from service immediately",
         ta: "'பயன்படுத்த வேண்டாம்' என டேக் செய்து உடனடியாக சேவையிலிருந்து நீக்கவும்",
         hi: "'उपयोग न करें' टैग लगाकर तुरंत सेवा से हटा दें"
       },
+      B: {
+        en: "Keep using it carefully until it fully breaks",
+        ta: "முழுவதும் உடையும் வரை கவனமாக பயன்படுத்தவும்",
+        hi: "पूरी तरह टूटने तक सावधानी से इस्तेमाल करें"
+      },
       C: {
-        en: "Hide it so no one asks questions",
-        ta: "யாரும் கேட்காதபடி மறைத்து வைக்கவும்",
-        hi: "छिपा दें ताकि कोई न पूछे"
+        en: "Return it to the store without any tag or note",
+        ta: "எந்த டேக்கும் குறிப்பும் இல்லாமல் அதை ஸ்டோருக்குத் திருப்பி அனுப்புவது",
+        hi: "बिना कोई टैग या नोट लगाए उसे स्टोर में वापस कर देना"
       },
       D: {
-        en: "Pass it to a new worker without mentioning the fault",
-        ta: "குறையை சொல்லாமல் புதிய தொழிலாளியிடம் கொடுக்கவும்",
-        hi: "खराबी बताए बिना नए कर्मचारी को दे दें"
+        en: "Keep it on site for occasional light use",
+        ta: "அடிக்கடி இல்லாமல் சிறிய வேலைகளுக்கு பயன்படுத்த அதை தளத்திலேயே வைத்துக்கொள்வது",
+        hi: "कभी-कभार हल्के काम के लिए उसे साइट पर ही रखना"
       }
     },
-    correct: "B"
+    correct: "A"
   },
   {
     qno: 26,
@@ -935,27 +943,27 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "About 3 m / 10 feet",
-        ta: "சுமார் 3 மீட்டர் / 10 அடி",
-        hi: "लगभग 3 मीटर / 10 फीट"
-      },
-      B: {
         en: "30 cm / 1 foot",
         ta: "30 செமீ / 1 அடி",
         hi: "30 सेमी / 1 फीट"
       },
+      B: {
+        en: "About 3 m / 10 feet",
+        ta: "சுமார் 3 மீட்டர் / 10 அடி",
+        hi: "लगभग 3 मीटर / 10 फीट"
+      },
       C: {
-        en: "No clearance is required if the operator is careful",
-        ta: "இயக்குபவர் கவனமாக இருந்தால் தூரம் தேவையில்லை",
-        hi: "यदि ऑपरेटर सावधान है तो कोई दूरी आवश्यक नहीं"
+        en: "Clearance is only required for lines above 500 kV",
+        ta: "500 kV-க்கு மேல் உள்ள மின்கம்பிகளுக்கு மட்டுமே இடைவெளி தேவை",
+        hi: "क्लीयरेंस केवल 500 kV से ऊपर की लाइनों के लिए ज़रूरी है"
       },
       D: {
-        en: "Only 1 m is enough for any voltage",
-        ta: "எந்த மின்னழுத்தத்திற்கும் 1 மீட்டர் மட்டும் போதும்",
-        hi: "किसी भी वोल्टेज के लिए केवल 1 मीटर पर्याप्त है"
+        en: "About 1 m / 3 feet",
+        ta: "சுமார் 1 m / 3 அடி",
+        hi: "लगभग 1 m / 3 फ़ीट"
       }
     },
-    correct: "A"
+    correct: "B"
   },
   {
     qno: 27,
@@ -969,27 +977,27 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "Yes, as long as you work quickly",
-        ta: "ஆம், விரைவாக வேலை செய்தால் பரவாயில்லை",
-        hi: "हाँ, जब तक आप जल्दी काम करें"
+        en: "Yes, provided the task takes less than a minute",
+        ta: "ஆம், வேலை ஒரு நிமிடத்திற்கும் குறைவான நேரம் எடுத்தால் சரி",
+        hi: "हाँ, बशर्ते काम एक मिनट से कम समय में पूरा हो जाए"
       },
       B: {
+        en: "Yes, if the tool is double insulated",
+        ta: "ஆம், கருவி டபுள் இன்சுலேட்டட் ஆக இருந்தால் சரி",
+        hi: "हाँ, अगर औज़ार डबल इंसुलेटेड हो"
+      },
+      C: {
         en: "No — never operate electrical equipment with wet hands or in water",
         ta: "இல்லை — ஈரமான கைகளுடன் அல்லது நீரில் மின்சார உபகரணங்களை ஒருபோதும் இயக்காதீர்கள்",
         hi: "नहीं — गीले हाथों से या पानी में बिजली के उपकरण कभी न चलाएं"
       },
-      C: {
-        en: "Yes, if the tool looks new",
-        ta: "ஆம், கருவி புதிதாக தெரிந்தால்",
-        hi: "हाँ, अगर टूल नया दिखे"
-      },
       D: {
-        en: "Only during rainy season",
-        ta: "மழைக்காலத்தில் மட்டும்",
-        hi: "केवल बरसात के मौसम में"
+        en: "Only when an RCD is unavailable",
+        ta: "RCD கிடைக்காதபோது மட்டும்",
+        hi: "केवल जब RCD उपलब्ध न हो"
       }
     },
-    correct: "B"
+    correct: "C"
   },
   {
     qno: 28,
@@ -1014,9 +1022,9 @@ var QUIZ_QUESTIONS = [
         hi: "स्टोरेज कंटेनर को लॉक करने के लिए"
       },
       B: {
-        en: "De-energizing and isolating equipment before maintenance or repair",
-        ta: "பராமரிப்பு அல்லது பழுதுபார்ப்புக்கு முன் உபகரணத்தை மின்நீக்கம் செய்து தனிமைப்படுத்த",
-        hi: "रखरखाव या मरम्मत से पहले उपकरण को डी-एनर्जाइज़ और आइसोलेट करने के लिए"
+        en: "To prevent the unexpected startup or release of hazardous energy during maintenance and repair work",
+        ta: "பராமரிப்பு மற்றும் பழுது பார்க்கும் வேலையின் போது எதிர்பாராத விதமாக இயந்திரம் இயங்கத் தொடங்குவதையோ அல்லது ஆபத்தான ஆற்றல் வெளியேறுவதையோ தடுப்பதற்கு",
+        hi: "रखरखाव और मरम्मत के काम के दौरान मशीन के अचानक चालू होने या ख़तरनाक ऊर्जा के निकलने से रोकने के लिए"
       },
       C: {
         en: "Tagging tools with the owner's name",
@@ -1030,40 +1038,6 @@ var QUIZ_QUESTIONS = [
       }
     },
     correct: "B"
-  },
-  {
-    qno: 29,
-    category: "Electrical",
-    question: {
-      en: "What does a Ground Fault Circuit Interrupter (GFCI) protect against?",
-      ta: "GFCI (Ground Fault Circuit Interrupter) எதிலிருந்து பாதுகாக்கிறது?",
-      hi: "GFCI (ग्राउंड फॉल्ट सर्किट इंटरप्टर) किससे बचाता है?"
-    },
-    image: "assets/images/q29.jpg",
-    imageCaption: "",
-    options: {
-      A: {
-        en: "Electric shock, by cutting power when current leakage is detected",
-        ta: "மின் கசிவு கண்டறியப்படும்போது மின்சாரத்தை துண்டித்து மின்அதிர்ச்சியிலிருந்து",
-        hi: "बिजली के झटके से, करंट लीकेज का पता चलने पर बिजली काटकर"
-      },
-      B: {
-        en: "Rust on metal tools",
-        ta: "உலோக கருவிகளில் துரு",
-        hi: "धातु के औज़ारों पर जंग से"
-      },
-      C: {
-        en: "Overheating of concrete",
-        ta: "காங்கிரீட் அதிக வெப்பமடைதல்",
-        hi: "कंक्रीट के ज़्यादा गर्म होने से"
-      },
-      D: {
-        en: "Dust build-up in generators",
-        ta: "ஜெனரேட்டர்களில் தூசி சேருதல்",
-        hi: "जनरेटर में धूल जमने से"
-      }
-    },
-    correct: "A"
   },
   {
     qno: 30,
@@ -1082,22 +1056,22 @@ var QUIZ_QUESTIONS = [
         hi: "टेप से मरम्मत कर इस्तेमाल जारी रखें"
       },
       B: {
-        en: "Report it, isolate/de-energize it, and have it replaced by a qualified person",
-        ta: "புகாரளித்து, தனிமைப்படுத்தி/மின்நீக்கம் செய்து, தகுதியான நபரால் மாற்றச் செய்யவும்",
-        hi: "रिपोर्ट करें, आइसोलेट/डी-एनर्जाइज़ करें और योग्य व्यक्ति से बदलवाएं"
-      },
-      C: {
-        en: "Ignore it if it still seems to work",
-        ta: "வேலை செய்வது போல் தெரிந்தால் புறக்கணிக்கவும்",
-        hi: "अगर चलता दिखे तो अनदेखा करें"
-      },
-      D: {
         en: "Step over it carefully and continue",
         ta: "கவனமாக தாண்டி சென்று தொடரவும்",
         hi: "सावधानी से ऊपर से निकलकर आगे बढ़ें"
+      },
+      C: {
+        en: "Continue using it until the end of the shift",
+        ta: "ஷிஃப்ட் முடியும் வரை அதைத் தொடர்ந்து பயன்படுத்துவது",
+        hi: "शिफ़्ट ख़त्म होने तक उसका इस्तेमाल जारी रखना"
+      },
+      D: {
+        en: "Report it, isolate/de-energize it, and have it replaced by a qualified person",
+        ta: "புகாரளித்து, தனிமைப்படுத்தி/மின்நீக்கம் செய்து, தகுதியான நபரால் மாற்றச் செய்யவும்",
+        hi: "रिपोर्ट करें, आइसोलेट/डी-एनर्जाइज़ करें और योग्य व्यक्ति से बदलवाएं"
       }
     },
-    correct: "B"
+    correct: "D"
   },
   {
     qno: 31,
@@ -1111,14 +1085,14 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "Any worker who feels confident",
-        ta: "நம்பிக்கை உள்ள எந்த தொழிலாளியும்",
-        hi: "कोई भी कर्मचारी जो आत्मविश्वासी हो"
-      },
-      B: {
         en: "Only an authorized, qualified electrician following proper safety procedure",
         ta: "சரியான பாதுகாப்பு நடைமுறையை பின்பற்றும் அங்கீகரிக்கப்பட்ட, தகுதிவாய்ந்த மின்சாரி மட்டும்",
         hi: "केवल अधिकृत, योग्य इलेक्ट्रीशियन जो उचित सुरक्षा प्रक्रिया का पालन करे"
+      },
+      B: {
+        en: "Any worker who feels confident",
+        ta: "நம்பிக்கை உள்ள எந்த தொழிலாளியும்",
+        hi: "कोई भी कर्मचारी जो आत्मविश्वासी हो"
       },
       C: {
         en: "Any supervisor, regardless of training",
@@ -1131,7 +1105,7 @@ var QUIZ_QUESTIONS = [
         hi: "नए कर्मचारी, ऑन-जॉब ट्रेनिंग के रूप में"
       }
     },
-    correct: "B"
+    correct: "A"
   },
   {
     qno: 32,
@@ -1185,8 +1159,8 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q33-A.jpg",
-      B: "assets/images/options/q33-B.jpg",
-      C: "assets/images/options/q33-C.jpg",
+      B: "assets/images/options/q33-C.jpg",
+      C: "assets/images/options/q33-B.jpg",
       D: "assets/images/options/q33-D.jpg"
     },
     options: {
@@ -1196,14 +1170,14 @@ var QUIZ_QUESTIONS = [
         hi: "बिना किसी सहारे की ढीली मिट्टी"
       },
       B: {
-        en: "A level, sound footing such as base plates or mud sills",
-        ta: "பேஸ் பிளேட் அல்லது மட் சில் போன்ற சமமான, உறுதியான அடித்தளம்",
-        hi: "बेस प्लेट या मड सिल जैसी समतल, मजबूत नींव"
-      },
-      C: {
         en: "Stacked bricks that are not fixed",
         ta: "பொருத்தப்படாத அடுக்கு செங்கற்கள்",
         hi: "बिना बंधी हुई ईंटों का ढेर"
+      },
+      C: {
+        en: "A level, sound footing such as base plates or mud sills",
+        ta: "பேஸ் பிளேட் அல்லது மட் சில் போன்ற சமமான, உறுதியான அடித்தளம்",
+        hi: "बेस प्लेट या मड सिल जैसी समतल, मजबूत नींव"
       },
       D: {
         en: "Anything available, stability doesn't matter",
@@ -1211,7 +1185,7 @@ var QUIZ_QUESTIONS = [
         hi: "जो भी उपलब्ध हो, स्थिरता मायने नहीं रखती"
       }
     },
-    correct: "B"
+    correct: "C"
   },
   {
     qno: 34,
@@ -1230,22 +1204,22 @@ var QUIZ_QUESTIONS = [
         hi: "कुछ नहीं, क्षमता रेटिंग केवल दिशानिर्देश हैं"
       },
       B: {
+        en: "It only matters while the scaffold is being dismantled",
+        ta: "சாரக்கட்டு அகற்றப்படும் போது மட்டுமே இது முக்கியம்",
+        hi: "यह केवल तब मायने रखता है जब मचान खोला जा रहा हो"
+      },
+      C: {
+        en: "Only the platform boards are affected",
+        ta: "பிளாட்பார்ம் பலகைகள் மட்டுமே பாதிக்கப்படும்",
+        hi: "केवल प्लेटफ़ॉर्म के तख़्ते प्रभावित होते हैं"
+      },
+      D: {
         en: "It risks structural failure or collapse",
         ta: "கட்டமைப்பு தோல்வி அல்லது இடிவு அபாயம்",
         hi: "संरचनात्मक विफलता या गिरने का जोखिम"
-      },
-      C: {
-        en: "The scaffold automatically gets stronger",
-        ta: "சாரக்கட்டு தானாக வலுவடைகிறது",
-        hi: "स्कैफोल्ड अपने आप मज़बूत हो जाता है"
-      },
-      D: {
-        en: "It only matters for scaffolds above 50 storeys",
-        ta: "50 மாடிக்கு மேல் உள்ள சாரக்கட்டுகளுக்கு மட்டுமே பொருந்தும்",
-        hi: "यह केवल 50 मंज़िल से ऊपर के स्कैफोल्ड के लिए मायने रखता है"
       }
     },
-    correct: "B"
+    correct: "D"
   },
   {
     qno: 35,
@@ -1259,67 +1233,27 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "Any available worker",
-        ta: "கிடைக்கும் எந்த தொழிலாளியும்",
-        hi: "कोई भी उपलब्ध कर्मचारी"
-      },
-      B: {
         en: "A trained and designated competent person",
         ta: "பயிற்சி பெற்ற மற்றும் நியமிக்கப்பட்ட தகுதிவாய்ந்த நபர்",
         hi: "प्रशिक्षित और नामित सक्षम व्यक्ति"
       },
-      C: {
-        en: "Only the site security guard",
-        ta: "தள பாதுகாப்பு காவலர் மட்டும்",
-        hi: "केवल साइट सिक्योरिटी गार्ड"
-      },
-      D: {
-        en: "Whoever arrives first that morning",
-        ta: "அன்று காலை முதலில் வருபவர்",
-        hi: "जो भी उस सुबह पहले आए"
-      }
-    },
-    correct: "B"
-  },
-  {
-    qno: 36,
-    category: "Scaffolding",
-    question: {
-      en: "What is required for a scaffold platform's decking/planking?",
-      ta: "சாரக்கட்டு தளத்தின் பலகை அமைப்பிற்கு என்ன தேவை?",
-      hi: "स्कैफोल्ड प्लेटफॉर्म की डेकिंग/प्लैंकिंग के लिए क्या आवश्यक है?"
-    },
-    image: "assets/images/q36.jpg",
-    imageCaption: "",
-    optionImages: {
-      A: "assets/images/options/q36-A.jpg",
-      B: "assets/images/options/q36-B.jpg",
-      C: "assets/images/options/q36-C.jpg",
-      D: "assets/images/options/q36-D.jpg"
-    },
-    options: {
-      A: {
-        en: "It can have large gaps, as long as most of it is covered",
-        ta: "பெரும்பகுதி மூடப்பட்டிருந்தால் பெரிய இடைவெளிகள் இருக்கலாம்",
-        hi: "बड़े गैप हो सकते हैं, जब तक अधिकांश ढका हो"
-      },
       B: {
-        en: "It must be fully planked/decked with no dangerous gaps",
-        ta: "ஆபத்தான இடைவெளிகள் இல்லாமல் முழுமையாக பலகையிடப்பட வேண்டும்",
-        hi: "खतरनाक गैप के बिना पूरी तरह प्लैंक/डेक होना चाहिए"
+        en: "Any available worker",
+        ta: "கிடைக்கும் எந்த தொழிலாளியும்",
+        hi: "कोई भी उपलब्ध कर्मचारी"
       },
       C: {
-        en: "Only half the platform needs boards",
-        ta: "தளத்தின் பாதிக்கு மட்டும் பலகை போதும்",
-        hi: "केवल आधे प्लेटफॉर्म पर बोर्ड चाहिए"
+        en: "Any worker holding a valid site induction card",
+        ta: "செல்லுபடியாகும் தள இன்டக்ஷன் கார்டு வைத்திருக்கும் எந்த தொழிலாளியும்",
+        hi: "कोई भी मज़दूर जिसके पास वैध साइट इंडक्शन कार्ड हो"
       },
       D: {
-        en: "Loose boards resting unsecured are fine",
-        ta: "உறுதிப்படுத்தப்படாத தளர்வான பலகைகள் பரவாயில்லை",
-        hi: "बिना बंधे ढीले बोर्ड ठीक हैं"
+        en: "The material supplier's delivery team",
+        ta: "பொருள் வழங்குபவரின் டெலிவரி குழு",
+        hi: "सामग्री सप्लायर की डिलीवरी टीम"
       }
     },
-    correct: "B"
+    correct: "A"
   },
   {
     qno: 37,
@@ -1359,35 +1293,40 @@ var QUIZ_QUESTIONS = [
     qno: 38,
     category: "Excavation",
     question: {
-      en: "At what trench depth is a protective system (sloping, shoring, or shielding) generally required?",
-      ta: "எந்த அகழி ஆழத்தில் பாதுகாப்பு அமைப்பு (சாய்வு, முட்டு அல்லது கவசம்) பொதுவாக தேவை?",
-      hi: "किस खाई की गहराई पर सुरक्षात्मक प्रणाली (स्लोपिंग, शोरिंग या शील्डिंग) सामान्यतः आवश्यक है?"
+      en: "At what trench depth is a protective system (sloping, shoring, or shielding) generally required, unless the excavation is made entirely in stable rock?",
+      ta: "தோண்டுதல் முழுவதும் உறுதியான பாறையில் செய்யப்படாத நிலையில், எந்த அகழி ஆழத்தில் பாதுகாப்பு அமைப்பு (சரிவு, ஷோரிங் அல்லது ஷீல்டிங்) பொதுவாகத் தேவைப்படுகிறது?",
+      hi: "जब खुदाई पूरी तरह ठोस चट्टान में न की गई हो, तो खाई की किस गहराई पर आम तौर पर सुरक्षा प्रणाली (ढलान, शोरिंग या शील्डिंग) ज़रूरी होती है?"
     },
     image: "assets/images/q38.jpg",
     imageCaption: "",
     options: {
       A: {
+        en: "A protective system is never required for trenches",
+        ta: "அகழிகளுக்கு பாதுகாப்பு அமைப்பு எப்போதும் தேவையில்லை",
+        hi: "खाइयों के लिए सुरक्षा प्रणाली कभी ज़रूरी नहीं होती"
+      },
+      B: {
+        en: "Only below 15 m (50 feet)",
+        ta: "15 m (50 அடி) க்குக் கீழே மட்டும்",
+        hi: "केवल 15 m (50 फ़ीट) से नीचे"
+      },
+      C: {
         en: "5 feet (1.5 m) or deeper",
         ta: "5 அடி (1.5 மீ) அல்லது ஆழமானது",
         hi: "5 फीट (1.5 मीटर) या गहरी"
       },
-      B: {
-        en: "Only below 50 feet",
-        ta: "50 அடிக்கு கீழே மட்டும்",
-        hi: "केवल 50 फीट से नीचे"
-      },
-      C: {
-        en: "Protective systems are never required for trenches",
-        ta: "அகழிகளுக்கு பாதுகாப்பு அமைப்புகள் ஒருபோதும் தேவையில்லை",
-        hi: "खाइयों के लिए सुरक्षात्मक प्रणाली कभी आवश्यक नहीं"
-      },
       D: {
-        en: "Only if it is raining",
-        ta: "மழை பெய்தால் மட்டும்",
-        hi: "केवल बारिश होने पर"
+        en: "Only when the excavation is left open overnight",
+        ta: "தோண்டிய இடம் இரவு முழுவதும் திறந்தே விடப்படும்போது மட்டும்",
+        hi: "केवल जब खुदाई रात भर खुली छोड़ी जाए"
       }
     },
-    correct: "A"
+    warning: {
+      en: "No trench is safe without proper protection. Protect against cave-ins before entering the excavation.",
+      ta: "சரியான பாதுகாப்பு இல்லாமல் எந்த அகழியும் பாதுகாப்பானது அல்ல. தோண்டிய இடத்தில் இறங்கும் முன் மண் சரிவைத் தடுக்கப் பாதுகாப்பு ஏற்பாடு செய்யுங்கள்.",
+      hi: "सही सुरक्षा के बिना कोई भी खाई सुरक्षित नहीं है। खुदाई में उतरने से पहले मिट्टी धँसने से बचाव का इंतज़ाम करें।"
+    },
+    correct: "C"
   },
   {
     qno: 39,
@@ -1401,9 +1340,9 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "At least 2 feet (0.6 m) back from the edge",
-        ta: "விளிம்பிலிருந்து குறைந்தது 2 அடி (0.6 மீ) பின்னால்",
-        hi: "किनारे से कम से कम 2 फीट (0.6 मीटर) पीछे"
+        en: "Use warning tape around the excavation",
+        ta: "தோண்டிய இடத்தைச் சுற்றி எச்சரிக்கை டேப் பயன்படுத்துவது",
+        hi: "खुदाई के चारों ओर चेतावनी टेप लगाना"
       },
       B: {
         en: "Right at the very edge",
@@ -1411,17 +1350,17 @@ var QUIZ_QUESTIONS = [
         hi: "बिल्कुल किनारे पर"
       },
       C: {
-        en: "Distance doesn't matter",
-        ta: "தூரம் முக்கியமல்ல",
-        hi: "दूरी मायने नहीं रखती"
+        en: "Spoil may be placed directly on the shoring",
+        ta: "தோண்டிய மண்ணை நேரடியாக ஷோரிங் மீது போடலாம்",
+        hi: "खुदाई की मिट्टी सीधे शोरिंग पर रखी जा सकती है"
       },
       D: {
-        en: "Only 2 inches back is enough",
-        ta: "2 அங்குலம் பின்னால் போதும்",
-        hi: "केवल 2 इंच पीछे काफी है"
+        en: "At least 2 feet (0.6 m) back from the edge",
+        ta: "விளிம்பிலிருந்து குறைந்தது 2 அடி (0.6 மீ) பின்னால்",
+        hi: "किनारे से कम से कम 2 फीट (0.6 मीटर) पीछे"
       }
     },
-    correct: "A"
+    correct: "D"
   },
   {
     qno: 40,
@@ -1456,9 +1395,9 @@ var QUIZ_QUESTIONS = [
         hi: "ट्रेंच बॉक्स/शील्ड का उपयोग"
       },
       D: {
-        en: "Standing a worker at the bottom to hold the walls by hand",
-        ta: "சுவர்களை கைகளால் பிடிக்க தொழிலாளியை கீழே நிறுத்துதல்",
-        hi: "दीवारों को हाथ से पकड़ने के लिए नीचे कर्मचारी खड़ा करना"
+        en: "Positioning a worker inside the trench to watch the walls",
+        ta: "அகழிச் சுவர்களைக் கண்காணிக்க ஒரு தொழிலாளியை அகழிக்குள்ளேயே நிற்க வைப்பது",
+        hi: "खाई की दीवारों पर नज़र रखने के लिए एक मज़दूर को खाई के अंदर खड़ा करना"
       }
     },
     correct: "D"
@@ -1480,9 +1419,9 @@ var QUIZ_QUESTIONS = [
         hi: "भूमिगत यूटिलिटी (गैस, बिजली, पानी की लाइनें) पहचानें और चिह्नित करें"
       },
       B: {
-        en: "Just start digging and see what's there",
-        ta: "தோண்டத் தொடங்கி என்ன இருக்கிறது என்று பார்க்கவும்",
-        hi: "बस खोदना शुरू करें और देखें क्या है"
+        en: "Begin digging and stop only if a utility is struck",
+        ta: "தோண்டத் தொடங்கி, ஏதாவது சேவைக் குழாய்/கேபிள் மீது அடிபட்டால் மட்டும் நிறுத்துவது",
+        hi: "खुदाई शुरू कर दें और तभी रोकें जब कोई यूटिलिटी लाइन टकरा जाए"
       },
       C: {
         en: "Excavation planning is only needed for very large sites",
@@ -1490,9 +1429,9 @@ var QUIZ_QUESTIONS = [
         hi: "खुदाई योजना केवल बहुत बड़ी साइटों के लिए चाहिए"
       },
       D: {
-        en: "Ask a passerby if they know what's underground",
-        ta: "நிலத்தடியில் என்ன இருக்கிறது என்று வழிப்போக்கரிடம் கேட்கவும்",
-        hi: "किसी राहगीर से पूछें कि नीचे क्या है"
+        en: "Rely on the site drawing alone, without field verification",
+        ta: "களத்தில் சரிபார்க்காமல், தள வரைபடத்தை மட்டுமே நம்புவது",
+        hi: "मौके पर जाँच किए बिना केवल साइट ड्रॉइंग पर भरोसा करना"
       }
     },
     correct: "A"
@@ -1509,27 +1448,27 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
+        en: "To confirm the soil type for the shoring design",
+        ta: "ஷோரிங் வடிவமைப்புக்கான மண் வகையை உறுதிப்படுத்துவதற்கு",
+        hi: "शोरिंग डिज़ाइन के लिए मिट्टी का प्रकार पक्का करने के लिए"
+      },
+      B: {
         en: "Hazardous or oxygen-deficient gases can accumulate in deep or enclosed excavations",
         ta: "ஆழமான அல்லது மூடிய அகழிகளில் அபாயகரமான அல்லது ஆக்ஸிஜன் குறைந்த வாயுக்கள் சேரலாம்",
         hi: "गहरी या बंद खुदाई में खतरनाक या ऑक्सीजन-रहित गैसें जमा हो सकती हैं"
       },
-      B: {
-        en: "To check if it's a good place for lunch",
-        ta: "மதிய உணவுக்கு நல்ல இடமா என்று பார்க்க",
-        hi: "यह देखने के लिए कि लंच के लिए अच्छी जगह है या नहीं"
-      },
       C: {
-        en: "Gas testing is never needed in trenches",
-        ta: "அகழிகளில் வாயு சோதனை ஒருபோதும் தேவையில்லை",
-        hi: "खाइयों में गैस परीक्षण कभी आवश्यक नहीं"
+        en: "Only when the trench is deeper than 10 m",
+        ta: "அகழி 10 m-க்கு மேல் ஆழமாக இருக்கும்போது மட்டும்",
+        hi: "केवल जब खाई 10 m से ज़्यादा गहरी हो"
       },
       D: {
-        en: "Only needed if the trench has a paint smell",
-        ta: "அகழியில் பெயிண்ட் வாசனை இருந்தால் மட்டும்",
-        hi: "केवल अगर खाई में पेंट की गंध हो"
+        en: "Only after a worker reports feeling unwell",
+        ta: "ஒரு தொழிலாளி உடல்நிலை சரியில்லை என்று தெரிவித்த பிறகு மட்டும்",
+        hi: "केवल तब जब कोई मज़दूर तबीयत ख़राब होने की शिकायत करे"
       }
     },
-    correct: "A"
+    correct: "B"
   },
   {
     qno: 43,
@@ -1543,8 +1482,8 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q43-A.jpg",
-      B: "assets/images/options/q43-B.jpg",
-      C: "assets/images/options/q43-C.jpg",
+      B: "assets/images/options/q43-C.jpg",
+      C: "assets/images/options/q43-B.jpg",
       D: "assets/images/options/q43-D.jpg"
     },
     options: {
@@ -1554,14 +1493,14 @@ var QUIZ_QUESTIONS = [
         hi: "उन्हें खुला और नुकीला छोड़ दें"
       },
       B: {
-        en: "Cap them with rebar caps or protective covers to prevent impalement injuries",
-        ta: "குத்தி காயம் தடுக்க ரீபார் கேப் அல்லது பாதுகாப்பு மூடிகளால் மூடவும்",
-        hi: "भोंकने की चोटों से बचने के लिए रीबार कैप या सुरक्षात्मक कवर लगाएं"
-      },
-      C: {
         en: "Bend them flat only if convenient",
         ta: "வசதியானால் மட்டும் வளைத்து தட்டையாக்கவும்",
         hi: "सुविधाजनक हो तभी मोड़कर चपटा करें"
+      },
+      C: {
+        en: "Cap them with rebar caps or protective covers to prevent impalement injuries",
+        ta: "குத்தி காயம் தடுக்க ரீபார் கேப் அல்லது பாதுகாப்பு மூடிகளால் மூடவும்",
+        hi: "भोंकने की चोटों से बचने के लिए रीबार कैप या सुरक्षात्मक कवर लगाएं"
       },
       D: {
         en: "Mark them with tape only, no cap needed",
@@ -1569,7 +1508,7 @@ var QUIZ_QUESTIONS = [
         hi: "केवल टेप से चिह्नित करें, कैप नहीं चाहिए"
       }
     },
-    correct: "B"
+    correct: "C"
   },
   {
     qno: 44,
@@ -1588,9 +1527,9 @@ var QUIZ_QUESTIONS = [
         hi: "जैसे ही कंक्रीट सतह पर सूखा दिखे"
       },
       B: {
-        en: "Only after the concrete has reached adequate strength, per the engineer's schedule",
-        ta: "பொறியாளரின் அட்டவணைப்படி காங்கிரீட் போதுமான வலிமை அடைந்த பின் மட்டும்",
-        hi: "केवल जब कंक्रीट ने पर्याप्त मज़बूती पा ली हो, इंजीनियर के शेड्यूल अनुसार"
+        en: "Only after the concrete has achieved the required strength and approval is obtained as per the engineer's design requirements",
+        ta: "கான்கிரீட் தேவையான வலிமையை அடைந்த பிறகு, பொறியாளரின் வடிவமைப்பு தேவைகளின்படி அனுமதி பெற்ற பிறகு மட்டுமே",
+        hi: "केवल कंक्रीट के आवश्यक मजबूती प्राप्त कर लेने और इंजीनियर की डिज़ाइन आवश्यकताओं के अनुसार मंज़ूरी मिल जाने के बाद"
       },
       C: {
         en: "Whenever it's convenient for the schedule",
@@ -1617,14 +1556,14 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "A pre-demolition survey and an approved method statement/sequence",
-        ta: "இடிப்புக்கு முந்தைய ஆய்வு மற்றும் அங்கீகரிக்கப்பட்ட முறை அறிக்கை/வரிசை",
-        hi: "पूर्व-विध्वंस सर्वेक्षण और अनुमोदित विधि विवरण/क्रम"
+        en: "A pre-demolition survey and an approved method statement / sequence risk assessment",
+        ta: "இடிப்புக்கு முன் ஆய்வு மற்றும் அனுமதிக்கப்பட்ட முறை அறிக்கை / வரிசை ஆபத்து மதிப்பீடு",
+        hi: "विध्वंस से पहले का सर्वे और स्वीकृत मेथड स्टेटमेंट / क्रम जोखिम मूल्यांकन"
       },
       B: {
-        en: "Just start from the top and knock it down randomly",
-        ta: "மேலிருந்து தொடங்கி சீரற்ற முறையில் இடிக்கவும்",
-        hi: "बस ऊपर से शुरू करें और बेतरतीब गिराएं"
+        en: "Begin at the top and work down without a documented plan",
+        ta: "ஆவணப்படுத்தப்பட்ட திட்டம் இல்லாமல் மேலே தொடங்கி கீழ்நோக்கி வேலை செய்யுங்கள்",
+        hi: "किसी लिखित योजना के बिना ऊपर से शुरू करके नीचे की ओर काम करना"
       },
       C: {
         en: "No planning is required for small structures",
@@ -1651,27 +1590,27 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
+        en: "Only the weight of the hose when empty",
+        ta: "குழாய் காலியாக இருக்கும்போது அதன் எடை மட்டும்",
+        hi: "केवल खाली होने पर होज़ का वज़न"
+      },
+      B: {
+        en: "Excessive noise from the pump motor",
+        ta: "பம்ப் மோட்டாரில் இருந்து அதிக சத்தம்",
+        hi: "पंप मोटर से अत्यधिक शोर"
+      },
+      C: {
+        en: "Minor vibration at the pump outlet",
+        ta: "பம்ப் வெளியேற்றத்தில் சிறிய அளவு அதிர்வு",
+        hi: "पंप आउटलेट पर हल्का कंपन"
+      },
+      D: {
         en: "The hose whipping or the line blocking/bursting under pressure",
         ta: "குழாய் சுழற்றி அடித்தல் அல்லது அழுத்தத்தில் லைன் அடைப்பு/வெடிப்பு",
         hi: "होज़ का लहराना या प्रेशर में लाइन का ब्लॉक/फटना"
-      },
-      B: {
-        en: "The concrete being too colorful",
-        ta: "காங்கிரீட் அதிக வண்ணமாக இருப்பது",
-        hi: "कंक्रीट का बहुत रंगीन होना"
-      },
-      C: {
-        en: "The pump being too quiet",
-        ta: "பம்ப் மிகவும் அமைதியாக இருப்பது",
-        hi: "पंप का बहुत शांत होना"
-      },
-      D: {
-        en: "There are no hazards with concrete pump hoses",
-        ta: "காங்கிரீட் பம்ப் குழாய்களில் ஆபத்து இல்லை",
-        hi: "कंक्रीट पंप होज़ में कोई खतरा नहीं"
       }
     },
-    correct: "A"
+    correct: "D"
   },
   {
     qno: 47,
@@ -1690,14 +1629,14 @@ var QUIZ_QUESTIONS = [
         hi: "ढेर गिरने से रोकने के लिए, ढेर की ऊँचाई"
       },
       B: {
-        en: "Nothing — stack as high as physically possible",
-        ta: "எதுவும் இல்லை — முடிந்த அளவு உயரமாக அடுக்கவும்",
-        hi: "कुछ नहीं — जितना हो सके ऊंचा रखें"
+        en: "Nothing, provided the ground is level",
+        ta: "தரை சமமாக இருந்தால் எதுவும் தேவையில்லை",
+        hi: "कुछ नहीं, बशर्ते ज़मीन समतल हो"
       },
       C: {
-        en: "Only the color of the bricks used",
-        ta: "பயன்படுத்தும் செங்கற்களின் நிறம் மட்டும்",
-        hi: "केवल ईंटों का रंग"
+        en: "Only the type of mortar used nearby",
+        ta: "அருகில் பயன்படுத்தப்படும் மசாலாவின் (மார்டர்) வகை மட்டும்",
+        hi: "केवल पास में इस्तेमाल हो रहे मसाले (मोर्टार) का प्रकार"
       },
       D: {
         en: "The stacking pattern, but not the height",
@@ -1719,19 +1658,19 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "Temporary bracing/propping until it gains adequate strength or is tied into the structure",
-        ta: "போதுமான வலிமை பெறும் வரை அல்லது கட்டமைப்புடன் இணைக்கப்படும் வரை தற்காலிக முட்டு/ஆதரவு",
-        hi: "पर्याप्त मज़बूती या संरचना से जुड़ने तक अस्थायी ब्रेसिंग/प्रॉपिंग"
-      },
-      B: {
         en: "No precaution needed once the mortar looks dry",
         ta: "சாந்து உலர்ந்ததாக தெரிந்தால் முன்னெச்சரிக்கை தேவையில்லை",
         hi: "मसाला सूखा दिखने पर कोई सावधानी नहीं चाहिए"
       },
+      B: {
+        en: "Temporary bracing/propping until it gains adequate strength or is tied into the structure",
+        ta: "போதுமான வலிமை பெறும் வரை அல்லது கட்டமைப்புடன் இணைக்கப்படும் வரை தற்காலிக முட்டு/ஆதரவு",
+        hi: "पर्याप्त मज़बूती या संरचना से जुड़ने तक अस्थायी ब्रेसिंग/प्रॉपिंग"
+      },
       C: {
-        en: "Push against it to test its strength",
-        ta: "வலிமையை சோதிக்க அதன் மீது தள்ளவும்",
-        hi: "मज़बूती जांचने के लिए धक्का दें"
+        en: "Load it with materials to check its stability",
+        ta: "அதன் நிலைத்தன்மையைச் சரிபார்க்க பொருட்களை ஏற்றி வைக்கவும்",
+        hi: "उसकी स्थिरता जाँचने के लिए उस पर सामग्री लाद दें"
       },
       D: {
         en: "Leave it exposed to strong wind with no support",
@@ -1739,41 +1678,41 @@ var QUIZ_QUESTIONS = [
         hi: "बिना सहारे तेज़ हवा में छोड़ दें"
       }
     },
-    correct: "A"
+    correct: "B"
   },
   {
     qno: 49,
     category: "Fire Safety",
     question: {
-      en: "Which fire extinguisher class is designed for ordinary combustibles like wood and paper?",
-      ta: "மரம் மற்றும் காகிதம் போன்ற சாதாரண எரிபொருட்களுக்கு எந்த தீயணைப்பான் வகுப்பு வடிவமைக்கப்பட்டுள்ளது?",
-      hi: "लकड़ी और कागज़ जैसी सामान्य ज्वलनशील वस्तुओं के लिए कौन सी अग्निशामक श्रेणी बनी है?"
+      en: "Which type of fire extinguisher is used for a fire involving live electrical equipment on a construction site?",
+      ta: "கட்டுமானத் தளத்தில் மின்சாரம் பாய்ந்து கொண்டிருக்கும் மின் உபகரணங்களில் ஏற்படும் தீயை அணைக்க எந்த வகை தீயணைப்பான் பயன்படுத்தப்படுகிறது?",
+      hi: "निर्माण स्थल पर चालू बिजली उपकरण में लगी आग के लिए किस प्रकार का अग्निशामक इस्तेमाल किया जाता है?"
     },
     image: "assets/images/q49.jpg",
     imageCaption: "",
     options: {
       A: {
-        en: "Class A",
-        ta: "வகுப்பு A",
-        hi: "क्लास A"
+        en: "Water extinguisher",
+        ta: "தண்ணீர் தீயணைப்பான்",
+        hi: "पानी वाला अग्निशामक"
       },
       B: {
-        en: "Class C",
-        ta: "வகுப்பு C",
-        hi: "क्लास C"
+        en: "Foam extinguisher",
+        ta: "நுரை (ஃபோம்) தீயணைப்பான்",
+        hi: "फोम अग्निशामक"
       },
       C: {
-        en: "Class D",
-        ta: "வகுப்பு D",
-        hi: "क्लास D"
+        en: "CO₂ (carbon dioxide) extinguisher",
+        ta: "CO₂ (கார்பன் டை ஆக்சைடு) தீயணைப்பான்",
+        hi: "CO₂ (कार्बन डाइऑक्साइड) अग्निशामक"
       },
       D: {
-        en: "Class K",
-        ta: "வகுப்பு K",
-        hi: "क्लास K"
+        en: "Water mist from a hose",
+        ta: "குழாயில் இருந்து வரும் நீர்த் தூறல்",
+        hi: "होज़ से निकलने वाली पानी की फुहार"
       }
     },
-    correct: "A"
+    correct: "C"
   },
   {
     qno: 50,
@@ -1787,27 +1726,27 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "A Class C (non-conductive agent) extinguisher",
-        ta: "வகுப்பு C (மின்கடத்தா முகவர்) தீயணைப்பான்",
-        hi: "क्लास C (नॉन-कंडक्टिव एजेंट) अग्निशामक"
+        en: "Water extinguisher",
+        ta: "தண்ணீர் தீயணைப்பான்",
+        hi: "पानी वाला अग्निशामक"
       },
       B: {
-        en: "A plain water extinguisher",
-        ta: "சாதாரண நீர் தீயணைப்பான்",
-        hi: "सादा पानी वाला अग्निशामक"
+        en: "Foam extinguisher",
+        ta: "நுரை (ஃபோம்) தீயணைப்பான்",
+        hi: "फोम अग्निशामक"
       },
       C: {
-        en: "Any extinguisher works the same on electrical fires",
-        ta: "மின் தீயில் எல்லா தீயணைப்பான்களும் ஒரே மாதிரி",
-        hi: "बिजली की आग पर सभी अग्निशामक समान काम करते हैं"
+        en: "CO₂ (carbon dioxide) extinguisher",
+        ta: "CO₂ (கார்பன் டை ஆக்சைடு) தீயணைப்பான்",
+        hi: "CO₂ (कार्बन डाइऑक्साइड) अग्निशामक"
       },
       D: {
-        en: "Throwing water directly on the panel",
-        ta: "பேனல் மீது நேரடியாக தண்ணீர் ஊற்றுவது",
-        hi: "पैनल पर सीधे पानी फेंकना"
+        en: "Water mist from a hose",
+        ta: "குழாயில் இருந்து வரும் நீர்த் தூறல்",
+        hi: "होज़ से निकलने वाली पानी की फुहार"
       }
     },
-    correct: "A"
+    correct: "C"
   },
   {
     qno: 51,
@@ -1821,9 +1760,9 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "Pull, Aim, Squeeze, Sweep",
-        ta: "Pull, Aim, Squeeze, Sweep (இழு, குறி, அழுத்து, துடை)",
-        hi: "Pull, Aim, Squeeze, Sweep (खींचो, निशाना, दबाओ, घुमाओ)"
+        en: "Point, Activate, Spray, Stand-by",
+        ta: "Point, Activate, Spray, Stand-by",
+        hi: "Point, Activate, Spray, Stand-by"
       },
       B: {
         en: "Push, Alarm, Stop, Shout",
@@ -1831,9 +1770,9 @@ var QUIZ_QUESTIONS = [
         hi: "Push, Alarm, Stop, Shout"
       },
       C: {
-        en: "Point, Activate, Spray, Stand-by",
-        ta: "Point, Activate, Spray, Stand-by",
-        hi: "Point, Activate, Spray, Stand-by"
+        en: "Pull, Aim, Squeeze, Sweep",
+        ta: "Pull, Aim, Squeeze, Sweep (இழு, குறி, அழுத்து, துடை)",
+        hi: "Pull, Aim, Squeeze, Sweep (खींचो, निशाना, दबाओ, घुमाओ)"
       },
       D: {
         en: "Pull, Alert, Spray, Stop",
@@ -1841,7 +1780,7 @@ var QUIZ_QUESTIONS = [
         hi: "Pull, Alert, Spray, Stop"
       }
     },
-    correct: "A"
+    correct: "C"
   },
   {
     qno: 52,
@@ -1854,16 +1793,16 @@ var QUIZ_QUESTIONS = [
     image: "assets/images/q52.jpg",
     imageCaption: "",
     optionImages: {
-      A: "assets/images/options/q52-A.jpg",
+      A: "assets/images/options/q52-D.jpg",
       B: "assets/images/options/q52-B.jpg",
       C: "assets/images/options/q52-C.jpg",
-      D: "assets/images/options/q52-D.jpg"
+      D: "assets/images/options/q52-A.jpg"
     },
     options: {
       A: {
-        en: "In a ventilated area/cabinet, away from ignition sources and heat",
-        ta: "தீப்பொறி மற்றும் வெப்ப மூலங்களிலிருந்து விலகி, காற்றோட்டமான பகுதி/அலமாரியில்",
-        hi: "हवादार क्षेत्र/कैबिनेट में, इग्निशन स्रोतों और गर्मी से दूर"
+        en: "Storage location doesn't matter as long as it's labeled",
+        ta: "லேபிள் இருந்தால் எங்கு வைத்தாலும் பரவாயில்லை",
+        hi: "लेबल हो तो जगह मायने नहीं रखती"
       },
       B: {
         en: "Stacked next to the welding/grinding area",
@@ -1876,52 +1815,57 @@ var QUIZ_QUESTIONS = [
         hi: "हीटर के पास साइट ऑफिस के अंदर"
       },
       D: {
-        en: "Storage location doesn't matter as long as it's labeled",
-        ta: "லேபிள் இருந்தால் எங்கு வைத்தாலும் பரவாயில்லை",
-        hi: "लेबल हो तो जगह मायने नहीं रखती"
+        en: "In a ventilated area/cabinet, away from ignition sources and heat",
+        ta: "தீப்பொறி மற்றும் வெப்ப மூலங்களிலிருந்து விலகி, காற்றோட்டமான பகுதி/அலமாரியில்",
+        hi: "हवादार क्षेत्र/कैबिनेट में, इग्निशन स्रोतों और गर्मी से दूर"
       }
     },
-    correct: "A"
+    correct: "D"
   },
   {
     qno: 53,
     category: "Fire Safety",
     question: {
-      en: "During a site fire evacuation, what should workers avoid using?",
-      ta: "தள தீ வெளியேற்றத்தின் போது தொழிலாளர்கள் எதை பயன்படுத்தக்கூடாது?",
-      hi: "साइट पर आग से निकासी के दौरान कर्मचारियों को किसका उपयोग नहीं करना चाहिए?"
+      en: "During a fire evacuation from a site building, which means of escape must workers avoid using?",
+      ta: "தளத்தில் உள்ள கட்டிடத்தில் தீ விபத்து ஏற்பட்டு வெளியேறும் போது, தொழிலாளர்கள் எந்த வழியைப் பயன்படுத்தக் கூடாது?",
+      hi: "साइट की किसी इमारत से आग के समय निकलते वक्त मज़दूरों को किस रास्ते का इस्तेमाल नहीं करना चाहिए?"
     },
     image: "assets/images/q53.jpg",
     imageCaption: "",
     optionImages: {
-      A: "assets/images/options/q53-A.jpg",
-      B: "assets/images/options/q53-B.jpg",
+      A: "assets/images/options/q53-B.jpg",
+      B: "assets/images/options/q53-A.jpg",
       C: "assets/images/options/q53-C.jpg",
       D: "assets/images/options/q53-D.jpg"
     },
     options: {
       A: {
+        en: "Elevators and lifts",
+        ta: "லிஃப்ட்கள் மற்றும் தூக்கிகள்",
+        hi: "एलिवेटर और लिफ्ट"
+      },
+      B: {
         en: "The marked emergency exit stairs",
         ta: "குறிக்கப்பட்ட அவசர வெளியேறும் படிக்கட்டுகள்",
         hi: "चिह्नित आपातकालीन निकास सीढ़ियां"
       },
-      B: {
-        en: "Elevators/lifts",
-        ta: "மின்தூக்கிகள்/லிஃப்ட்கள்",
-        hi: "एलिवेटर/लिफ्ट"
-      },
       C: {
-        en: "The muster/assembly point",
-        ta: "ஒன்றுகூடும் இடம்",
-        hi: "मस्टर/असेंबली पॉइंट"
+        en: "The designated assembly point route",
+        ta: "குறிக்கப்பட்ட ஒன்றுகூடும் இடத்திற்கான வழி",
+        hi: "निर्धारित असेंबली पॉइंट का रास्ता"
       },
       D: {
-        en: "The site's fire alarm",
-        ta: "தளத்தின் தீ எச்சரிக்கை மணி",
-        hi: "साइट का फायर अलार्म"
+        en: "The nearest marked fire exit door",
+        ta: "அருகில் உள்ள குறிக்கப்பட்ட தீ வெளியேறும் கதவு",
+        hi: "सबसे नज़दीकी चिह्नित फायर एग्ज़िट दरवाज़ा"
       }
     },
-    correct: "B"
+    warning: {
+      en: "In a fire, use the stairs, not the lifts. Evacuate calmly and proceed to the designated assembly point.",
+      ta: "தீ விபத்தின் போது லிஃப்ட்டை பயன்படுத்தாமல் படிக்கட்டுகளைப் பயன்படுத்துங்கள். பதற்றமில்லாமல் வெளியேறி, குறிக்கப்பட்ட ஒன்றுகூடும் இடத்திற்குச் செல்லுங்கள்.",
+      hi: "आग लगने पर लिफ्ट नहीं, सीढ़ियों का इस्तेमाल करें। शांति से बाहर निकलें और निर्धारित असेंबली पॉइंट पर पहुँचें।"
+    },
+    correct: "A"
   },
   {
     qno: 54,
@@ -1934,21 +1878,21 @@ var QUIZ_QUESTIONS = [
     image: "assets/images/q54.jpg",
     imageCaption: "",
     optionImages: {
-      A: "assets/images/options/q54-A.jpg",
-      B: "assets/images/options/q54-B.jpg",
+      A: "assets/images/options/q54-B.jpg",
+      B: "assets/images/options/q54-A.jpg",
       C: "assets/images/options/q54-C.jpg",
       D: "assets/images/options/q54-D.jpg"
     },
     options: {
       A: {
-        en: "No — never stand or walk under a suspended load",
-        ta: "இல்லை — தொங்கும் சுமையின் கீழ் ஒருபோதும் நிற்கவோ நடக்கவோ கூடாது",
-        hi: "नहीं — लटके भार के नीचे कभी न खड़े हों न चलें"
-      },
-      B: {
         en: "Yes, briefly, if you move quickly",
         ta: "ஆம், வேகமாக நகர்ந்தால் சிறிது நேரம்",
         hi: "हाँ, थोड़ी देर, अगर तेज़ी से निकलें"
+      },
+      B: {
+        en: "No — never stand or walk under a suspended load",
+        ta: "இல்லை — தொங்கும் சுமையின் கீழ் ஒருபோதும் நிற்கவோ நடக்கவோ கூடாது",
+        hi: "नहीं — लटके भार के नीचे कभी न खड़े हों न चलें"
       },
       C: {
         en: "Yes, if the crane operator waves you through",
@@ -1961,7 +1905,7 @@ var QUIZ_QUESTIONS = [
         hi: "हाँ, जब तक हार्ड हैट पहनी हो"
       }
     },
-    correct: "A"
+    correct: "B"
   },
   {
     qno: 55,
@@ -1975,9 +1919,9 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "To help control the load's rotation and swing from the ground",
-        ta: "தரையிலிருந்து சுமையின் சுழற்சி மற்றும் ஊசலாட்டத்தை கட்டுப்படுத்த உதவ",
-        hi: "ज़मीन से भार के घुमाव और झूले को नियंत्रित करने में मदद"
+        en: "To measure the load's weight",
+        ta: "சுமையின் எடையை அளக்க",
+        hi: "भार का वज़न मापने के लिए"
       },
       B: {
         en: "To decorate the load for visibility",
@@ -1985,9 +1929,9 @@ var QUIZ_QUESTIONS = [
         hi: "दृश्यता के लिए भार को सजाने के लिए"
       },
       C: {
-        en: "To measure the load's weight",
-        ta: "சுமையின் எடையை அளக்க",
-        hi: "भार का वज़न मापने के लिए"
+        en: "To help control the load's rotation and swing from the ground",
+        ta: "தரையிலிருந்து சுமையின் சுழற்சி மற்றும் ஊசலாட்டத்தை கட்டுப்படுத்த உதவ",
+        hi: "ज़मीन से भार के घुमाव और झूले को नियंत्रित करने में मदद"
       },
       D: {
         en: "To power the crane's hydraulics",
@@ -1995,7 +1939,12 @@ var QUIZ_QUESTIONS = [
         hi: "क्रेन के हाइड्रोलिक्स को पावर देने के लिए"
       }
     },
-    correct: "A"
+    warning: {
+      en: "Use tag lines to control the load, stay clear of the line of fire, and never place yourself under a suspended load.",
+      ta: "சுமையைக் கட்டுப்படுத்த டேக் லைன்களைப் பயன்படுத்துங்கள், லைன் ஆஃப் ஃபயர் பகுதியில் நிற்காதீர்கள், தொங்கும் சுமைக்குக் கீழே ஒருபோதும் நிற்காதீர்கள்.",
+      hi: "लोड को काबू में रखने के लिए टैग लाइन का इस्तेमाल करें, लाइन ऑफ फायर से दूर रहें, और लटके हुए लोड के नीचे कभी खड़े न हों।"
+    },
+    correct: "C"
   },
   {
     qno: 56,
@@ -2009,27 +1958,27 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
+        en: "Only the weather forecast for the week",
+        ta: "அந்த வாரத்திற்கான வானிலை அறிக்கை மட்டும்",
+        hi: "केवल हफ्ते का मौसम पूर्वानुमान"
+      },
+      B: {
+        en: "Only that the crane has enough fuel for the shift",
+        ta: "கிரேனில் அந்த ஷிப்டுக்குப் போதுமான எரிபொருள் உள்ளது என்பது மட்டும்",
+        hi: "केवल यह कि क्रेन में उस शिफ्ट के लिए पर्याप्त ईंधन है"
+      },
+      C: {
+        en: "Only the operator's licence expiry date",
+        ta: "இயக்குபவரின் உரிமம் முடிவடையும் தேதி மட்டும்",
+        hi: "केवल ऑपरेटर के लाइसेंस की समाप्ति तिथि"
+      },
+      D: {
         en: "Rigging/slings condition and the load chart for capacity vs. lift weight/radius",
         ta: "ரிக்கிங்/ஸ்லிங் நிலை மற்றும் திறன் vs தூக்கும் எடை/ஆரத்திற்கான லோட் சார்ட்",
         hi: "रिगिंग/स्लिंग की स्थिति और क्षमता बनाम भार/त्रिज्या के लिए लोड चार्ट"
-      },
-      B: {
-        en: "Only that the crane is painted the right color",
-        ta: "கிரேன் சரியான வண்ணத்தில் இருப்பது மட்டும்",
-        hi: "केवल यह कि क्रेन सही रंग में पेंट है"
-      },
-      C: {
-        en: "Nothing — the operator can judge it by eye",
-        ta: "எதுவும் இல்லை — இயக்குபவர் கண்ணால் மதிப்பிடலாம்",
-        hi: "कुछ नहीं — ऑपरेटर आंख से अंदाज़ा लगा सकता है"
-      },
-      D: {
-        en: "Only the time of day",
-        ta: "நாளின் நேரம் மட்டும்",
-        hi: "केवल दिन का समय"
       }
     },
-    correct: "A"
+    correct: "D"
   },
   {
     qno: 57,
@@ -2043,25 +1992,30 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "A trained, designated signal person using standard hand signals or radio",
-        ta: "நிலையான கை சைகை அல்லது ரேடியோ பயன்படுத்தும் பயிற்சி பெற்ற, நியமிக்கப்பட்ட சிக்னல் நபர்",
-        hi: "मानक हाथ संकेत या रेडियो उपयोग करने वाला प्रशिक्षित, नामित सिग्नल व्यक्ति"
+        en: "A trained, designated signal person using standard hand signals or a walkie talkie",
+        ta: "நிலையான கைச் சைகைகள் அல்லது வாக்கி டாக்கியைப் பயன்படுத்தும், பயிற்சி பெற்ற, நியமிக்கப்பட்ட சிக்னல் நபர்",
+        hi: "मानक हाथ के इशारों या वॉकी टॉकी का इस्तेमाल करने वाला प्रशिक्षित, नियुक्त सिग्नल मैन"
       },
       B: {
-        en: "Any bystander who happens to be nearby",
-        ta: "அருகில் இருக்கும் எந்த பார்வையாளரும்",
-        hi: "आस-पास का कोई भी राहगीर"
+        en: "Any worker standing closest to the load",
+        ta: "சுமைக்கு மிக அருகில் நின்றுகொண்டிருக்கும் எந்த ஒரு தொழிலாளியும்",
+        hi: "लोड के सबसे पास खड़ा कोई भी मज़दूर"
       },
       C: {
-        en: "No one — the operator should guess",
-        ta: "யாரும் இல்லை — இயக்குபவர் யூகிக்க வேண்டும்",
-        hi: "कोई नहीं — ऑपरेटर अंदाज़ा लगाए"
+        en: "No one; the operator proceeds using mirrors",
+        ta: "யாரும் இல்லை; இயக்குபவர் கண்ணாடிகளைப் பார்த்து வேலையைத் தொடர்கிறார்",
+        hi: "कोई नहीं; ऑपरेटर शीशों की मदद से काम आगे बढ़ाता है"
       },
       D: {
-        en: "The load itself, since it can't move on its own",
-        ta: "சுமையே, அது தானாக நகர முடியாது என்பதால்",
-        hi: "भार खुद, क्योंकि वह अपने आप नहीं चल सकता"
+        en: "The rigger, by shouting instructions",
+        ta: "ரிக்கர், கத்தி அறிவுரை சொல்வதன் மூலம்",
+        hi: "रिगर, चिल्लाकर निर्देश देते हुए"
       }
+    },
+    warning: {
+      en: "When the operator cannot see the load, a trained signal person must lead the lift safely.",
+      ta: "இயக்குபவருக்கு சுமை தெரியாதபோது, பயிற்சி பெற்ற சிக்னல் நபர் ஒருவரே தூக்கும் பணியைப் பாதுகாப்பாக வழிநடத்த வேண்டும்.",
+      hi: "जब ऑपरेटर को लोड दिखाई न दे, तो प्रशिक्षित सिग्नल मैन को ही लिफ्ट सुरक्षित तरीके से करवानी चाहिए।"
     },
     correct: "A"
   },
@@ -2076,21 +2030,21 @@ var QUIZ_QUESTIONS = [
     image: "assets/images/q58.jpg",
     imageCaption: "",
     optionImages: {
-      A: "assets/images/options/q58-A.jpg",
-      B: "assets/images/options/q58-B.jpg",
+      A: "assets/images/options/q58-B.jpg",
+      B: "assets/images/options/q58-A.jpg",
       C: "assets/images/options/q58-C.jpg",
       D: "assets/images/options/q58-D.jpg"
     },
     options: {
       A: {
-        en: "Bend the knees, keep the back straight, and hold the load close to the body",
-        ta: "முழங்கால்களை மடக்கி, முதுகை நேராக வைத்து, சுமையை உடலுக்கு அருகில் பிடிக்கவும்",
-        hi: "घुटने मोड़ें, पीठ सीधी रखें और भार को शरीर के पास रखें"
-      },
-      B: {
         en: "Bend at the waist with straight legs and lift far from the body",
         ta: "கால்களை நேராக வைத்து இடுப்பில் வளைந்து உடலிலிருந்து தூரமாக தூக்கவும்",
         hi: "सीधे पैरों से कमर पर झुकें और शरीर से दूर उठाएं"
+      },
+      B: {
+        en: "Bend the knees, keep the back straight, and hold the load close to the body",
+        ta: "முழங்கால்களை மடக்கி, முதுகை நேராக வைத்து, சுமையை உடலுக்கு அருகில் பிடிக்கவும்",
+        hi: "घुटने मोड़ें, पीठ सीधी रखें और भार को शरीर के पास रखें"
       },
       C: {
         en: "Twist the spine while lifting to save time",
@@ -2098,12 +2052,12 @@ var QUIZ_QUESTIONS = [
         hi: "समय बचाने के लिए उठाते समय रीढ़ मोड़ें"
       },
       D: {
-        en: "Lift with one hand while the other holds a phone",
-        ta: "ஒரு கையில் தூக்கி மறு கையில் போன் வைத்திருக்கவும்",
-        hi: "एक हाथ से उठाएं जबकि दूसरे में फोन हो"
+        en: "Lift quickly in one movement to reduce strain time",
+        ta: "அழுத்தம் ஏற்படும் நேரத்தைக் குறைக்க ஒரே அசைவில் வேகமாகத் தூக்குங்கள்",
+        hi: "ज़ोर पड़ने का समय कम करने के लिए एक ही झटके में तेज़ी से उठाएँ"
       }
     },
-    correct: "A"
+    correct: "B"
   },
   {
     qno: 59,
@@ -2117,27 +2071,27 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "High-risk activities such as hot work, confined-space entry, or work at height",
-        ta: "ஹாட் ஒர்க், மூடிய இட நுழைவு அல்லது உயர வேலை போன்ற அதிக ஆபத்துள்ள செயல்பாடுகள்",
-        hi: "हॉट वर्क, कन्फाइंड-स्पेस एंट्री या ऊंचाई पर काम जैसी उच्च जोखिम गतिविधियां"
-      },
-      B: {
-        en: "Any activity, no matter how minor, including a coffee break",
-        ta: "காபி இடைவேளை உட்பட எவ்வளவு சிறிய செயலும்",
-        hi: "कोई भी गतिविधि, चाहे कितनी छोटी हो, कॉफी ब्रेक सहित"
-      },
-      C: {
         en: "Permits are never used in construction",
         ta: "கட்டுமானத்தில் அனுமதிகள் ஒருபோதும் பயன்படுத்தப்படுவதில்லை",
         hi: "निर्माण में परमिट कभी उपयोग नहीं होते"
       },
+      B: {
+        en: "Any routine activity already covered by the method statement",
+        ta: "முறை அறிக்கையில் (method statement) ஏற்கனவே உள்ளடக்கப்பட்ட வழக்கமான எந்த வேலையும்",
+        hi: "कोई भी नियमित कार्य जो मेथड स्टेटमेंट में पहले से शामिल है"
+      },
+      C: {
+        en: "High-risk activities such as hot work, confined-space entry, or work at height",
+        ta: "ஹாட் ஒர்க், மூடிய இட நுழைவு அல்லது உயர வேலை போன்ற அதிக ஆபத்துள்ள செயல்பாடுகள்",
+        hi: "हॉट वर्क, कन्फाइंड-स्पेस एंट्री या ऊंचाई पर काम जैसी उच्च जोखिम गतिविधियां"
+      },
       D: {
-        en: "Only tasks the supervisor personally dislikes",
-        ta: "மேற்பார்வையாளர் தனிப்பட்ட முறையில் விரும்பாத பணிகள் மட்டும்",
-        hi: "केवल वे काम जो सुपरवाइज़र को व्यक्तिगत रूप से नापसंद हों"
+        en: "Only tasks performed by subcontractors",
+        ta: "துணை ஒப்பந்தக்காரர்கள் செய்யும் வேலைகள் மட்டும்",
+        hi: "केवल सब-कॉन्ट्रैक्टरों द्वारा किए जाने वाले काम"
       }
     },
-    correct: "A"
+    correct: "C"
   },
   {
     qno: 60,
@@ -2151,9 +2105,9 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "It helps identify and fix hazards before they cause a real injury",
-        ta: "உண்மையான காயத்தை ஏற்படுத்தும் முன் அபாயங்களை கண்டறிந்து சரிசெய்ய உதவுகிறது",
-        hi: "यह वास्तविक चोट से पहले खतरों की पहचान और सुधार में मदद करता है"
+        en: "Reporting a near-miss will always result in punishment, so it should be avoided",
+        ta: "புகாரளித்தால் எப்போதும் தண்டனை கிடைக்கும், எனவே தவிர்க்க வேண்டும்",
+        hi: "रिपोर्ट करने पर हमेशा सज़ा मिलेगी, इसलिए बचना चाहिए"
       },
       B: {
         en: "It's just paperwork with no real value",
@@ -2166,12 +2120,12 @@ var QUIZ_QUESTIONS = [
         hi: "केवल चोटों की रिपोर्ट चाहिए, नियर-मिस मायने नहीं रखते"
       },
       D: {
-        en: "Reporting a near-miss will always result in punishment, so it should be avoided",
-        ta: "புகாரளித்தால் எப்போதும் தண்டனை கிடைக்கும், எனவே தவிர்க்க வேண்டும்",
-        hi: "रिपोर्ट करने पर हमेशा सज़ा मिलेगी, इसलिए बचना चाहिए"
+        en: "It helps identify and fix hazards before they cause a real injury",
+        ta: "உண்மையான காயத்தை ஏற்படுத்தும் முன் அபாயங்களை கண்டறிந்து சரிசெய்ய உதவுகிறது",
+        hi: "यह वास्तविक चोट से पहले खतरों की पहचान और सुधार में मदद करता है"
       }
     },
-    correct: "A"
+    correct: "D"
   },
   {
     qno: 61,
@@ -2184,34 +2138,34 @@ var QUIZ_QUESTIONS = [
     image: "assets/images/q61.jpg",
     imageCaption: "",
     optionImages: {
-      A: "assets/images/options/q61-A.jpg",
-      B: "assets/images/options/q61-B.jpg",
+      A: "assets/images/options/q61-B.jpg",
+      B: "assets/images/options/q61-A.jpg",
       C: "assets/images/options/q61-C.jpg",
       D: "assets/images/options/q61-D.jpg"
     },
     options: {
       A: {
-        en: "By breathing fresh air",
-        ta: "சுத்தமான காற்றை சுவாசிப்பதால்",
-        hi: "ताज़ी हवा में सांस लेने से"
-      },
-      B: {
         en: "Contact with water or soil contaminated by animal urine",
         ta: "விலங்கு சிறுநீரால் மாசுபட்ட நீர் அல்லது மண்ணுடன் தொடர்பு",
         hi: "जानवरों के मूत्र से दूषित पानी या मिट्टी के संपर्क से"
       },
+      B: {
+        en: "By inhaling cement dust",
+        ta: "சிமெண்ட் தூசியை சுவாசிப்பதால்",
+        hi: "सीमेंट की धूल सांस में लेने से"
+      },
       C: {
-        en: "By wearing PPE",
-        ta: "PPE அணிவதால்",
-        hi: "PPE पहनने से"
+        en: "Through prolonged exposure to direct sunlight",
+        ta: "நேரடி சூரிய ஒளியில் நீண்ட நேரம் இருப்பதால்",
+        hi: "लंबे समय तक सीधी धूप में रहने से"
       },
       D: {
-        en: "By drinking clean water",
-        ta: "சுத்தமான நீர் குடிப்பதால்",
-        hi: "साफ पानी पीने से"
+        en: "By sharing hand tools with a colleague",
+        ta: "கை கருவிகளை சக ஊழியருடன் பங்கிட்டு பயன்படுத்துவதால்",
+        hi: "हैंड टूल्स को किसी साथी कर्मचारी के साथ साझा करने से"
       }
     },
-    correct: "B"
+    correct: "A"
   },
   {
     qno: 62,
@@ -2251,6 +2205,11 @@ var QUIZ_QUESTIONS = [
         hi: "आगंतुक"
       }
     },
+    warning: {
+      en: "Avoid contact with contaminated water, wear proper PPE, cover cuts and wounds, and maintain good hygiene to prevent leptospirosis.",
+      ta: "அசுத்தமான தண்ணீருடன் தொடர்பை தவிர்க்கவும், சரியான PPE (தனிநபர் பாதுகாப்பு உபகரணம்) அணியவும், வெட்டுக்காயங்கள் மற்றும் புண்களை மூடி வைக்கவும், லெப்டோஸ்பைரோசிஸ் தடுக்க நல்ல சுத்தத்தை பேணவும்.",
+      hi: "दूषित पानी के संपर्क से बचें, सही PPE (व्यक्तिगत सुरक्षा उपकरण) पहनें, कटे-फटे और घावों को ढककर रखें, और लेप्टोस्पायरोसिस से बचाव के लिए अच्छी साफ-सफाई बनाए रखें।"
+    },
     correct: "B"
   },
   {
@@ -2265,27 +2224,32 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "Continue working",
-        ta: "தொடர்ந்து வேலை செய்யவும்",
-        hi: "काम जारी रखें"
+        en: "Continue working and rest later",
+        ta: "வேலையை தொடர்ந்து செய்து, பிறகு ஓய்வு எடுக்க வேண்டும்",
+        hi: "काम जारी रखें और बाद में आराम करें"
       },
       B: {
+        en: "Climb down quickly without assistance",
+        ta: "யாருடைய உதவியும் இல்லாமல் வேகமாக கீழே இறங்க வேண்டும்",
+        hi: "बिना किसी सहायता के जल्दी से नीचे उतर जाएं"
+      },
+      C: {
         en: "Stop work immediately and inform the supervisor",
         ta: "உடனடியாக வேலையை நிறுத்தி மேற்பார்வையாளருக்கு தெரிவிக்கவும்",
         hi: "तुरंत काम रोकें और सुपरवाइज़र को सूचित करें"
       },
-      C: {
-        en: "Run downstairs quickly",
-        ta: "வேகமாக கீழே ஓடவும்",
-        hi: "जल्दी से नीचे भागें"
-      },
       D: {
-        en: "Ignore the symptoms",
-        ta: "அறிகுறிகளை புறக்கணிக்கவும்",
-        hi: "लक्षणों को अनदेखा करें"
+        en: "Wait until the end of the shift to report it",
+        ta: "ஷிப்ட் முடியும் வரை காத்திருந்து பிறகு தெரிவிக்க வேண்டும்",
+        hi: "शिफ्ट खत्म होने तक इंतज़ार करें और तब इसकी सूचना दें"
       }
     },
-    correct: "B"
+    warning: {
+      en: "Workers who experience dizziness, vertigo, epilepsy, or any medical condition that could affect safe work at height must report it during their pre-employment and periodic medical examinations, as well as during site induction. Early reporting helps prevent falls and saves lives.",
+      ta: "தலைசுற்றல், தலைச்சுற்றல் (வெர்டிகோ), வலிப்பு நோய் (எபிலெப்ஸி) அல்லது உயரத்தில் பாதுகாப்பாக வேலை செய்வதை பாதிக்கக்கூடிய எந்த உடல்நலப் பிரச்சினை இருந்தாலும், அதை வேலைக்கு சேரும் முன் நடக்கும் மருத்துவ பரிசோதனை, காலமுறை மருத்துவ பரிசோதனை மற்றும் தள அறிமுகம் (site induction) ஆகிய நேரங்களில் தொழிலாளர்கள் கட்டாயம் தெரிவிக்க வேண்டும். சீக்கிரம் தெரிவிப்பது விழுதல்களை தடுக்க உதவுகிறது, உயிரையும் காப்பாற்றுகிறது.",
+      hi: "जिन कर्मचारियों को चक्कर आना, चक्कर (वर्टिगो), मिर्गी, या ऊंचाई पर सुरक्षित काम को प्रभावित करने वाली कोई भी चिकित्सीय समस्या है, उन्हें इसकी सूचना अपनी नौकरी-पूर्व और समय-समय पर होने वाली मेडिकल जांच के दौरान, तथा साइट इंडक्शन के समय अनिवार्य रूप से देनी चाहिए। समय पर सूचना देने से गिरने की दुर्घटनाएं रुकती हैं और जानें बचती हैं।"
+    },
+    correct: "C"
   },
   {
     qno: 64,
@@ -2299,27 +2263,27 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "Encourage him to finish the task",
-        ta: "வேலையை முடிக்க ஊக்குவிக்கவும்",
-        hi: "उसे काम पूरा करने के लिए प्रोत्साहित करें"
+        en: "Ask him to complete the current task first",
+        ta: "தற்போதைய வேலையை முதலில் முடிக்கச் சொல்ல வேண்டும்",
+        hi: "उसे पहले मौजूदा काम पूरा करने के लिए कहें"
       },
       B: {
+        en: "Move him to a lower scaffold level",
+        ta: "அவரை சாரத்தின் கீழ் மட்டத்திற்கு மாற்ற வேண்டும்",
+        hi: "उसे मचान के निचले स्तर पर भेज दें"
+      },
+      C: {
+        en: "Allow him to continue once the sensation passes",
+        ta: "அந்த உணர்வு குறைந்த பிறகு வேலையை தொடர அனுமதிக்க வேண்டும்",
+        hi: "वह अहसास खत्म होने के बाद उसे काम जारी रखने दें"
+      },
+      D: {
         en: "Stop work and arrange medical evaluation immediately",
         ta: "வேலையை நிறுத்தி உடனடியாக மருத்துவ பரிசோதனை ஏற்பாடு செய்யவும்",
         hi: "काम रोकें और तुरंत चिकित्सा मूल्यांकन की व्यवस्था करें"
-      },
-      C: {
-        en: "Ignore it if he feels better",
-        ta: "நன்றாக உணர்ந்தால் புறக்கணிக்கவும்",
-        hi: "बेहतर महसूस करे तो अनदेखा करें"
-      },
-      D: {
-        en: "Transfer him to another scaffold",
-        ta: "வேறு சாரக்கட்டுக்கு மாற்றவும்",
-        hi: "उसे दूसरे स्कैफोल्ड पर भेज दें"
       }
     },
-    correct: "B"
+    correct: "D"
   },
   {
     qno: 65,
@@ -2333,27 +2297,32 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "Better performance",
-        ta: "சிறந்த செயல்திறன்",
-        hi: "बेहतर प्रदर्शन"
-      },
-      B: {
         en: "Fatigue, poor concentration, and increased accident risk",
         ta: "சோர்வு, கவனக்குறைவு மற்றும் அதிகரித்த விபத்து அபாயம்",
         hi: "थकान, कम एकाग्रता और दुर्घटना का बढ़ा जोखिम"
       },
+      B: {
+        en: "Improved concentration over long shifts",
+        ta: "நீண்ட ஷிப்ட்களில் கவனக்குவிப்பு மேம்படுகிறது",
+        hi: "लंबी शिफ्टों में एकाग्रता बेहतर हो जाती है"
+      },
       C: {
-        en: "Increased strength",
-        ta: "அதிகரித்த வலிமை",
-        hi: "बढ़ी हुई ताकत"
+        en: "A reduced need for rest breaks",
+        ta: "ஓய்வு இடைவேளைகளின் தேவை குறைகிறது",
+        hi: "आराम के ब्रेक की जरूरत कम हो जाती है"
       },
       D: {
-        en: "Faster work completion",
-        ta: "வேகமான வேலை முடிவு",
-        hi: "तेज़ काम पूरा होना"
+        en: "No measurable effect on site safety",
+        ta: "தள பாதுகாப்பில் அளவிடக்கூடிய எந்த பாதிப்பும் இல்லை",
+        hi: "साइट सुरक्षा पर कोई मापने योग्य असर नहीं पड़ता"
       }
     },
-    correct: "B"
+    warning: {
+      en: "Fatigue is a hidden hazard. If you are not fit for duty due to lack of sleep, illness, or medication, report it to your supervisor. A tired worker is more likely to make mistakes that can lead to serious injuries or fatalities.",
+      ta: "சோர்வு ஒரு மறைந்த ஆபத்து. தூக்கமின்மை, நோய் அல்லது மருந்தின் காரணமாக நீங்கள் வேலைக்கு தகுதியாக இல்லை என்றால், அதை உங்கள் மேற்பார்வையாளரிடம் தெரிவிக்கவும். சோர்வான தொழிலாளி தவறு செய்ய அதிக வாய்ப்பு உள்ளது; அந்த தவறுகள் கடுமையான காயங்களுக்கு அல்லது உயிரிழப்புக்கு வழிவகுக்கும்.",
+      hi: "थकान एक छिपा हुआ खतरा है। नींद की कमी, बीमारी या दवा के कारण अगर आप ड्यूटी के लिए फिट नहीं हैं, तो अपने सुपरवाइज़र को इसकी सूचना दें। थका हुआ कर्मचारी गलती करने की ज्यादा संभावना रखता है, और ऐसी गलतियां गंभीर चोट या मौत का कारण बन सकती हैं।"
+    },
+    correct: "A"
   },
   {
     qno: 66,
@@ -2367,9 +2336,9 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "It increases expenses",
-        ta: "செலவுகளை அதிகரிக்கிறது",
-        hi: "यह खर्च बढ़ाता है"
+        en: "It reduces productivity only",
+        ta: "இது உற்பத்தித் திறனை மட்டுமே குறைக்கிறது",
+        hi: "इससे केवल उत्पादकता कम होती है"
       },
       B: {
         en: "It affects judgment, reaction time, and safety",
@@ -2377,9 +2346,9 @@ var QUIZ_QUESTIONS = [
         hi: "यह निर्णय, प्रतिक्रिया समय और सुरक्षा को प्रभावित करता है"
       },
       C: {
-        en: "It causes thirst",
-        ta: "தாகத்தை ஏற்படுத்துகிறது",
-        hi: "इससे प्यास लगती है"
+        en: "It affects only the worker's personal health",
+        ta: "இது தொழிலாளியின் தனிப்பட்ட உடல்நலத்தை மட்டுமே பாதிக்கிறது",
+        hi: "इससे केवल कर्मचारी के निजी स्वास्थ्य पर असर पड़ता है"
       },
       D: {
         en: "It affects attendance only",
@@ -2401,27 +2370,27 @@ var QUIZ_QUESTIONS = [
     imageCaption: "",
     options: {
       A: {
-        en: "To save water",
-        ta: "தண்ணீரை சேமிக்க",
-        hi: "पानी बचाने के लिए"
+        en: "To keep the hands cool",
+        ta: "கைகளை குளிர்ச்சியாக வைத்திருக்க",
+        hi: "हाथों को ठंडा रखने के लिए"
       },
       B: {
+        en: "To comply with the site dress code",
+        ta: "தளத்தின் உடை விதிமுறையை பின்பற்ற",
+        hi: "साइट के ड्रेस कोड का पालन करने के लिए"
+      },
+      C: {
         en: "To prevent infections and diseases",
         ta: "தொற்று மற்றும் நோய்களை தடுக்க",
         hi: "संक्रमण और बीमारियों से बचने के लिए"
       },
-      C: {
-        en: "To cool the body",
-        ta: "உடலை குளிர்விக்க",
-        hi: "शरीर को ठंडा करने के लिए"
-      },
       D: {
-        en: "To improve appetite",
-        ta: "பசியை அதிகரிக்க",
-        hi: "भूख बढ़ाने के लिए"
+        en: "To remove cement stains from the skin",
+        ta: "தோலில் உள்ள சிமெண்ட் கறைகளை நீக்க",
+        hi: "त्वचा से सीमेंट के दाग हटाने के लिए"
       }
     },
-    correct: "B"
+    correct: "C"
   },
   {
     qno: 68,
@@ -2441,42 +2410,47 @@ var QUIZ_QUESTIONS = [
     },
     options: {
       A: {
-        en: "Repairing the Machines",
-        ta: "இயந்திரங்களை பழுதுபார்ப்பது",
-        hi: "मशीनों की मरम्मत करना"
+        en: "Standing under a suspended load",
+        ta: "தொங்கும் சுமைக்கு கீழே நிற்பது",
+        hi: "लटके हुए लोड के नीचे खड़ा होना"
       },
       B: {
-        en: "Standing in front of moving equipment",
-        ta: "நகரும் இயந்திரத்தின் முன் நிற்பது",
-        hi: "चलते उपकरण के सामने खड़ा होना"
+        en: "Wearing a safety helmet",
+        ta: "பாதுகாப்பு ஹெல்மெட் அணிவது",
+        hi: "सुरक्षा हेलमेट पहनना"
       },
       C: {
-        en: "Working near Hotwork",
-        ta: "ஹாட்வொர்க் அருகில் வேலை செய்வது",
-        hi: "हॉटवर्क के पास काम करना"
+        en: "Attending a toolbox talk",
+        ta: "டூல்பாக்ஸ் டாக்கில் கலந்துகொள்வது",
+        hi: "टूलबॉक्स टॉक में शामिल होना"
       },
       D: {
-        en: "Working without PPE",
-        ta: "PPE இல்லாமல் வேலை செய்வது",
-        hi: "बिना PPE काम करना"
+        en: "Using a designated walkway",
+        ta: "குறிக்கப்பட்ட நடைபாதையை பயன்படுத்துவது",
+        hi: "निर्धारित वॉकवे का उपयोग करना"
       }
     },
-    correct: "B"
+    warning: {
+      en: "Identify the Line of Fire before starting work. If an object moves, falls, swings, rolls, or releases energy, make sure you are not in its path.",
+      ta: "வேலையை தொடங்கும் முன் ஆபத்து பாதையை (Line of Fire) கண்டறியுங்கள். ஒரு பொருள் நகர்ந்தால், விழுந்தால், ஆடினால், உருண்டால் அல்லது ஆற்றலை வெளியிட்டால், நீங்கள் அதன் பாதையில் இல்லை என்பதை உறுதிப்படுத்துங்கள்.",
+      hi: "काम शुरू करने से पहले लाइन ऑफ़ फायर की पहचान करें। अगर कोई वस्तु खिसकती है, गिरती है, झूलती है, लुढ़कती है या ऊर्जा छोड़ती है, तो पक्का करें कि आप उसके रास्ते में न हों।"
+    },
+    correct: "A"
   },
   {
     qno: 69,
     category: "Life Saving Rules",
     question: {
-      en: "When working at height, what is mandatory?",
-      ta: "உயரத்தில் வேலை செய்யும்போது எது கட்டாயம்?",
-      hi: "ऊंचाई पर काम करते समय क्या अनिवार्य है?"
+      en: "What fall-protection arrangement is mandatory for any work at height?",
+      ta: "உயரத்தில் செய்யப்படும் எந்த வேலைக்கும் எந்த விழுதல் தடுப்பு ஏற்பாடு கட்டாயமாக வேண்டும்?",
+      hi: "ऊंचाई पर किए जाने वाले किसी भी काम के लिए कौन सी फॉल-प्रोटेक्शन व्यवस्था अनिवार्य है?"
     },
     imageCaption: "",
     optionImages: {
       A: "assets/images/options/q69-A.jpg",
-      B: "assets/images/options/q69-B.jpg",
+      B: "assets/images/options/q69-D.jpg",
       C: "assets/images/options/q69-C.jpg",
-      D: "assets/images/options/q69-D.jpg"
+      D: "assets/images/options/q69-B.jpg"
     },
     options: {
       A: {
@@ -2485,9 +2459,9 @@ var QUIZ_QUESTIONS = [
         hi: "केवल सेफ्टी शूज़"
       },
       B: {
-        en: "Full body harness with 100% tie-off",
-        ta: "100% டை-ஆஃப் உடன் முழு உடல் கச்சை",
-        hi: "100% टाई-ऑफ के साथ फुल बॉडी हार्नेस"
+        en: "Reflective vest only",
+        ta: "ஒளிரும் உடை மட்டும்",
+        hi: "केवल रिफ्लेक्टिव वेस्ट"
       },
       C: {
         en: "Gloves only",
@@ -2495,45 +2469,45 @@ var QUIZ_QUESTIONS = [
         hi: "केवल दस्ताने"
       },
       D: {
-        en: "Reflective vest only",
-        ta: "ஒளிரும் உடை மட்டும்",
-        hi: "केवल रिफ्लेक्टिव वेस्ट"
+        en: "Full body harness with 100% tie-off",
+        ta: "100% டை-ஆஃப் உடன் முழு உடல் கச்சை",
+        hi: "100% टाई-ऑफ के साथ फुल बॉडी हार्नेस"
       }
     },
-    correct: "B"
+    correct: "D"
   },
   {
     qno: 70,
     category: "Life Saving Rules",
     question: {
-      en: "Can you remove a machine guard without authorization?",
-      ta: "அங்கீகாரம் இல்லாமல் இயந்திர கவசத்தை (machine guard) அகற்றலாமா?",
-      hi: "क्या बिना अनुमति मशीन गार्ड हटा सकते हैं?"
+      en: "Under what circumstances may a machine guard be removed from a tool or machine?",
+      ta: "எந்த சூழ்நிலைகளில் ஒரு கருவி அல்லது இயந்திரத்திலிருந்து பாதுகாப்பு கவசத்தை அகற்றலாம்?",
+      hi: "किन परिस्थितियों में किसी टूल या मशीन से सुरक्षा गार्ड हटाया जा सकता है?"
     },
     imageCaption: "",
     options: {
       A: {
-        en: "Yes",
-        ta: "ஆம்",
-        hi: "हाँ"
+        en: "By any experienced operator, at their discretion",
+        ta: "அனுபவம் உள்ள எந்த இயக்குபவரும், அவரது விருப்பப்படி",
+        hi: "कोई भी अनुभवी ऑपरेटर, अपने विवेक से"
       },
       B: {
-        en: "Yes, if experienced",
-        ta: "ஆம், அனுபவம் இருந்தால்",
-        hi: "हाँ, अगर अनुभवी हों"
+        en: "Whenever the guard slows down the work",
+        ta: "பாதுகாப்பு கவசம் வேலையை மெதுவாக்கும் போதெல்லாம்",
+        hi: "जब भी सुरक्षा गार्ड काम की गति धीमी कर दे"
       },
       C: {
-        en: "No, authorization is required",
-        ta: "இல்லை, அங்கீகாரம் தேவை",
-        hi: "नहीं, अनुमति आवश्यक है"
+        en: "During an emergency, without prior approval",
+        ta: "அவசர நிலையில், முன் அனுமதி இல்லாமல்",
+        hi: "आपातकाल के दौरान, पहले से मंजूरी लिए बिना"
       },
       D: {
-        en: "Only during emergency",
-        ta: "அவசர காலத்தில் மட்டும்",
-        hi: "केवल आपातकाल में"
+        en: "Only with authorization, after isolating the machine and following an approved safe procedure",
+        ta: "அனுமதியுடன் மட்டுமே; இயந்திரத்தை தனிமைப்படுத்தி (isolate), அனுமதிக்கப்பட்ட பாதுகாப்பான நடைமுறையை பின்பற்றிய பிறகு",
+        hi: "केवल अधिकृत अनुमति के साथ, मशीन को आइसोलेट करने और स्वीकृत सुरक्षित प्रक्रिया का पालन करने के बाद"
       }
     },
-    correct: "C"
+    correct: "D"
   }
 ];
 

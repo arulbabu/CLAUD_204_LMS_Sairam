@@ -248,6 +248,9 @@
       QuizAudio.playReaction(answeredCorrect, currentLang);
     } else if (answeredCorrect) {
       QuizAudio.playCorrect(qno, currentLang);
+    } else if (selectedAnswer === null) {
+      // Show Answer pressed with nothing picked — never say "That's not right".
+      QuizAudio.playShowAnswerCold(qno, currentLang);
     } else {
       QuizAudio.playWrong(qno, currentLang);
     }
@@ -581,9 +584,12 @@
     if (rec) rec.revealed = true;
     showWarning();   // fires with the reveal, per client spec
     if (speak) {
-      // Not yet answered (pressed Show Answer outright) reads as a miss.
+      // Not yet answered (pressed Show Answer outright) reads as a miss, but
+      // must never open with "That's not right" when nothing was selected.
       if (answeredCorrect) {
         QuizAudio.playCorrect(currentQno(), currentLang);
+      } else if (selectedAnswer === null) {
+        QuizAudio.playShowAnswerCold(currentQno(), currentLang);
       } else {
         QuizAudio.playWrong(currentQno(), currentLang);
       }
@@ -607,6 +613,8 @@
       // Already visible: this is a replay request.
       if (answeredCorrect) {
         QuizAudio.playCorrect(currentQno(), currentLang);
+      } else if (selectedAnswer === null) {
+        QuizAudio.playShowAnswerCold(currentQno(), currentLang);
       } else {
         QuizAudio.playWrong(currentQno(), currentLang);
       }

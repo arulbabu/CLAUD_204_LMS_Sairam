@@ -1570,9 +1570,9 @@
   "47": {
    "correctLetter": "A",
    "q": {
-    "en": "What should be limited when stacking bricks, blocks, or masonry units on site?",
-    "ta": "தளத்தில் செங்கல், பிளாக் அல்லது கொத்து அலகுகளை அடுக்கும்போது எதை கட்டுப்படுத்த வேண்டும்?",
-    "hi": "साइट पर ईंटें, ब्लॉक या चिनाई इकाइयां रखते समय क्या सीमित करना चाहिए?"
+    "en": "What should be the limited height when stacking bricks, blocks, or masonry units on site?",
+    "ta": "தளத்தில் செங்கல், பிளாக் அல்லது கொத்து அலகுகளை அடுக்கும்போது உயரத்தை எவ்வளவு கட்டுப்படுத்த வேண்டும்?",
+    "hi": "साइट पर ईंटें, ब्लॉक या चिनाई इकाइयां रखते समय ऊंचाई कितनी सीमित होनी चाहिए?"
    },
    "correct": {
     "en": "The stacking height, to prevent the stack from toppling",
@@ -2190,7 +2190,7 @@
   "64": {
    "correctLetter": "D",
    "q": {
-    "en": "A worker reports a spinning sensation while climbing scaffolding. What should be done first?",
+    "en": "A worker reports dizziness while climbing scaffolding. What should be done first?",
     "ta": "சாரக்கட்டில் ஏறும்போது தலை சுற்றுவதாக ஒரு தொழிலாளி கூறுகிறார். முதலில் என்ன செய்ய வேண்டும்?",
     "hi": "स्कैफोल्डिंग पर चढ़ते समय कर्मचारी चक्कर आने की शिकायत करता है। पहले क्या करना चाहिए?"
    },
@@ -2225,9 +2225,9 @@
   "65": {
    "correctLetter": "A",
    "q": {
-    "en": "What can happen if a worker does not get enough sleep?",
-    "ta": "தொழிலாளிக்கு போதுமான தூக்கம் இல்லாவிட்டால் என்ன நடக்கும்?",
-    "hi": "यदि कर्मचारी पर्याप्त नींद न ले तो क्या हो सकता है?"
+    "en": "What can happen if you do not get enough sleep?",
+    "ta": "உங்களுக்கு போதுமான தூக்கம் இல்லாவிட்டால் என்ன நடக்கும்?",
+    "hi": "यदि आप पर्याप्त नींद न लें तो क्या हो सकता है?"
    },
    "correct": {
     "en": "Fatigue, poor concentration, and increased accident risk",

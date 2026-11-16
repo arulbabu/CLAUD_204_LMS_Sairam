@@ -81,6 +81,15 @@ var QuizAudio = (function () {
     },
 
     /**
+     * Show Answer pressed with nothing picked: client feedback v3 — never say
+     * "That's not right" when the learner didn't select anything. Goes
+     * straight to "The correct answer is" + the answer.
+     */
+    playShowAnswerCold: function (qno, lang) {
+      playChain([src(lang, "lead-" + lang), src(lang, "q" + qno + "-ans")], true);
+    },
+
+    /**
      * Just the right/wrong reaction, with no answer given away. Used when
      * auto-reveal is off.
      */

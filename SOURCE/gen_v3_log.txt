@@ -1,0 +1,30 @@
+20:58:50 START v3 image gen: 20 jobs
+20:58:51 [1/20] Q4 HTTP 402 {
+  "error": {
+    "code": 402,
+    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",
+    "status": "RESOURCE_EXHAUSTED"
+  }
+}
+
+20:59:18 [1/20] Q4 OK 826KB 18s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q4.jpg
+20:59:37 [2/20] Q12 OK 885KB 17s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q12.jpg
+20:59:56 [3/20] Q14 OK 757KB 17s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q14.jpg
+21:00:15 [4/20] Q24 OK 996KB 17s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q24.jpg
+21:00:35 [5/20] Q26 OK 782KB 18s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q26.jpg
+21:00:52 [6/20] Q33 OK 998KB 15s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q34.jpg
+21:01:12 [7/20] Q37 OK 1002KB 18s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q39.jpg
+21:01:30 [8/20] Q39 OK 664KB 16s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q41.jpg
+21:01:52 [9/20] Q40 OK 960KB 19s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q42.jpg
+21:02:13 [10/20] Q46 OK 949KB 19s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q48.jpg
+21:02:32 [11/20] Q48 OK 598KB 17s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q50.jpg
+21:02:54 [12/20] Q56 OK 893KB 21s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q58.jpg
+21:03:13 [13/20] Q58 OK 930KB 17s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q60.jpg
+21:03:33 [14/20] Q59 OK 976KB 18s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q61.jpg
+21:03:54 [15/20] Q60 OK 911KB 18s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q62.jpg
+21:04:16 [16/20] Q66 OK 888KB 21s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q68.jpg
+21:04:37 [17/20] Q67 OK 956KB 18s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q69.jpg
+21:04:56 [18/20] Q68 OK 928KB 17s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/q70.jpg
+21:05:18 [19/20] Q2-D OK 840KB 20s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/options/q2-D.jpg
+21:05:41 [20/20] Q9-D OK 728KB 21s -> D:\OneDrive - kuvira Cybernetics\KUVIRA_2_New\CLAUD_204_LMS_Sairam\scorm-quiz\assets\images/options/q9-D.jpg
+21:05:43 DONE. fails: none
